@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>hg6app</artifactId>
+	<name>"Server" application of Homeguard6</name>
+
+	<parent>
+		<groupId>cz.martlin</groupId>
+		<artifactId>homeguard6local</artifactId>
+		<version>0.1.0</version>
+	</parent>
+
+	<dependencies>
+		<!-- JRest -->
+		<dependency>
+			<groupId>cz.martlin</groupId>
+			<artifactId>JRest</artifactId>
+			<version>0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cz.martlin</groupId>
+			<artifactId>hg6core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+</project>
