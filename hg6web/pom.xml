@@ -32,7 +32,7 @@
 
 		<dependency>
 			<groupId>cz.martlin</groupId>
-			<artifactId>hg6client</artifactId>
+			<artifactId>hg6core-jrest</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

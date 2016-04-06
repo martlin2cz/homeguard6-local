@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="cz.martlin.hg6.app.v0.SomeAppEntry" project="hg6app" 
+    file="/hg6app/src/main/java/cz/martlin/hg6/app/v0/SomeAppEntry.java" binary="false" label="someAppEntry" 
+    type="class" autoSize="false">    
+    <position height="89" width="178" x="0" y="0"/>  
+  </object>  
+  <object id="2" language="java" name="cz.martlin.hg6.core.v0.SomeApplication" project="hg6core" 
+    file="/hg6core/src/main/java/cz/martlin/hg6/core/v0/SomeApplication.java" binary="false" label="someApplication" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="560" y="0"/>  
+  </object>  
+  <object id="3" language="java" name="hg6client.SomeAppClient" project="hg6client" 
+    file="/hg6client/src/main/java/hg6client/SomeAppClient.java" binary="false" label="someAppClient" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="761" y="0"/>  
+  </object>
+</sequence-diagram>

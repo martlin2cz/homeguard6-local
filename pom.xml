@@ -19,9 +19,10 @@
 	<modules>
 		<module>hg6core</module>
 		<module>hg6app</module>
-		<module>hg6client</module>
+		<module>hg6client-app</module>
 		<module>hg6web</module>
 		<module>hg6mrscli</module>
+		<module>hg6core-jrest</module>
 	</modules>
 
 

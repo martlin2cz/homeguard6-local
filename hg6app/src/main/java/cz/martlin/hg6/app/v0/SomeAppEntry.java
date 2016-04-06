@@ -1,22 +1,24 @@
 package cz.martlin.hg6.app.v0;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import cz.martlin.hg6.core.v0.SomeApplication;
-import cz.martlin.jrest.misc.CommunicationProtocol;
-import cz.martlin.jrest.waiter.CommandProcessor;
-import cz.martlin.jrest.waiter.JRestWaiterStarter;
+import cz.martlin.hg6.coreJRest.v0.Hg6CommandsProcessor;
+import cz.martlin.hg6.coreJRest.v0.Hg6Server;
 
 public class SomeAppEntry {
+	private static final Logger log = LoggerFactory.getLogger(SomeAppEntry.class);
 
 	public static void main(String[] args) {
 		SomeApplication app = new SomeApplication();
 
-		CommunicationProtocol protocol = new SomeAppProtocol();
-		CommandProcessor processor = new SomeAppCommandProcessor(app);
-		
-		JRestWaiterStarter starter = new JRestWaiterStarter(protocol, processor);
+		Hg6CommandsProcessor processor = new Hg6CommandsProcessorImpl(app);
+		Hg6Server server = new Hg6Server(processor);
 
-		starter.startWaiter();
+		server.startServer();
 
+		log.info("Some app server running");
 	}
 
 }
