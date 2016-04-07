@@ -17,6 +17,7 @@ public class Protocol {
 	public static final String STOP_COMMAND = "stop";
 	public static final String IS_RUNNING_COMMAND = "is-running";
 	public static final String SIMPLE_INFO_COMMAND = "simple-info";
+	//TODO something like: "change-config set-interval 40?"
 
 	public Protocol() {
 	}

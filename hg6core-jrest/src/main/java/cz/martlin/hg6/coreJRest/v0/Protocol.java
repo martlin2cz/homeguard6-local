@@ -11,7 +11,7 @@ import cz.martlin.jrest.waiter.RequestHandler;
 
 public class Protocol {
 
-	private static final int PORT = 6_417_1;
+	private static final int PORT = 65777;
 
 	public static final String START_COMMAND = "start";
 	public static final String STOP_COMMAND = "stop";
