@@ -22,8 +22,13 @@ public class Hg6CommandsProcessorImpl implements Hg6CommandsProcessor {
 	}
 
 	@Override
-	public boolean isRunning() {
-		return hg.isRunning();
+	public String getIsRunning() {
+		return Boolean.toString(hg.isRunning());
+	}
+
+	@Override
+	public String getSimpleInfo() {
+		return hg.lastReport().toString(); // TODO like this?
 	}
 
 }

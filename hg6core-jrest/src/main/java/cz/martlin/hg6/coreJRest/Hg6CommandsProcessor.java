@@ -6,7 +6,9 @@ public interface Hg6CommandsProcessor {
 
 	public void stop();
 
-	public boolean isRunning();
+	public String getIsRunning();
+
+	public String getSimpleInfo();
 
 	// TODO
 

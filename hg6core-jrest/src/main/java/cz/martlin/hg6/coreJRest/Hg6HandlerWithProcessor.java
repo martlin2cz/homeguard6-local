@@ -32,6 +32,16 @@ public class Hg6HandlerWithProcessor implements RequestHandler {
 			processor.stop();
 			return JRestResponse.ok("stopped");
 		}
+		
+		if (Protocol.IS_RUNNING_COMMAND.equals(req.getCommand())) {
+			String is = processor.getIsRunning();
+			return JRestResponse.ok(is);
+		}
+		
+		if (Protocol.SIMPLE_INFO_COMMAND.equals(req.getCommand())) {
+			String info = processor.getSimpleInfo();
+			return JRestResponse.ok(info);
+		}
 		return null;
 	}
 

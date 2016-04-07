@@ -15,6 +15,8 @@ public class Protocol {
 
 	public static final String START_COMMAND = "start";
 	public static final String STOP_COMMAND = "stop";
+	public static final String IS_RUNNING_COMMAND = "is-running";
+	public static final String SIMPLE_INFO_COMMAND = "simple-info";
 
 	public Protocol() {
 	}
