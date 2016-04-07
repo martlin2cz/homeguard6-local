@@ -23,6 +23,8 @@
 		<module>hg6web</module>
 		<module>hg6mrscli</module>
 		<module>hg6core-jrest</module>
+		<module>hg6db</module>
+		<module>hg6data</module>
 	</modules>
 
 

@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>hg6core</artifactId>
-	<name>Core library for Homeguard 6</name>
+	<artifactId>hg6db</artifactId>
+	<name>Homeguard6 database of logs and samples</name>
 
 	<parent>
 		<groupId>cz.martlin</groupId>
@@ -25,11 +25,6 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>cz.martlin</groupId>
-			<artifactId>hg6db</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 	</dependencies>
+
 </project>
