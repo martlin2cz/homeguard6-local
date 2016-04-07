@@ -1,8 +1,8 @@
 package cz.martlin.hg6.coreJRest.test;
 
-import cz.martlin.hg6.coreJRest.v0.Hg6CommandsProcessor;
+import cz.martlin.hg6.coreJRest.v0.SomeAppCommandsProcessor;
 
-public class FakeHG6CmdsProcImpl implements Hg6CommandsProcessor {
+public class SomeAppCmdsProcImpl implements SomeAppCommandsProcessor {
 
 	@Override
 	public void start() {

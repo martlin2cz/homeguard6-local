@@ -1,9 +1,9 @@
 package cz.martlin.hg6.app.v0;
 
 import cz.martlin.hg6.core.v0.SomeApplication;
-import cz.martlin.hg6.coreJRest.v0.Hg6CommandsProcessor;
+import cz.martlin.hg6.coreJRest.v0.SomeAppCommandsProcessor;
 
-public class Hg6CommandsProcessorImpl implements Hg6CommandsProcessor {
+public class Hg6CommandsProcessorImpl implements SomeAppCommandsProcessor {
 
 	private final SomeApplication app;
 

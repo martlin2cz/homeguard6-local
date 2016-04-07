@@ -5,11 +5,11 @@ import cz.martlin.jrest.protocol.reqresp.JRestResponse;
 import cz.martlin.jrest.waiter.JRestWaiter;
 import cz.martlin.jrest.waiter.RequestHandler;
 
-public class Hg6HandlerWithProcessor implements RequestHandler {
+public class SomeAppHandlerWithProcessor implements RequestHandler {
 
-	private final Hg6CommandsProcessor processor;
+	private final SomeAppCommandsProcessor processor;
 
-	public Hg6HandlerWithProcessor(Hg6CommandsProcessor processor) {
+	public SomeAppHandlerWithProcessor(SomeAppCommandsProcessor processor) {
 		this.processor = processor;
 	}
 

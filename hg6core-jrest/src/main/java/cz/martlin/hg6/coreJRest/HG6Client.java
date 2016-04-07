@@ -1,4 +1,4 @@
-package cz.martlin.hg6.coreJRest.v0;
+package cz.martlin.hg6.coreJRest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

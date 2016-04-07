@@ -4,8 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg6.core.v0.SomeApplication;
-import cz.martlin.hg6.coreJRest.v0.Hg6CommandsProcessor;
-import cz.martlin.hg6.coreJRest.v0.Hg6Server;
+import cz.martlin.hg6.coreJRest.v0.SomeAppCommandsProcessor;
+import cz.martlin.hg6.coreJRest.v0.SomeAppServer;
 
 public class SomeAppEntry {
 	private static final Logger log = LoggerFactory.getLogger(SomeAppEntry.class);
@@ -13,8 +13,8 @@ public class SomeAppEntry {
 	public static void main(String[] args) {
 		SomeApplication app = new SomeApplication();
 
-		Hg6CommandsProcessor processor = new Hg6CommandsProcessorImpl(app);
-		Hg6Server server = new Hg6Server(processor);
+		SomeAppCommandsProcessor processor = new Hg6CommandsProcessorImpl(app);
+		SomeAppServer server = new SomeAppServer(processor);
 
 		server.startServer();
 

@@ -12,13 +12,6 @@
 	</parent>
 
 	<dependencies>
-		<!-- JRest -->
-		<dependency>
-			<groupId>cz.martlin</groupId>
-			<artifactId>JRest</artifactId>
-			<version>1.1</version>
-		</dependency>
-
 		<dependency>
 			<groupId>cz.martlin</groupId>
 			<artifactId>hg6core</artifactId>

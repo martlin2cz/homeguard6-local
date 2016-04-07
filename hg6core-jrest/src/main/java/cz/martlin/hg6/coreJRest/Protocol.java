@@ -1,4 +1,4 @@
-package cz.martlin.hg6.coreJRest.v0;
+package cz.martlin.hg6.coreJRest;
 
 import cz.martlin.jrest.guest.JRestGuest;
 import cz.martlin.jrest.protocol.GuestProtocol;
@@ -29,15 +29,15 @@ public class Protocol {
 		return new JRestGuest(protocol);
 	}
 
-	public JRestWaiter getWaiter(SomeAppCommandsProcessor processor) {
+	public JRestWaiter getWaiter(Hg6CommandsProcessor processor) {
 
-		RequestHandler handler = new SomeAppHandlerWithProcessor(processor);
+		RequestHandler handler = new Hg6HandlerWithProcessor(processor);
 		WaiterProtocol protocol = new SimpleWaiterProtocolImpl(PORT, handler);
 
 		return new JRestWaiter(protocol);
 	}
 
-	public JRestWaiterShift getWaitersShift(SomeAppCommandsProcessor processor) {
+	public JRestWaiterShift getWaitersShift(Hg6CommandsProcessor processor) {
 
 		JRestWaiter waiter = getWaiter(processor);
 		return new JRestWaiterShift(waiter);

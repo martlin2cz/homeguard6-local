@@ -2,11 +2,11 @@ package cz.martlin.hg6.coreJRest.v0;
 
 import cz.martlin.jrest.waiter.JRestWaiterShift;
 
-public class Hg6Server {
+public class SomeAppServer {
 
 	private final JRestWaiterShift shift;
 
-	public Hg6Server(Hg6CommandsProcessor processor) {
+	public SomeAppServer(SomeAppCommandsProcessor processor) {
 		Protocol protocol = new Protocol();
 		this.shift = protocol.getWaitersShift(processor);
 	}

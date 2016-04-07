@@ -3,13 +3,13 @@ package cz.martlin.hg6.web.v0;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import cz.martlin.hg6.coreJRest.v0.HG6Client;
+import cz.martlin.hg6.coreJRest.v0.SomeAppClient;
 
 @SessionScoped
 @ManagedBean(name = "main")
 public class SomeAppMainFormBean {
 
-	private final HG6Client cli = new HG6Client();
+	private final SomeAppClient cli = new SomeAppClient();
 
 	private String status = "unknown";
 
