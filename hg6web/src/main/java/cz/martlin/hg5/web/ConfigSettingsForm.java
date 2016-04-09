@@ -14,13 +14,14 @@ public class ConfigSettingsForm implements Serializable {
 	private static final long serialVersionUID = 3501199313655052697L;
 
 	private final Configuration config = new Configuration();
-
+	private final _Homeguard homeguard = new _Homeguard();
+	
 	public ConfigSettingsForm() {
 	}
 
 	@PostConstruct
 	public void init() {
-		config.setTo(HomeguardSingleton.getConfig());
+		config.setTo(homeguard.getConfig());
 		checkAndWarn();
 	}
 
@@ -40,7 +41,7 @@ public class ConfigSettingsForm implements Serializable {
 
 	public void save() {
 		checkAndWarn();
-		_Homeguard hg = HomeguardSingleton.get();
+		_Homeguard hg = homeguard;
 
 		hg.setConfigTo(config);
 		boolean success = hg.saveConfig();
@@ -52,11 +53,11 @@ public class ConfigSettingsForm implements Serializable {
 	}
 
 	public void reset() {
-		config.setTo(HomeguardSingleton.getConfig());
+		config.setTo(homeguard.getConfig());	//TODO not to use homeguard#cfg#setTo?
 	}
 
 	public void reload() {
-		_Homeguard hg = HomeguardSingleton.get();
+		_Homeguard hg = homeguard;
 
 		boolean success = hg.loadConfig();
 		if (success) {

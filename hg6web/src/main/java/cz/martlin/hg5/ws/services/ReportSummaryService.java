@@ -6,7 +6,6 @@ import java.util.Calendar;
 import java.util.Map;
 
 import cz.martlin.hg5.logic.data.GuardingReport;
-import cz.martlin.hg5.web.HomeguardSingleton;
 import cz.martlin.hg5.web._Homeguard;
 import cz.martlin.hg5.ws.WebServiceProcessor;
 import cz.martlin.hg5.ws.WebServiceUtils;
@@ -26,6 +25,8 @@ public class ReportSummaryService implements WebServiceProcessor {
 	private static final String LAST_REP_ATTR_VAL = "last";
 	private static final DateFormat FORMAT = new SimpleDateFormat("dd.MM., HH:mm:ss");
 
+	private final _Homeguard homeguard = new _Homeguard();
+
 	public ReportSummaryService() {
 	}
 
@@ -36,18 +37,18 @@ public class ReportSummaryService implements WebServiceProcessor {
 
 	@Override
 	public byte[] process(Map<String, String[]> request) throws Exception {
-		_Homeguard homeguard = HomeguardSingleton.get();
+
 		String which = WebServiceUtils.getString(REPORT_SPEC_ATTR_NAME, request);
 
 		GuardingReport report;
 		if (which == null) {
-			if (homeguard.isRunning()) {
+			if (homeguard.getIsRunning()) {
 				report = homeguard.currentReport();
 			} else {
 				report = homeguard.lastReport();
 			}
 		} else if (CURRENT_REP_ATTR_VAL.equals(which)) {
-			if (homeguard.isRunning()) {
+			if (homeguard.getIsRunning()) {
 				report = homeguard.currentReport();
 			} else {
 				report = null;

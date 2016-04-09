@@ -3,7 +3,7 @@ package cz.martlin.hg5.ws.services;
 import java.util.Calendar;
 import java.util.Map;
 
-import cz.martlin.hg5.web.HomeguardSingleton;
+import cz.martlin.hg5.web._Homeguard;
 import cz.martlin.hg5.ws.WebServiceProcessor;
 import cz.martlin.hg5.ws.WebServiceUtils;
 
@@ -18,6 +18,8 @@ public class AudioRecordService implements WebServiceProcessor {
 	private static final String AUDIO_FORMAT = "wav";
 	private static final String MIME = "audio/" + AUDIO_FORMAT;
 
+	private final _Homeguard homeguard = new _Homeguard();
+	
 	@Override
 	public String getContentType() {
 		return MIME;
@@ -27,7 +29,7 @@ public class AudioRecordService implements WebServiceProcessor {
 	public byte[] process(Map<String, String[]> request) throws Exception {
 		Calendar recordedAt = WebServiceUtils.parseDateTime("at", "at-unix", request);
 
-		byte[] bytes = HomeguardSingleton.get().loadRawWavBytesOfTrack(recordedAt);
+		byte[] bytes = homeguard.loadRawWavBytesOfTrack(recordedAt);
 
 		if (bytes == null) {
 			throw new IllegalArgumentException("There is no such record at " + recordedAt.getTime());

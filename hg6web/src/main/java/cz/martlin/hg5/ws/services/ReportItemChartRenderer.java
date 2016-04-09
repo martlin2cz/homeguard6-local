@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Map;
 
 import cz.martlin.hg5.logic.data.SoundTrack;
-import cz.martlin.hg5.web.HomeguardSingleton;
+import cz.martlin.hg5.web._Homeguard;
 import cz.martlin.hg5.web.charts.RIsimpleChartRenderer;
 import cz.martlin.hg5.ws.WebServiceProcessor;
 import cz.martlin.hg5.ws.WebServiceUtils;
@@ -23,7 +23,8 @@ public class ReportItemChartRenderer implements WebServiceProcessor {
 	private static final String MIME = "image/" + IMAGE_FORMAT;
 
 	private final RIsimpleChartRenderer renderer = new RIsimpleChartRenderer();
-
+	private final _Homeguard homeguard = new _Homeguard();
+	
 	public ReportItemChartRenderer() {
 	}
 
@@ -43,7 +44,7 @@ public class ReportItemChartRenderer implements WebServiceProcessor {
 		Color bg = WebServiceUtils.parseColorOrDefault("background", request, RIsimpleChartRenderer.BG_DEFAULT_COLOR);
 		boolean useCache = WebServiceUtils.parseBoolean("useCache", request, null, "false");
 
-		SoundTrack track = HomeguardSingleton.get().getTrack(recordedAt);
+		SoundTrack track = homeguard.getTrack(recordedAt);
 
 		if (track == null) {
 			throw new IllegalArgumentException("There is no such soundtrack at " + recordedAt.getTime());

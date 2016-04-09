@@ -16,8 +16,10 @@ public class HomeGuardApp implements Serializable {
 	private static final String APP_NAME = "Homeguard";
 	private static final String VERSION = "5.3";
 	private static final String AUTHOR = "m@rtlin";
+	@Deprecated
 	private static final File CONFIG_FILE = createConfigFile();
 
+	@Deprecated
 	private static File createConfigFile() {
 		try {
 			InitialContext initialContext = new InitialContext();

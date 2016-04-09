@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg5.logic.data.SoundTrack;
-import cz.martlin.hg5.web.HomeguardSingleton;
+import cz.martlin.hg5.web._Homeguard;
 
 /**
  * Implements creating of very-the-fuck simple technique of creating time
@@ -25,8 +25,8 @@ import cz.martlin.hg5.web.HomeguardSingleton;
  * is each group's min, average and max value rendered as 1px width bar with
  * given colors.
  * 
- * @author martin
- * @deprecated FIXME TODO not yet in hg6core? or somewhere else?
+ * @author martin //@deprecated FIXME TODO not yet in hg6core? or somewhere
+ *         else?
  */
 
 public class RIsimpleChartRenderer implements Serializable {
@@ -38,6 +38,8 @@ public class RIsimpleChartRenderer implements Serializable {
 	public static final Color AVGS_DEFAULT_COLOR = Color.MAGENTA;
 	public static final Color MAXS_DEFAULT_COLOR = Color.RED;
 	public static final Color BG_DEFAULT_COLOR = Color.WHITE;
+
+	private final _Homeguard homeguard = new _Homeguard();
 
 	private final Map<SoundTrack, byte[]> cache = new HashMap<>();
 
@@ -84,7 +86,7 @@ public class RIsimpleChartRenderer implements Serializable {
 			Color background) {
 		LOG.info("Creating chart of track: {}", track);
 
-		double[] samples = HomeguardSingleton.get().getJustSimplySamplesOfTrack(track);
+		double[] samples = homeguard.getJustSimplySamplesOfTrack(track);
 
 		BufferedImage image = createChart(samples, width, height, mins, avgs, maxs, background);
 		byte[] data = exportImage(image);

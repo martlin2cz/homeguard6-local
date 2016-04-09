@@ -1,102 +1,97 @@
 package cz.martlin.hg5.web;
 
 import java.util.Calendar;
-import java.util.HashSet;
 import java.util.Set;
-
-import javax.sound.sampled.AudioFormat;
 
 import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.SoundTrack;
+import cz.martlin.hg6.webapp.Hg6ClientWrapper;
+import cz.martlin.hg6.webapp.Hg6ConfigWrapper;
+import cz.martlin.hg6.webapp.Hg6DatabaseWrapper;
 
 public class _Homeguard {
 
+	private final Hg6ClientWrapper client;
+	private final Hg6DatabaseWrapper db;
+	private final Hg6ConfigWrapper cfg;
+
 	public _Homeguard() {
-		// TODO Auto-generated constructor stub
+		this.client = new Hg6ClientWrapper();
+		this.db = new Hg6DatabaseWrapper();
+		this.cfg = new Hg6ConfigWrapper();
 	}
+
+	// TODO nonparametric constructor (with config ... load/default)
+	// and withexplicit config
 
 	public static _Homeguard get() {
 		return new _Homeguard(); // TODO ...
 	}
 
+	// TODO WTF???
+	public static _Homeguard tryToLoadConfigAndCreate() {
+		return new _Homeguard(); // TODO
+	}
+
 	public void setConfigTo(Configuration config) {
-		// TODO Auto-generated method stub
-		
+		cfg.setConfigTo(config);
 	}
 
 	public boolean saveConfig() {
-		// TODO Auto-generated method stub
-		return false;
+		return cfg.saveConfig();
 	}
 
 	public boolean loadConfig() {
-		// TODO Auto-generated method stub
-		return false;
+		return cfg.loadConfig();
 	}
 
 	public Configuration getConfig() {
-		// TODO Auto-generated method stub
-		return new Configuration();
+		return cfg.getConfig();
 	}
 
-	public Set<GuardingReport> reportsAt(Calendar today) {
-		// TODO Auto-generated method stub
-		return new HashSet<>();
+	public Set<GuardingReport> reportsAt(Calendar day) {
+		return db.reportsAt(day);
 	}
 
 	public GuardingReport currentReport() {
-		// TODO Auto-generated method stub
-		return new GuardingReport("yea, current");
+		return db.currentReport();
 	}
 
 	public GuardingReport lastReport() {
-		// TODO Auto-generated method stub
-		return new GuardingReport("yea, last report");
+		return db.lastReport();
 	}
 
 	public boolean saveReportsMetadata(GuardingReport report) {
-		// TODO Auto-generated method stub
-		return false;
+		return db.saveReportsMetadata(report);
 	}
 
 	public GuardingReport getReport(Calendar date) {
-		// TODO Auto-generated method stub
-		return new GuardingReport("faaaou");
+		return db.getReport(date);
 	}
 
-	public static _Homeguard tryToLoadConfigAndCreate() {
-		return new _Homeguard();	//TODO 
+	public Boolean getIsRunning() {
+		return client.getIsRunning();
 	}
 
-	public boolean isRunning() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean start() {
+		return client.start();
 	}
 
-	public void start() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void stop() {
-		// TODO Auto-generated method stub
-		
+	public boolean stop() {
+		return client.stop();
 	}
 
 	public double[] getJustSimplySamplesOfTrack(SoundTrack track) {
-		// TODO Auto-generated method stub
-		return new double[10];
+		return db.getJustSimplySamplesOfTrack(track);
 	}
 
 	public byte[] loadRawWavBytesOfTrack(Calendar recordedAt) {
-		// TODO Auto-generated method stub
-		return new byte[10];
+		return db.loadRawWawBytesOfTrack(recordedAt);
 	}
 
 	public SoundTrack getTrack(Calendar recordedAt) {
-		// TODO Auto-generated method stub
-		return new SoundTrack(new byte[10], new AudioFormat((float) 10.0,10,10,true,true));
+		return db.getTrack(recordedAt);
 	}
 
 }

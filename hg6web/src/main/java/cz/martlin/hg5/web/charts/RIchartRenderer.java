@@ -1,16 +1,11 @@
 package cz.martlin.hg5.web.charts;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.Serializable;
 
-import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg5.logic.data.SoundTrack;
-import cz.martlin.hg5.web.HomeguardSingleton;
 
 /**
  * Old, charts generator for simple tracks, similar to
@@ -22,6 +17,7 @@ import cz.martlin.hg5.web.HomeguardSingleton;
  * @see RIsimpleChartRenderer
  *
  */
+@Deprecated
 public class RIchartRenderer implements Serializable {
 	private static final long serialVersionUID = -569957807078171698L;
 
@@ -39,31 +35,33 @@ public class RIchartRenderer implements Serializable {
 	 * @return
 	 */
 	public byte[] getChartForTrack(SoundTrack track, int width, int height) {
-		LOG.info("Renderuje se graf pro record: {},", track);
-
-		CategoryDataset dataset = createDataset(track);
-		JFreeChart chart = ChartFactory.createBarChart("Záznam", "x", "y", dataset, PlotOrientation.VERTICAL, true,
-				false, false);
-
-		File file;
-		try {
-			file = File.createTempFile("chart", ".png");
-			ChartUtilities.saveChartAsPNG(file, chart, width, height);
-		} catch (IOException e) {
-			LOG.error("Cannot create graph", e);
-			return null;
-		}
-
-		FileInputStream fis = null;
-		try {
-			fis = new FileInputStream(file);
-			return IOUtils.toByteArray(fis);
-		} catch (IOException e) {
-			LOG.error("Cannot load graph", e);
-			return null;
-		} finally {
-			IOUtils.closeQuietly(fis);
-		}
+		throw new UnsupportedOperationException("getChartForTrack");
+//		
+//		LOG.info("Renderuje se graf pro record: {},", track);
+//
+//		CategoryDataset dataset = createDataset(track);
+//		JFreeChart chart = ChartFactory.createBarChart("Záznam", "x", "y", dataset, PlotOrientation.VERTICAL, true,
+//				false, false);
+//
+//		File file;
+//		try {
+//			file = File.createTempFile("chart", ".png");
+//			ChartUtilities.saveChartAsPNG(file, chart, width, height);
+//		} catch (IOException e) {
+//			LOG.error("Cannot create graph", e);
+//			return null;
+//		}
+//
+//		FileInputStream fis = null;
+//		try {
+//			fis = new FileInputStream(file);
+//			return IOUtils.toByteArray(fis);
+//		} catch (IOException e) {
+//			LOG.error("Cannot load graph", e);
+//			return null;
+//		} finally {
+//			IOUtils.closeQuietly(fis);
+//		}
 	}
 
 	/**
@@ -72,19 +70,20 @@ public class RIchartRenderer implements Serializable {
 	 * @param track
 	 * @return
 	 */
-	private CategoryDataset createDataset(SoundTrack track) {
-		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-		double[] samples = HomeguardSingleton.get().getJustSimplySamplesOfTrack(track);
-
-		final String series = "Záznam";
-		int i = 0;
-
-		for (double sample : samples) {
-			dataset.setValue(sample, series, new Integer(i));
-			i++;
-		}
-
-		return dataset;
+	private /*CategoryDataset*/Object createDataset(SoundTrack track) {
+		throw new UnsupportedOperationException("createDataset");
+//		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+//		double[] samples = homeguard.getJustSimplySamplesOfTrack(track);
+//
+//		final String series = "Záznam";
+//		int i = 0;
+//
+//		for (double sample : samples) {
+//			dataset.setValue(sample, series, new Integer(i));
+//			i++;
+//		}
+//
+//		return dataset;
 	}
 
 }

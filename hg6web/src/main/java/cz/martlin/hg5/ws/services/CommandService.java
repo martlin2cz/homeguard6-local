@@ -2,7 +2,7 @@ package cz.martlin.hg5.ws.services;
 
 import java.util.Map;
 
-import cz.martlin.hg5.web.HomeguardSingleton;
+import cz.martlin.hg5.web._Homeguard;
 import cz.martlin.hg5.ws.WebServiceProcessor;
 
 /**
@@ -16,6 +16,8 @@ public class CommandService implements WebServiceProcessor {
 
 	private static final String MIME = "text/plain";
 
+	private final _Homeguard homeguard = new _Homeguard();
+	
 	public CommandService() {
 	}
 
@@ -41,17 +43,17 @@ public class CommandService implements WebServiceProcessor {
 	}
 
 	private String processStart() {
-		HomeguardSingleton.get().start();
+		homeguard.start();
 		return "Homeguard started and running";
 	}
 
 	private String processStop() {
-		HomeguardSingleton.get().stop();
+		homeguard.stop();
 		return "Homeguard stopped and not running";
 	}
 
 	private String processStatus() {
-		if (HomeguardSingleton.get().isRunning()) {
+		if (homeguard.getIsRunning()) {
 			return "Homeguard is started and running";
 		} else {
 			return "Homeguard is stopped and not running";

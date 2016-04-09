@@ -23,6 +23,8 @@ public class GuardingReportPanel implements Serializable {
 	private static final long serialVersionUID = 1329899742372452384L;
 	private static final GuardingReportChart REPORT_CHARTS = new GuardingReportChart();
 
+	private final _Homeguard homeguard = new _Homeguard();
+	
 	private List<GuardingReport> reportsAtDay = null;
 	private GuardingReport report;
 
@@ -32,7 +34,7 @@ public class GuardingReportPanel implements Serializable {
 	@PostConstruct
 	public void init() {
 		Calendar today = Calendar.getInstance();
-		Set<GuardingReport> reports = HomeguardSingleton.get().reportsAt(today);
+		Set<GuardingReport> reports = homeguard.reportsAt(today);
 		reportsAtDay = new ArrayList<>(reports);
 	}
 
@@ -49,12 +51,12 @@ public class GuardingReportPanel implements Serializable {
 	}
 
 	public void showCurrentReport() {
-		GuardingReport current = HomeguardSingleton.get().currentReport();
+		GuardingReport current = homeguard.currentReport();
 		this.report = current;
 	}
 
 	public void showLastReport() {
-		GuardingReport last = HomeguardSingleton.get().lastReport();
+		GuardingReport last = homeguard.lastReport();
 		this.report = last;
 	}
 
@@ -62,7 +64,7 @@ public class GuardingReportPanel implements Serializable {
 		Calendar day = Calendar.getInstance();
 		day.setTime((Date) event.getObject());
 
-		Set<GuardingReport> reports = HomeguardSingleton.get().reportsAt(day);
+		Set<GuardingReport> reports = homeguard.reportsAt(day);
 		this.reportsAtDay = new ArrayList<>(reports);
 	}
 
@@ -71,12 +73,12 @@ public class GuardingReportPanel implements Serializable {
 	}
 
 	public void showReport(Calendar date) {
-		GuardingReport report = HomeguardSingleton.get().getReport(date);
+		GuardingReport report = homeguard.getReport(date);
 		this.report = report;
 	}
 
 	public void saveDescription() {
-		boolean success = HomeguardSingleton.get().saveReportsMetadata(report);
+		boolean success = homeguard.saveReportsMetadata(report);
 		if (success) {
 			Utils.info("Uloženo", "Změna uložena");
 		} else {
