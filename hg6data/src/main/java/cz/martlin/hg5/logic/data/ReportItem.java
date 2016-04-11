@@ -3,7 +3,6 @@ package cz.martlin.hg5.logic.data;
 import java.io.Serializable;
 import java.util.Calendar;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.config.HasSamplesEntryConfig;
 
 /**
@@ -11,8 +10,7 @@ import cz.martlin.hg5.logic.config.HasSamplesEntryConfig;
  * soundtrack (and, optionally, particular array of samples). Each report item
  * can be warning and/or critical. This is given this way: The item is [X] if
  * the count of [X] samples ([X]SamplesCount) is higer than max[X]NoiseAmount.
- * The sample is [X] if its value is higher than [X]NoiseThreshold. The samples
- * array is loaded lazyly.
+ * The sample is [X] if its value is higher than [X]NoiseThreshold.
  * 
  * @author martin
  *
@@ -67,12 +65,6 @@ public class ReportItem implements Serializable, HasSamplesEntryConfig {
 
 	public int getLenghtInSeconds() {
 		return lenghtInSeconds;
-	}
-
-	@Deprecated
-	public double[] getSamples(Configuration config) {
-		throw new UnsupportedOperationException(
-				"No more supported. Use instead directly FileSystemManTools's tryToLoadSamplesOfItem(recordedAt) method");
 	}
 
 	public int getSamplesCount() {
@@ -190,30 +182,8 @@ public class ReportItem implements Serializable, HasSamplesEntryConfig {
 				"criticalSamplesCount=" + criticalSamplesCount + "]";
 	}
 
-	// XXX not in use
-	// private static double[] loadSamples(Configuration config, Calendar
-	// recordedAt) {
-	// final FileSystemManTools man = new FileSystemManTools(config);
-	//
-	// double[] samples = man.tryToLoadSamplesOfItem(recordedAt);
-	// return samples;
-	// }
-
-	public static ReportItem createWithSamples(Calendar recordedAt, int samplesCount, Configuration config,
-			int warningSamplesCount, int criticalSamplesCount) {
-
-		int lenghtInSeconds = config.getSampleLenght();
-		double warningNoiseThreshold = config.getWarningNoiseThreshold();
-		double criticalNoiseThreshold = config.getCriticalNoiseThreshold();
-		double maxWarningNoiseAmount = config.getWarningNoiseAmount();
-		double maxCriticalNoiseAmount = config.getCriticalNoiseAmount();
-
-		return new ReportItem(recordedAt, lenghtInSeconds, samplesCount, warningNoiseThreshold, criticalNoiseThreshold,
-				maxWarningNoiseAmount, maxCriticalNoiseAmount, warningSamplesCount, criticalSamplesCount);
-	}
-
-	public static ReportItem createWithoutSamples(Calendar recordedAt, int lenghtInSeconds, int samplesCount,
-			Configuration config, int warningSamplesCount, int criticalSamplesCount) {
+	public static ReportItem create(Calendar recordedAt, int lenghtInSeconds, int samplesCount,
+			HasSamplesEntryConfig config, int warningSamplesCount, int criticalSamplesCount) {
 
 		double warningNoiseThreshold = config.getWarningNoiseThreshold();
 		double criticalNoiseThreshold = config.getCriticalNoiseThreshold();

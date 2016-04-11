@@ -1,0 +1,255 @@
+17:42:29.943 [main] INFO  c.m.h.a.Hg6ServiceMain [Hg6ServiceMain.java:23] Homeguard6 service is running
+17:43:21.547 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running
+ [at 23]17:43:40.545 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at 23]
+17:43:50.970 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:50.984 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:50.988 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:50.991 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:50.996 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.085 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.087 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.090 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.104 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.106 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.108 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.123 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.129 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.133 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.187 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.197 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.199 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.201 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.205 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.239 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.250 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.272 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.280 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+17:43:51.284 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at 95]
+18:03:04.540 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at
+				23]
+18:03:19.043 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.066 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.071 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.078 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.083 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.129 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.133 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.135 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.140 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:19.143 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.296 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.299 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.302 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.313 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.316 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.361 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.366 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.368 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.372 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.375 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.380 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.384 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.386 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.390 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.397 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=start, arguments=[]] [at
+				95]
+18:03:22.397 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at
+				58]
+18:03:22.627 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at
+				63]
+18:03:22.632 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.634 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.643 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.647 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.651 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.692 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.695 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.697 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.699 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.703 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.704 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.707 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.914 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.930 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.932 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.934 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.937 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.990 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.991 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.993 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:22.997 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:23.008 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:23.010 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:23.013 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:23.015 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:23.019 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.602 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=current-report-started-at, arguments=[]] [at
+				95]
+18:03:25.603 [WaiterThread] WARN  c.m.j.p.h.UnhandledReqsHandler Came request with command current-report-started-at which cannot be handled. Original arguments:  [at
+				51]
+18:03:25.615 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.616 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.618 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.621 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.623 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.643 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.645 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.647 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.649 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.653 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.655 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:03:25.656 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.850 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.852 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.861 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.863 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.865 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.886 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.888 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.890 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.892 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.893 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.895 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.897 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.899 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.900 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.903 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=stop, arguments=[]] [at
+				95]
+18:04:06.903 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at
+				72]
+18:04:06.904 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at
+				80]
+18:04:06.907 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.908 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.910 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.913 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.915 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.929 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.931 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.932 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.935 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:06.937 [WaiterThread] DEBUG c.m.j.w.RequestsProcessor Processing request: JRestRequest [command=is-running, arguments=[]] [at
+				95]
+18:04:13.791 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at 23]
+18:04:39.520 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at 58]
+18:04:39.794 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at 63]
+18:04:54.866 [WaiterThread] WARN  c.m.j.p.h.UnhandledReqsHandler Came request with command current-report-started-at which cannot be handled. Original arguments:  [at 51]
+20:15:07.863 [WaiterThread] WARN  c.m.j.p.h.UnhandledReqsHandler Came request with command current-report-started-at which cannot be handled. Original arguments:  [at 51]
+20:19:07.378 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at 23]
+20:23:43.172 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at 58]
+20:23:43.552 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at 63]
+20:39:21.731 [WaiterThread] ERROR c.m.j.w.RequestsProcessor An unahndled error occured during the handling of request:  [at 104]
+cz.martlin.jrest.misc.JRestException: Cannot parse request, sorry...
+	at cz.martlin.jrest.protocol.serializers.ShellLikeSerializer.deserializeRequest(ShellLikeSerializer.java:76)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:79)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:59)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:18)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Missing or excessing lines count, expected 1 found 0
+	at cz.martlin.jrest.protocol.serializers.ShellLikeSerializer.csvStringToRecord(ShellLikeSerializer.java:165)
+	at cz.martlin.jrest.protocol.serializers.ShellLikeSerializer.deserializeRequest(ShellLikeSerializer.java:74)
+	... 7 common frames omitted
+20:43:12.063 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at 23]
+20:44:32.152 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at 58]
+20:44:32.830 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at 63]
+21:03:06.303 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at 72]
+21:03:06.303 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at 80]
+21:11:35.704 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at line 23]
+21:20:12.333 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at line 23]
+21:20:54.876 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at line 58]
+21:20:55.218 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at line 63]
+21:28:28.781 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at line 72]
+21:28:28.782 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at line 80]
+21:28:35.476 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at line 58]
+21:28:35.487 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at line 63]
+23:00:53.743 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at line 72]
+23:00:53.744 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at line 80]
+23:50:02.930 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at line 23]

@@ -13,10 +13,15 @@
 
 
 	<dependencies>
-		<!-- JRest -->
 		<dependency>
 			<groupId>cz.martlin</groupId>
 			<artifactId>hg6core-jrest</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cz.martlin</groupId>
+			<artifactId>hg6config</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

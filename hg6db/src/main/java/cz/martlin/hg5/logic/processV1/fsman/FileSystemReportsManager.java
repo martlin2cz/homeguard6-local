@@ -50,11 +50,11 @@ public class FileSystemReportsManager implements Serializable {
 	 * @param report
 	 * @param item
 	 */
-	public void saveItemOfReport(GuardingReport report, ReportItem item) {
+	public boolean saveItemOfReport(GuardingReport report, ReportItem item) {
 		LOG.info("Saving report's new item: {}", item);
 		File log = tools.logFile(report);
 		String content = tools.serializeReportItem(item);
-		tools.appendLine(log, content);
+		return tools.appendLine(log, content);
 	}
 
 	/**
@@ -62,21 +62,10 @@ public class FileSystemReportsManager implements Serializable {
 	 * 
 	 * @param track
 	 */
-	public void saveSoundTrack(Calendar recordedAt, SoundTrack track) {
+	public boolean saveSoundTrack(Calendar recordedAt, SoundTrack track) {
 		LOG.info("Saving soundtrack into WAV file: {}", track);
 		File wav = tools.wavFile(recordedAt);
-		tools.saveSoundTrack(wav, track);
-	}
-
-	/**
-	 * Loads item of report from line of log file.
-	 * 
-	 * @param recordedAt
-	 * @return
-	 */
-	public ReportItem loadItemOfReport(String line) {
-		LOG.info("Loading report item from line: {}", line);
-		return tools.deserializeReportItem(line);
+		return tools.saveSoundTrack(wav, track);
 	}
 
 	/**
@@ -96,7 +85,6 @@ public class FileSystemReportsManager implements Serializable {
 		return tools.loadRawSoundTrackWavBytes(file);
 	}
 
-	
 	/**
 	 * Loads whole report by given start datetime.
 	 * 
@@ -106,6 +94,10 @@ public class FileSystemReportsManager implements Serializable {
 	public GuardingReport loadReport(Calendar startedAt) {
 		LOG.debug("Loading report started at: " + startedAt.getTime());
 		TreeSet<GuardingReport> reports = loadAllReports();
+
+		if (reports == null) {
+			return null;
+		}
 
 		GuardingReport report = reports.stream().filter(//
 				(GuardingReport r) -> startedAt.equals(r.getStartedAt()//
@@ -124,6 +116,9 @@ public class FileSystemReportsManager implements Serializable {
 		TreeSet<GuardingReport> reports = new TreeSet<>();
 
 		Set<File> logs = tools.logsFiles(null);
+		if (logs == null) {
+			return null;
+		}
 		logs.forEach((File logFile) -> reports.add(tools.parseLogFile(logFile)));
 
 		return reports;
@@ -140,6 +135,9 @@ public class FileSystemReportsManager implements Serializable {
 		TreeSet<GuardingReport> reports = new TreeSet<>();
 
 		Set<File> logs = tools.logsFiles(day);
+		if (logs == null) {
+			return null;
+		}
 		logs.forEach((File logFile) -> reports.add(tools.parseLogFile(logFile)));
 
 		return reports;
@@ -154,9 +152,13 @@ public class FileSystemReportsManager implements Serializable {
 	public GuardingReport loadLastReport() {
 		LOG.debug("Loading last report");
 		TreeSet<GuardingReport> reports = loadAllReports();
+
+		if (reports == null) {
+			return null;
+		}
+
 		return reports.last();
 		/// TODO FIXME nešlo by to vylepšit?
 	}
-
 
 }

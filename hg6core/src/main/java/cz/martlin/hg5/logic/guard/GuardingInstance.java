@@ -16,6 +16,8 @@ import cz.martlin.hg5.logic.process.AbstractAudioProcessor;
 import cz.martlin.hg5.logic.process.AbstractReporter;
 import cz.martlin.hg5.logic.process.AudioRecorder;
 import cz.martlin.hg5.logic.process.Interruptable;
+import cz.martlin.hg5.logic.process.TrackToSamplesConverter;
+import cz.martlin.hg5.logic.processV1.ImprovedTrackToSamplesConv;
 import cz.martlin.hg5.logic.processV1.ImprovedAudioProcessor;
 import cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager;
 
@@ -33,6 +35,7 @@ public class GuardingInstance implements Serializable, Interruptable {
 	private final Logger LOG = LoggerFactory.getLogger(getClass());
 
 	private final AudioRecorder recorder;
+	private final TrackToSamplesConverter converter;
 	private final AbstractAudioProcessor processor;
 	private final List<AbstractReporter> reporters;
 
@@ -45,8 +48,10 @@ public class GuardingInstance implements Serializable, Interruptable {
 		this.config = config;
 
 		this.recorder = new AudioRecorder(config);
+		this.converter = new ImprovedTrackToSamplesConv(config);
 		this.processor = new ImprovedAudioProcessor(config);
 		this.reporters = new LinkedList<>(reporters);
+		
 		this.report = new GuardingReport(config.getDefaultDescription());
 	}
 
@@ -113,18 +118,20 @@ public class GuardingInstance implements Serializable, Interruptable {
 
 	/**
 	 * Proceses one sample record step. Via {@link AudioRecorder} records
-	 * sample, processes it with {@link ImprovedAudioProcessor} and then logs it
-	 * and reports via {@link FileSystemReportsManager} and
-	 * {@link AbstractReporter} .
+	 * sample, converts with {@link ImprovedTrackToSamplesConv}, processes it
+	 * with {@link ImprovedAudioProcessor} and then logs it and reports via
+	 * {@link FileSystemReportsManager} and {@link AbstractReporter} .
 	 */
 	public void doOneSample() {
+		LOG.debug("Recording and processing sample");
 		Calendar recordedAt = Calendar.getInstance();
 
 		SoundTrack track = recorder.record(config.getSampleLenght());
-		ReportItem item = processor.analyzeSample(recordedAt, track);
+		double[] samples = converter.toSamples(track);
+		ReportItem item = processor.analyzeSample(recordedAt, track, samples);
 
 		reporters.forEach((AbstractReporter reporter) -> //
-		reporter.reportItem(report, item, track));
+		reporter.reportItem(report, item, track, samples));
 
 		report.addReportItem(item);
 	}
@@ -136,7 +143,7 @@ public class GuardingInstance implements Serializable, Interruptable {
 		long wait = config.getSamplesInterval() - config.getSampleLenght();
 		long ms = 1000 * wait;
 
-		LOG.info("Now waiting {} seconds until next record", wait);
+		LOG.debug("Now waiting {} seconds until next record", wait);
 		try {
 			Thread.sleep(ms);
 		} catch (InterruptedException e) {

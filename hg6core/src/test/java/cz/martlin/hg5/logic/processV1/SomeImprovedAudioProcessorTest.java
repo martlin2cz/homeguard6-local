@@ -15,18 +15,20 @@ import org.junit.Before;
 import org.junit.Test;
 
 import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg5.logic.config.Hg6Config;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools;
 import cz.martlin.hg5.web.charts.RIsimpleChartRenderer;
-import cz.martlin.hg6.core.Homeguard;
+import cz.martlin.hg6.core.Hg6Core;
 
 public class SomeImprovedAudioProcessorTest {
 
-	private final Configuration config = new Configuration();
-	private final Homeguard homeguard = new Homeguard(config);
+	private final Configuration config = Hg6Config.get().createDefault();
+	private final Hg6Core homeguard = new Hg6Core(config);
 	
 	private final ImprovedAudioProcessor processor = new ImprovedAudioProcessor(config);
+	private final ImprovedTrackToSamplesConv conv = new ImprovedTrackToSamplesConv(config);
 	private final RIsimpleChartRenderer charts = new RIsimpleChartRenderer(homeguard);
 	private final FileSystemManTools fsmant = new FileSystemManTools(config);
 
@@ -39,7 +41,7 @@ public class SomeImprovedAudioProcessorTest {
 	public void toSigned() {
 		byte unss[] = new byte[] { 0x0, 0x01, (byte) 0xFF, (byte) 0x7F, (byte) 0x80 };
 
-		byte sss[] = processor.toSigned(unss);
+		byte sss[] = conv.toSigned(unss);
 
 		assertEquals(-128, sss[0]);
 		assertEquals(-127, sss[1]);
@@ -110,8 +112,9 @@ public class SomeImprovedAudioProcessorTest {
 
 	private ReportItem calculateReportItem(String name) {
 		SoundTrack track = loadTrackOfName(name);
+		double[] samples = conv.toSamples(track);
 		Calendar when = Calendar.getInstance();
-		return processor.analyzeSample(when, track);
+		return processor.analyzeSample(when, track, samples);
 	}
 
 	private File calculateChart(String name) {
@@ -146,8 +149,8 @@ public class SomeImprovedAudioProcessorTest {
 
 	private double calculateAverageIn(String name) {
 		SoundTrack track = loadTrackOfName(name);
-		double[] doubles = processor.samplesOfTrack(track);
-		return average(doubles);
+		double[] samples = conv.toSamples(track);
+		return average(samples);
 	}
 
 	private SoundTrack loadTrackOfName(String name) {

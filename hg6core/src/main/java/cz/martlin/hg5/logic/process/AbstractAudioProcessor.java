@@ -20,8 +20,9 @@ public interface AbstractAudioProcessor {
 	 * 
 	 * @param recordedAt
 	 * @param track
+	 * @param samples 
 	 * @return
 	 */
-	public ReportItem analyzeSample(Calendar recordedAt, SoundTrack track);
+	public ReportItem analyzeSample(Calendar recordedAt, SoundTrack track, double[] samples);
 
 }

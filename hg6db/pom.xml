@@ -20,6 +20,11 @@
 
 		<dependency>
 			<groupId>cz.martlin</groupId>
+			<artifactId>hg6config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>cz.martlin</groupId>
 			<artifactId>hg6data</artifactId>
 			<version>${project.version}</version>
 		</dependency>

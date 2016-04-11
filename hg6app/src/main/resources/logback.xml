@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{10} %msg [at line %line]%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
+		<file>hg6app.log</file>
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{10} %msg [at line %line]%n</pattern>
+		</encoder>
+	</appender>
+
+
+
+	<root level="warn">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="LOGFILE" />
+	</root>
+
+	<logger level="info" name="cz.martlin.hg6.app.Hg6ServiceMain" />
+	<logger level="warn" name="cz.martlin.jrest.waiter.RequestsProcessor" />
+	<logger level="debug" name="cz.martlin.hg5.logic.guard.GuardingPerformer" />
+
+</configuration>
+
+ 

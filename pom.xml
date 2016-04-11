@@ -25,6 +25,8 @@
 		<module>hg6core-jrest</module>
 		<module>hg6db</module>
 		<module>hg6data</module>
+		<module>hg6config</module>
+		<module>hg6mrs-conn</module>
 	</modules>
 
 

@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg5.logic.data.SoundTrack;
-import cz.martlin.hg5.web._Homeguard;
+import cz.martlin.hg5.web.Hg6WebApp;
 
 /**
  * Implements creating of very-the-fuck simple technique of creating time
@@ -39,7 +39,7 @@ public class RIsimpleChartRenderer implements Serializable {
 	public static final Color MAXS_DEFAULT_COLOR = Color.RED;
 	public static final Color BG_DEFAULT_COLOR = Color.WHITE;
 
-	private final _Homeguard homeguard = new _Homeguard();
+	private final Hg6WebApp homeguard = new Hg6WebApp();
 
 	private final Map<SoundTrack, byte[]> cache = new HashMap<>();
 
@@ -86,12 +86,14 @@ public class RIsimpleChartRenderer implements Serializable {
 			Color background) {
 		LOG.info("Creating chart of track: {}", track);
 
-		double[] samples = homeguard.getJustSimplySamplesOfTrack(track);
-
-		BufferedImage image = createChart(samples, width, height, mins, avgs, maxs, background);
-		byte[] data = exportImage(image);
-
-		return data;
+		throw new UnsupportedOperationException("Not currently supported");
+		
+//		double[] samples = homeguard.getJustSimplySamplesOfTrack(track);
+//
+//		BufferedImage image = createChart(samples, width, height, mins, avgs, maxs, background);
+//		byte[] data = exportImage(image);
+//
+//		return data;
 	}
 
 	/**

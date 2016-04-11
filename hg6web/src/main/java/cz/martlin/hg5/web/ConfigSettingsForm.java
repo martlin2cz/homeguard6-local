@@ -13,9 +13,10 @@ import cz.martlin.hg5.logic.config.Configuration;
 public class ConfigSettingsForm implements Serializable {
 	private static final long serialVersionUID = 3501199313655052697L;
 
-	private final Configuration config = new Configuration();
-	private final _Homeguard homeguard = new _Homeguard();
-	
+	private final Hg6WebApp homeguard = new Hg6WebApp();
+
+	private Configuration config = homeguard.getConfig(); // TODO like that?
+
 	public ConfigSettingsForm() {
 	}
 
@@ -39,12 +40,14 @@ public class ConfigSettingsForm implements Serializable {
 		return config;
 	}
 
+	public void setConfig(Configuration config) {
+		this.config = config;
+	}
+
 	public void save() {
 		checkAndWarn();
-		_Homeguard hg = homeguard;
 
-		hg.setConfigTo(config);
-		boolean success = hg.saveConfig();
+		boolean success = homeguard.setToAndSave(config);
 		if (success) {
 			Utils.info("Uloženo", "Konfigurační soubor byl uložen");
 		} else {
@@ -53,15 +56,15 @@ public class ConfigSettingsForm implements Serializable {
 	}
 
 	public void reset() {
-		config.setTo(homeguard.getConfig());	//TODO not to use homeguard#cfg#setTo?
+		homeguard.resetConfig(config);
+
+		Utils.info("Obnoveno", "Změny byly vráceny (ale zatím neuloženy)");
 	}
 
 	public void reload() {
-		_Homeguard hg = homeguard;
 
-		boolean success = hg.loadConfig();
+		boolean success = homeguard.loadConfig();
 		if (success) {
-			this.config.setTo(hg.getConfig());
 			Utils.info("Načteno", "Konfigurační soubor byl načten znovu");
 		} else {
 			Utils.error("Chyba", "Konfigurační soubor se nepodařilo načíst");
@@ -69,7 +72,8 @@ public class ConfigSettingsForm implements Serializable {
 	}
 
 	public void redefault() {
-		config.setTo(new Configuration());
+		homeguard.setConfigToDefault();
+
 		Utils.info("Obnoveno", "Configurace nastavena na výchozí (ale zatím neuložena)");
 	}
 

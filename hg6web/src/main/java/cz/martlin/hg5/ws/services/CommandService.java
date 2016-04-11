@@ -2,8 +2,9 @@ package cz.martlin.hg5.ws.services;
 
 import java.util.Map;
 
-import cz.martlin.hg5.web._Homeguard;
+import cz.martlin.hg5.web.Hg6WebApp;
 import cz.martlin.hg5.ws.WebServiceProcessor;
+import cz.martlin.hg6.coreJRest.Hg6CoreConnException;
 
 /**
  * Processes simple commands (start, stop, status). Response is send back as
@@ -16,8 +17,8 @@ public class CommandService implements WebServiceProcessor {
 
 	private static final String MIME = "text/plain";
 
-	private final _Homeguard homeguard = new _Homeguard();
-	
+	private final Hg6WebApp homeguard = new Hg6WebApp();
+
 	public CommandService() {
 	}
 
@@ -43,17 +44,34 @@ public class CommandService implements WebServiceProcessor {
 	}
 
 	private String processStart() {
-		homeguard.start();
-		return "Homeguard started and running";
+		try {
+			homeguard.start();
+			return "Homeguard started and running";
+		} catch (Hg6CoreConnException e) {
+			return "Start failed because: " + e;
+		}
+
 	}
 
 	private String processStop() {
-		homeguard.stop();
-		return "Homeguard stopped and not running";
+		try {
+			homeguard.stop();
+			return "Homeguard stopped and not running";
+		} catch (Hg6CoreConnException e) {
+			return "Start failed because: " + e;
+		}
+
 	}
 
 	private String processStatus() {
-		if (homeguard.getIsRunning()) {
+		boolean is;
+		try {
+			is = homeguard.isRunning();
+		} catch (Hg6CoreConnException e) {
+			return "Check of running failed because " + e;
+		}
+		
+		if (is) {
 			return "Homeguard is started and running";
 		} else {
 			return "Homeguard is stopped and not running";

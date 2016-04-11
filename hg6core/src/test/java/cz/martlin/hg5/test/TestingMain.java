@@ -1,13 +1,16 @@
 package cz.martlin.hg5.test;
 
 import cz.martlin.hg5.logic.config.Configuration;
-import cz.martlin.hg6.core.Homeguard;
+import cz.martlin.hg5.logic.config.Hg6Config;
+import cz.martlin.hg6.core.Hg6Core;
+import cz.martlin.hg6.db.Hg6Database;
+import cz.martlin.hg6.db.Hg6DbException;
 
 public class TestingMain {
 
 	public static void main(String[] args) {
-		Configuration config = new Configuration();
-		Homeguard hg = new Homeguard(config);
+		Configuration config = Hg6Config.get().createDefault();
+		Hg6Core hg = new Hg6Core(config);
 
 		System.out.println("Starting...");
 		hg.start();
@@ -22,6 +25,11 @@ public class TestingMain {
 		hg.stop();
 		System.out.println("Stopped.");
 
-		System.out.println("Last report:\n " + hg.lastReport());
+		try {
+			Hg6Database db = new Hg6Database(config);
+			System.out.println("Last report: " + db.loadLastReport());
+		} catch (Hg6DbException e) {
+			e.printStackTrace();
+		}
 	}
 }

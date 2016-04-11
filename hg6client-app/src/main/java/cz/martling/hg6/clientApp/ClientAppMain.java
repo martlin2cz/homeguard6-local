@@ -1,10 +1,11 @@
 package cz.martling.hg6.clientApp;
 
-import cz.martlin.hg6.coreJRest.HG6Client;
+import cz.martlin.hg6.coreJRest.Hg6CoreClient;
+import cz.martlin.hg6.coreJRest.Hg6CoreConnException;
 
 public class ClientAppMain {
 
-	private static final HG6Client client = new HG6Client();
+	private static final Hg6CoreClient client = new Hg6CoreClient();
 	// TODO host?
 	// TODO init only when required?
 
@@ -66,42 +67,40 @@ public class ClientAppMain {
 	}
 
 	private static void doSimpleInfo() {
-		String si = client.simpleInfo();
 
-		if (si != null) {
+		try {
+			String si = client.simpleInfo();
 			System.out.println(si);
-		} else {
-			System.err.println("FAILED");
+		} catch (Hg6CoreConnException e) {
+			System.err.println("FAILED: " + e);
 		}
+
 	}
 
 	private static void doIsRunning() {
-		Boolean what = client.isRunning();
-
-		if (what != null) {
-			System.out.println("Is running? " + what);
-		} else {
-			System.err.println("FAILED");
+		try {
+			boolean is = client.isRunning();
+			System.out.println("Is running? " + is);
+		} catch (Hg6CoreConnException e) {
+			System.err.println("FAILED: " + e);
 		}
 	}
 
 	private static void doStop() {
-		boolean success = client.stop();
-
-		if (success) {
+		try {
+			client.stop();
 			System.out.println("Stopped");
-		} else {
-			System.err.println("FAILED");
+		} catch (Hg6CoreConnException e) {
+			System.err.println("FAILED: " + e);
 		}
 	}
 
 	private static void doStart() {
-		boolean success = client.start();
-
-		if (success) {
+		try {
+			client.start();
 			System.out.println("Started");
-		} else {
-			System.err.println("FAILED");
+		} catch (Hg6CoreConnException e) {
+			System.err.println("FAILED: " + e);
 		}
 	}
 

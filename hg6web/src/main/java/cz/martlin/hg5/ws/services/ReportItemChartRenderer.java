@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Map;
 
 import cz.martlin.hg5.logic.data.SoundTrack;
-import cz.martlin.hg5.web._Homeguard;
+import cz.martlin.hg5.web.Hg6WebApp;
 import cz.martlin.hg5.web.charts.RIsimpleChartRenderer;
 import cz.martlin.hg5.ws.WebServiceProcessor;
 import cz.martlin.hg5.ws.WebServiceUtils;
@@ -23,8 +23,8 @@ public class ReportItemChartRenderer implements WebServiceProcessor {
 	private static final String MIME = "image/" + IMAGE_FORMAT;
 
 	private final RIsimpleChartRenderer renderer = new RIsimpleChartRenderer();
-	private final _Homeguard homeguard = new _Homeguard();
-	
+	private final Hg6WebApp homeguard = new Hg6WebApp();
+
 	public ReportItemChartRenderer() {
 	}
 
@@ -44,17 +44,21 @@ public class ReportItemChartRenderer implements WebServiceProcessor {
 		Color bg = WebServiceUtils.parseColorOrDefault("background", request, RIsimpleChartRenderer.BG_DEFAULT_COLOR);
 		boolean useCache = WebServiceUtils.parseBoolean("useCache", request, null, "false");
 
-		SoundTrack track = homeguard.getTrack(recordedAt);
+		throw new UnsupportedOperationException("Not supported");
 
-		if (track == null) {
-			throw new IllegalArgumentException("There is no such soundtrack at " + recordedAt.getTime());
-		} else {
-			if (useCache) {
-				return renderer.getChartCached(track, width, height, mins, avgs, maxs, bg);
-			} else {
-				return renderer.getChart(track, width, height, mins, avgs, maxs, bg);
-			}
-		}
+		// SoundTrack track = homeguard.getTrack(recordedAt);
+		//
+		// if (track == null) {
+		// throw new IllegalArgumentException("There is no such soundtrack at "
+		// + recordedAt.getTime());
+		// } else {
+		// if (useCache) {
+		// return renderer.getChartCached(track, width, height, mins, avgs,
+		// maxs, bg);
+		// } else {
+		// return renderer.getChart(track, width, height, mins, avgs, maxs, bg);
+		// }
+		// }
 	}
 
 }

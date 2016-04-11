@@ -32,6 +32,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg5.logic.config.Hg6Config;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
@@ -43,13 +44,13 @@ public class FileSystemManTools implements Serializable {
 
 	private static final SimpleDateFormat FORMAT = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
 	private static final SimpleDateFormat DAY_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
-	//FIXME private final ImprovedAudioProcessor processor;
+	// FIXME private final ImprovedAudioProcessor processor;
 
-	private final Configuration config;
+	private File home;
 
 	public FileSystemManTools(Configuration config) {
-		this.config = config;
-		//this.processor = new ImprovedAudioProcessor(config);
+		this.home = Hg6Config.createFile(config.getLogsRootDir().getPath());
+		// this.processor = new ImprovedAudioProcessor(config);
 	}
 
 	/**
@@ -192,27 +193,8 @@ public class FileSystemManTools implements Serializable {
 		double warningNoiseThreshold = Double.parseDouble(map.get("warningNoiseThreshold"));
 		int warningSamplesCount = Integer.parseInt(map.get("warningSamplesCount"));
 
-		
-		return new ReportItem(recordedAt, lenghtInSeconds, samplesCount, warningNoiseThreshold,
-				criticalNoiseThreshold, maxWarningNoiseAmount, maxCriticalNoiseAmount, warningSamplesCount,
-				criticalSamplesCount);
-	}
-
-	/**
-	 * Tries to find file of soundtrack and mine samples of its content.
-	 * 
-	 * @param recordedAt
-	 * @return
-	 */
-	public double[] tryToLoadSamplesOfItem(Calendar recordedAt) {
-		File file = wavFile(recordedAt);
-		if (!file.exists()) {
-			return null;
-		}
-
-		SoundTrack track = loadSoundTrack(file);
-		throw new UnsupportedOperationException("FIXME: dependencies problem...");//FIXME
-		//return processor.samplesOfTrack(track);
+		return new ReportItem(recordedAt, lenghtInSeconds, samplesCount, warningNoiseThreshold, criticalNoiseThreshold,
+				maxWarningNoiseAmount, maxCriticalNoiseAmount, warningSamplesCount, criticalSamplesCount);
 	}
 
 	/**
@@ -314,34 +296,6 @@ public class FileSystemManTools implements Serializable {
 		return file.getName().contains(dayStr);
 	}
 
-	public File logFile(GuardingReport report) {
-		File logsDir = logsDir();
-		File logFile = new File(logsDir, logFileName(report.getStartedAt()));
-		return logFile;
-	}
-
-	private File logsDir() {
-		return new File(config.getLogsRootDir(), "logs");
-	}
-
-	public File wavFile(Calendar recordedAt) {
-		File samplesDir = samplesDir();
-		File sampleFile = new File(samplesDir, wavFileName(recordedAt));
-		return sampleFile;
-	}
-
-	private File samplesDir() {
-		return new File(config.getLogsRootDir(), "samples");
-	}
-
-	private String logFileName(Calendar startedAt) {
-		return "log-" + formatDate(startedAt) + ".log";
-	}
-
-	private String wavFileName(Calendar recordedAt) {
-		return "sample-" + formatDate(recordedAt) + ".wav";
-	}
-
 	/**
 	 * Parses line with format key1=value1,[tab]key2=value2,... into map
 	 * 
@@ -409,6 +363,34 @@ public class FileSystemManTools implements Serializable {
 			return null;
 		}
 		return cal;
+	}
+
+	public File logFile(GuardingReport report) {
+		File logsDir = logsDir();
+		File logFile = new File(logsDir, logFileName(report.getStartedAt()));
+		return logFile;
+	}
+
+	private File logsDir() {
+		return new File(home, "logs");
+	}
+
+	public File wavFile(Calendar recordedAt) {
+		File samplesDir = samplesDir();
+		File sampleFile = new File(samplesDir, wavFileName(recordedAt));
+		return sampleFile;
+	}
+
+	private File samplesDir() {
+		return new File(home, "samples");
+	}
+
+	private String logFileName(Calendar startedAt) {
+		return "log-" + formatDate(startedAt) + ".log";
+	}
+
+	private String wavFileName(Calendar recordedAt) {
+		return "sample-" + formatDate(recordedAt) + ".wav";
 	}
 
 }

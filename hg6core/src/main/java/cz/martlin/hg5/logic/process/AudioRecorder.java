@@ -104,7 +104,7 @@ public class AudioRecorder implements Serializable, Interruptable {
 
 		LOG.info("Recorded {} bytes of audio data", out.size());
 
-		SoundTrack track = new SoundTrack(out.toByteArray(), FORMAT);
+		SoundTrack track = new SoundTrack(seconds, out.toByteArray(), FORMAT);
 		return track;
 	}
 

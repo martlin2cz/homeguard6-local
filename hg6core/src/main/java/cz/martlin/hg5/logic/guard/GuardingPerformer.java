@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.process.AbstractReporter;
 import cz.martlin.hg5.logic.process.Interruptable;
@@ -18,6 +21,8 @@ import cz.martlin.hg5.logic.processV1.FileSystemReporter;
  */
 public class GuardingPerformer implements Serializable {
 	private static final long serialVersionUID = 4187081166801559376L;
+
+	private final Logger LOG = LoggerFactory.getLogger(getClass());
 
 	private final List<AbstractReporter> reporters;
 	private final Configuration config;
@@ -50,10 +55,12 @@ public class GuardingPerformer implements Serializable {
 	 */
 	public synchronized void start() {
 		if (instance == null) {
+			LOG.debug("Homeguard starting");
 			instance = new GuardingInstance(config, reporters);
-			
+
 			thread = new GuardInstanceThread(config, instance);
 			thread.start();
+			LOG.info("Homeguard started");
 		}
 	}
 
@@ -62,6 +69,7 @@ public class GuardingPerformer implements Serializable {
 	 */
 	public synchronized void stop() {
 		if (instance != null) {
+			LOG.debug("Homeguard stopping");
 			thread.interrupt();
 			// try {
 			// thread.join();
@@ -69,6 +77,7 @@ public class GuardingPerformer implements Serializable {
 			// }
 			instance = null;
 			thread = null;
+			LOG.info("Homeguard stopped");
 		}
 	}
 

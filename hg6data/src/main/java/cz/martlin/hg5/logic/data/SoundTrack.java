@@ -15,12 +15,29 @@ import javax.sound.sampled.AudioFormat;
 public class SoundTrack implements Serializable {
 	private static final long serialVersionUID = 4225340778055694664L;
 
+	private final int lenght;
 	private final byte[] bytes;
 	private final AudioFormat format;
 
 	public SoundTrack(byte[] bytes, AudioFormat format) {
+		this.lenght = calculateLenght(bytes, format);
 		this.bytes = bytes;
 		this.format = format;
+	}
+
+	public SoundTrack(int lenght, byte[] bytes, AudioFormat format) {
+		this.lenght = lenght;
+		this.bytes = bytes;
+		this.format = format;
+	}
+
+	private static int calculateLenght(byte[] bytes, AudioFormat format) {
+		// TODO test
+		return (int) (bytes.length / (format.getFrameSize() * format.getFrameRate()));
+	}
+
+	public int getLenght() {
+		return lenght;
 	}
 
 	public byte[] getBytes() {
@@ -61,7 +78,9 @@ public class SoundTrack implements Serializable {
 
 	@Override
 	public String toString() {
-		return "SoundTrack [bytes=" + bytes.length + ", format=" + format + "]";
+		return "SoundTrack [lenght=" + lenght + ", bytes=" + bytes.length + ", format=" + format + "]";
 	}
+
+	
 
 }

@@ -16,10 +16,13 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 	private double warningNoiseAmount = 0.2;
 	private double criticalNoiseAmount = 0.1;
 
-	private File logsRootDir = new File("/home/martin/hg5/");
+	private File logsRootDir = new File("reports");
 	private String defaultDescription = "Nepřítomnost";
 
-	public Configuration() {
+	/**
+	 * Use {@link Hg6Config} as possible
+	 */
+	protected Configuration() {
 	}
 
 	public int getSamplesInterval() {

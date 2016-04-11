@@ -64,8 +64,8 @@
 					action="#{guardingReportPanel.showCurrentReport}" update="@all"
 					rendered="#{mainForm.running}" styleClass="big-margin" />
 
-				<p:commandButton value="Obnovit" icon="ui-icon-refresh" process="@none" update="@all"
-					rendered="#{mainForm.running}" styleClass="big-margin" />
+<!-- 				<p:commandButton value="Obnovit" icon="ui-icon-refresh" process="@none" update="@all" -->
+<!-- 					rendered="#{mainForm.running}" styleClass="big-margin" /> -->
 
 				<p:commandButton id="showAtDayButton" value="Zobrazit záznam ze dne"
 					icon="ui-icon-calendar" styleClass="big-margin" />
@@ -82,7 +82,7 @@
 						itemType="none"
 						emptyMessage="Tento den nebyly zaznamenán žádné záznamy">
 
-						<p:commandButton id="choosetButton" icon="ui-icon-search" title="Zobrazit"
+						<p:commandButton id="chooseButton" icon="ui-icon-search" title="Zobrazit"
 							action="#{guardingReportPanel.showReport(report.startedAt)}"
 							update="@all" styleClass="open-report-button" />
 

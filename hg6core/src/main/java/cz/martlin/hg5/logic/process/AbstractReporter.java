@@ -27,8 +27,9 @@ public interface AbstractReporter {
 	 * @param report
 	 * @param item
 	 * @param track
+	 * @param samples 
 	 */
-	public void reportItem(GuardingReport report, ReportItem item, SoundTrack track);
+	public void reportItem(GuardingReport report, ReportItem item, SoundTrack track, double[] samples);
 
 	/**
 	 * Somehow reports end of recording.
