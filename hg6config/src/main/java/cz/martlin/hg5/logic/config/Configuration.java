@@ -179,4 +179,8 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 				+ "]";
 	}
 
+	public String getMRSurl() {
+		return "TODOOO in config";
+	}
+
 }

@@ -253,3 +253,20 @@ Caused by: java.io.IOException: Missing or excessing lines count, expected 1 fou
 23:00:53.743 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at line 72]
 23:00:53.744 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at line 80]
 23:50:02.930 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at line 23]
+11:47:41.894 [main] INFO  c.m.h.a.Hg6ServiceMain Homeguard6 service is running [at line 23]
+15.04.2016 02:41:06.690 [main] INFO  c.m.h.a.Hg6ServiceMain:23 Homeguard6 service is running
+15.04.2016 02:41:06.702 [WaiterThread] ERROR c.m.j.w.JRestWaiter:53 Cannot start server
+cz.martlin.jrest.misc.JRestException: Cannot start server
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:59)
+	at cz.martlin.jrest.waiter.JRestServer.<init>(JRestServer.java:42)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:51)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:18)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.BindException: Adresa je užívána
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:128)
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:55)
+	... 4 common frames omitted

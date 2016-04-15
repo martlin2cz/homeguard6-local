@@ -10,7 +10,7 @@
 	</appender>
 
 	<appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
-		<file>hg6app.log</file>
+		<file>hg6mrs.log</file>
 
 		<encoder>
 			<pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{10}:%line %msg%n</pattern>
@@ -24,9 +24,8 @@
 		<appender-ref ref="LOGFILE" />
 	</root>
 
-	<logger level="info" name="cz.martlin.hg6.app.Hg6ServiceMain" />
+	<logger level="info" name="cz.martlin.hg6.mrsApp.MrsConnectorApp" />
 	<logger level="warn" name="cz.martlin.jrest.waiter.RequestsProcessor" />
-	<logger level="debug" name="cz.martlin.hg5.logic.guard.GuardingPerformer" />
 
 </configuration>
 

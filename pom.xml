@@ -21,12 +21,13 @@
 		<module>hg6app</module>
 		<module>hg6client-app</module>
 		<module>hg6web</module>
-		<module>hg6mrscli</module>
 		<module>hg6core-jrest</module>
 		<module>hg6db</module>
 		<module>hg6data</module>
 		<module>hg6config</module>
 		<module>hg6mrs-conn</module>
+		<module>hg6mrs-app</module>
+		<module>hg6mrs-lib</module>
 	</modules>
 
 

@@ -1,0 +1,25 @@
+12.04.2016 21:01:24.038 [main] INFO  c.m.h.m.MrsConnectorApp:18 MRS some started
+15.04.2016 02:40:20.922 [main] WARN  c.m.h.l.c.Hg6Config:39 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+15.04.2016 02:40:20.942 [main] ERROR c.m.h.l.c.ConfigLoader:185 Cannot load config
+java.io.FileNotFoundException: config.props (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:181)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:52)
+	at cz.martlin.hg5.logic.config.Hg6Config.load(Hg6Config.java:55)
+	at cz.martlin.hg5.logic.config.Hg6Config.get(Hg6Config.java:27)
+	at cz.martlin.hg6.mrsApp.MrsConnectorApp.main(MrsConnectorApp.java:15)
+15.04.2016 02:40:20.950 [main] ERROR c.m.h.l.c.ConfigLoader:143 Error during loading config file: 
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at cz.martlin.hg5.logic.config.ConfigLoader.setTo(ConfigLoader.java:125)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg5.logic.config.Hg6Config.load(Hg6Config.java:55)
+	at cz.martlin.hg5.logic.config.Hg6Config.get(Hg6Config.java:27)
+	at cz.martlin.hg6.mrsApp.MrsConnectorApp.main(MrsConnectorApp.java:15)
+15.04.2016 02:40:20.951 [main] WARN  c.m.h.l.c.Hg6Config:29 Config file load failed. Will be used default instead.
+15.04.2016 02:40:20.971 [main] INFO  c.m.h.m.MrsConnectorApp:20 MRS some started
+15.04.2016 02:42:36.069 [main] INFO  c.m.h.m.MrsConnectorApp:20 MRS some started
