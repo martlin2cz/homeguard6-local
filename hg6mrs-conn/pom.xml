@@ -23,5 +23,11 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
+
+		<dependency>
+			<groupId>cz.martlin</groupId>
+			<artifactId>hg6data</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

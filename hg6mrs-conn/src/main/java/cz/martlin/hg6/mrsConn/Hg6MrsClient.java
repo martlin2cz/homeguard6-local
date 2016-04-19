@@ -1,18 +1,12 @@
 package cz.martlin.hg6.mrsConn;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 
-import org.apache.commons.io.IOUtils;
+import cz.martlin.hg5.logic.data.GuardingReport;
+import cz.martlin.hg6.mrsConn.tools.NetworkTools;
 
 public class Hg6MrsClient {
-
-	public static final String UPDATE_STATUS_PATH = "/update-status";
-	public static final String CURRENT_STATUS_PATH = "/current-status";
-	public static final String STATUS_PARAM_NAME = "status";
+	private static final NetworkTools TOOLS = new NetworkTools();
 
 	private final String url;
 
@@ -20,56 +14,52 @@ public class Hg6MrsClient {
 		this.url = url;
 	}
 
-	public Hg6CommandToLocal sendStarted() {
-		return sendUpdateStatus(Hg6LocalStatus.RUNNING);
+	public Hg6CommandToLocal sendStarted(GuardingReport report) throws Hg6MrsException {
+		return sendWithReport(Protocol.STARTED_PATH, report);
 	}
 
-	public Hg6CommandToLocal sendStopped() {
-		return sendUpdateStatus(Hg6LocalStatus.STOPPED);
+	public Hg6CommandToLocal sendStopped(GuardingReport report) throws Hg6MrsException {
+		return sendWithReport(Protocol.STOPPED_PATH, report);
 	}
 
-	public Hg6CommandToLocal sendStartFailed() {
-		return sendUpdateStatus(Hg6LocalStatus.RUN_FAILED);
+	public Hg6CommandToLocal sendFailed(String message) throws Hg6MrsException {
+		return sendWith(Protocol.FAILED_PATH, //
+				Protocol.MESSAGE_PARAM_NAME, message);
 	}
 
-	public Hg6CommandToLocal sendStopFailed() {
-		return sendUpdateStatus(Hg6LocalStatus.STOP_FAILED);
+	public Hg6CommandToLocal sendClientDown(GuardingReport report) throws Hg6MrsException {
+		return sendWithReport(Protocol.CLIENT_DOWN_PATH, report);
 	}
 
-	public Hg6CommandToLocal sendClientDown() {
-		return sendUpdateStatus(Hg6LocalStatus.LOCAL_CLIENT_DOWN);
-	}
+	private Hg6CommandToLocal sendWithReport(String path, GuardingReport report) throws Hg6MrsException {
 
-	private Hg6CommandToLocal sendUpdateStatus(Hg6LocalStatus status) {
-
-		URL url = constructUpdateStatusURL(status);
-		String response = connectAndReadResp(url);
-
-		return Hg6CommandToLocal.valueOf(response); // TODO handle error
-	}
-
-	private String connectAndReadResp(URL url) {
-		InputStream ins = null;
-		try {
-			URLConnection conn = url.openConnection();
-			ins = conn.getInputStream();
-			return IOUtils.toString(ins);
-		} catch (IOException e) {
-			e.printStackTrace();
-			return null;
-		} finally {
-			IOUtils.closeQuietly(ins);
+		if (report != null) {
+			return sendWith(path, //
+					Protocol.STARTED_AT_PARAM_NAME, TOOLS.formatCalendar(report.getStartedAt()), //
+					Protocol.STOPPED_AT_PARAM_NAME, TOOLS.formatCalendar(report.getStoppedAt()), //
+					Protocol.LAST_WARN_AT_PARAM_NAME, TOOLS.formatCalendar(report.getLastWarningAt()), //
+					Protocol.DESCRIPTION_PARAM_NAME, report.getDescription(), //
+					Protocol.ITEMS_COUNT_PARAM_NAME, report.getItemsCount(), //
+					Protocol.WARNINGS_COUNT_PARAM_NAME, report.getWarningsCount(), //
+					Protocol.CRITICAL_COUNT_PARAM_NAME, report.getCriticalCount()//
+			);
+		} else {
+			return sendWith(path);
 		}
 	}
 
-	private URL constructUpdateStatusURL(Hg6LocalStatus status) {
-		String url = this.url + UPDATE_STATUS_PATH + "?" + STATUS_PARAM_NAME + "=" + status.name();
+	private Hg6CommandToLocal sendWith(String path, Object... params) throws Hg6MrsException {
+		return send(path, params);
+	}
 
+	private Hg6CommandToLocal send(String path, Object[] params) throws Hg6MrsException {
 		try {
-			return new URL(url);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-			return null; // TODO handle error
+			URL url = TOOLS.createGetUrl(this.url, path, params);
+			String response = TOOLS.connectAndGetResponse(url);
+			return Hg6CommandToLocal.valueOf(response);
+		} catch (Exception e) {
+			throw new Hg6MrsException("Cannot send to path " + path, e);
 		}
 	}
+
 }

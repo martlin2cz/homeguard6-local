@@ -1,10 +1,12 @@
 package cz.martlin.hg5.logic.data;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.ListIterator;
 
 /**
  * Represents report of guarding instance. Contains list of audio samples
@@ -70,13 +72,27 @@ public class GuardingReport implements Serializable, Comparable<GuardingReport> 
 	}
 
 	public int getWarningsCount() {
-		return items.stream().collect(Collectors.summingInt(//
-				(ReportItem item) -> (item.isWarning() ? 1 : 0)));
+		int count = 0;
+
+		for (ReportItem item : items) {
+			if (item.isWarning()) {
+				count++;
+			}
+		}
+
+		return count;
 	}
 
 	public int getCriticalCount() {
-		return items.stream().collect(Collectors.summingInt(//
-				(ReportItem item) -> (item.isCritical() ? 1 : 0)));
+		int count = 0;
+
+		for (ReportItem item : items) {
+			if (item.isCritical()) {
+				count++;
+			}
+		}
+
+		return count;
 	}
 
 	public double getWarningsRatio() {
@@ -85,6 +101,76 @@ public class GuardingReport implements Serializable, Comparable<GuardingReport> 
 
 	public double getCriticalsRatio() {
 		return (double) getCriticalCount() / getItemsCount();
+	}
+
+	public ReportItem getLastWarning() {
+		ListIterator<ReportItem> iter = items.listIterator();
+
+		while (iter.hasPrevious()) {
+			ReportItem item = iter.previous();
+			if (item.isWarning()) {
+				return item;
+			}
+		}
+
+		return null;
+	}
+
+	public Calendar getLastWarningAt() {
+		ReportItem lastWarning = getLastWarning();
+
+		if (lastWarning != null) {
+			return lastWarning.getRecordedAt();
+		} else {
+			return null;
+		}
+	}
+
+	public String getCzechSummary() {
+		//TODO refactor to some reporter
+		final DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+
+		StringBuilder stb = new StringBuilder();
+
+		stb.append("Zaznamenávání bylo spuštěno ");
+		if (getStartedAt() != null) {
+			stb.append(dateFormat.format(getStartedAt().getTime()));
+		} else {
+			stb.append("neznámo kdy");
+		}
+
+		stb.append(" a ");
+		if (getStoppedAt() != null) {
+			stb.append(dateFormat.format(getStoppedAt().getTime()));
+		} else {
+			stb.append("ještě beží");
+		}
+
+		stb.append(". Zaznamenáno bylo ");
+		stb.append(String.format("%d", getItemsCount()));
+
+		stb.append(" záznamů, z nichž je ");
+		stb.append(String.format("%d (%d%%)", getWarningsCount(), (int) (getWarningsRatio() * 100)));
+
+		stb.append(" varovných a ");
+		stb.append(String.format("%d (%d%%)", getCriticalCount(), (int) (getCriticalsRatio() * 100)));
+
+		stb.append(" dokonce kritických.");
+
+		if (getLastWarningAt() != null) {
+			stb.append(" Poslední varovný (nebo kritický) záznam nastal v ");
+			stb.append(dateFormat.format(getLastWarningAt().getTime()));
+			stb.append(".");
+		}
+
+		if (getDescription() != null) {
+			stb.append("Popis: ");
+			stb.append(getDescription());
+		} else {
+			stb.append("Popis nebyl uveden.");
+		}
+
+		return stb.toString();
 	}
 
 	@Override
