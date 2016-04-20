@@ -127,8 +127,8 @@ public class FileSystemManTools implements Serializable {
 	private void deserializeMetadata(String line, GuardingReport report) {
 		Map<String, String> map = parseMap(line);
 
-		report.setStarted(parseDate(map.get("startedAt")));
-		report.setStopped(parseDate(map.get("stoppedAt")));
+		report.setStartedAt(parseDate(map.get("startedAt")));
+		report.setStoppedAt(parseDate(map.get("stoppedAt")));
 		report.setDescription(map.get("description"));
 	}
 

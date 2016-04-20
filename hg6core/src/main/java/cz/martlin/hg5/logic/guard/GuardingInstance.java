@@ -105,7 +105,7 @@ public class GuardingInstance implements Serializable, Interruptable {
 	 */
 	private void beforeStart() {
 		Calendar start = Calendar.getInstance();
-		report.setStarted(start);
+		report.setStartedAt(start);
 
 		reporters.forEach((AbstractReporter reporter) -> //
 		reporter.reportChanged(report));
@@ -155,7 +155,7 @@ public class GuardingInstance implements Serializable, Interruptable {
 	 */
 	private void afterEnd() {
 		Calendar stop = Calendar.getInstance();
-		report.setStopped(stop);
+		report.setStoppedAt(stop);
 
 		reporters.forEach((AbstractReporter reporter) -> //
 		reporter.reportChanged(report));

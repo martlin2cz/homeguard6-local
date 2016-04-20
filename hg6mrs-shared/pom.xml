@@ -2,9 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>hg6mrs-cli</artifactId>
-
-	<name>Homeguard6 mrs client library</name>
+	<artifactId>hg6mrs-shared</artifactId>
+	<name>Homeguard6 mrs connector and martin's remote services shared library</name>
 
 	<parent>
 		<groupId>cz.martlin</groupId>
@@ -12,26 +11,19 @@
 		<version>0.1.0</version>
 	</parent>
 
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 
+
 	<dependencies>
-
-		<!-- Web Service -->
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-client</artifactId>
-			<version>1.8</version>
-		</dependency>
-
+		<!-- jaxon -->
 		<dependency>
 			<groupId>cz.martlin</groupId>
-			<artifactId>hg6data</artifactId>
-			<version>${project.version}</version>
+			<artifactId>jaxon</artifactId>
+			<version>0.4.1-jv7</version>
 		</dependency>
 
 		<dependency>
@@ -42,7 +34,7 @@
 
 		<dependency>
 			<groupId>cz.martlin</groupId>
-			<artifactId>hg6mrs-shared</artifactId>
+			<artifactId>hg6data</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

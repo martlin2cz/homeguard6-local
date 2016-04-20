@@ -1,9 +1,20 @@
-package cz.martlin.mrs.hg6.comm;
+package cz.martlin.hg6.mrs.situation;
 
-public class RemoteConfig {
-	public Integer interval;
+import java.io.Serializable;
 
-	public RemoteConfig(Integer interval) {
+import cz.martlin.jaxon.jaxon.JaxonSerializable;
+
+public class SimplifiedConfig implements Serializable, JaxonSerializable, Cloneable {
+	private static final long serialVersionUID = 4407399558674525100L;
+
+	private static final String DESC = "Simplified Hg6 configuration";
+
+	private Integer interval;
+
+	public SimplifiedConfig() {
+	}
+
+	public SimplifiedConfig(Integer interval) {
 		this.interval = interval;
 	}
 
@@ -31,7 +42,7 @@ public class RemoteConfig {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		RemoteConfig other = (RemoteConfig) obj;
+		SimplifiedConfig other = (SimplifiedConfig) obj;
 		if (interval == null) {
 			if (other.interval != null)
 				return false;
@@ -43,6 +54,21 @@ public class RemoteConfig {
 	@Override
 	public String toString() {
 		return "RemoteConfig [interval=" + interval + "]";
+	}
+
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		SimplifiedConfig config = new SimplifiedConfig();
+
+		config.setInterval(getInterval());
+
+		return config;
+
+	}
+
+	@Override
+	public String jaxonDescription() {
+		return DESC;
 	}
 
 }

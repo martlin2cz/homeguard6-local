@@ -47,11 +47,11 @@ public class GuardingReport implements Serializable, Comparable<GuardingReport> 
 		return stoppedAt;
 	}
 
-	public void setStarted(Calendar date) {
+	public void setStartedAt(Calendar date) {
 		this.startedAt = date;
 	}
 
-	public void setStopped(Calendar date) {
+	public void setStoppedAt(Calendar date) {
 		this.stoppedAt = date;
 	}
 

@@ -1,23 +1,27 @@
-package cz.martlin.hg6.mrsConn;
+package cz.martlin.hg6.mrs.situation;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
 import cz.martlin.hg5.logic.data.GuardingReport;
+import cz.martlin.jaxon.jaxon.JaxonSerializable;
 
-public class RemoteGuardReport extends GuardingReport {
+public class SimplifiedGuardReport extends GuardingReport implements Serializable, JaxonSerializable, Cloneable {
 
 	private static final long serialVersionUID = 1532919114288578607L;
+
+	private static final String DESC = "Simplified version of guard report";
 
 	private int itemsCount;
 	private int warningsCount;
 	private int criticalCount;
 
-	private Calendar lastWarnAt;
+	private Calendar lastWarningAt;
 
-	public RemoteGuardReport() {
+	public SimplifiedGuardReport() {
 	}
 
-	public RemoteGuardReport(Calendar startedAt, Calendar stoppedAt, Calendar lastWarnAt, Integer warningsCount,
+	public SimplifiedGuardReport(Calendar startedAt, Calendar stoppedAt, Calendar lastWarnAt, Integer warningsCount,
 			Integer criticalCount, Integer itemsCount, String description) {
 
 		trySetTo(startedAt, stoppedAt, lastWarnAt, warningsCount, criticalCount, itemsCount, description);
@@ -40,7 +44,7 @@ public class RemoteGuardReport extends GuardingReport {
 
 	@Override
 	public Calendar getLastWarningAt() {
-		return lastWarnAt;
+		return lastWarningAt;
 	}
 
 	public void setCriticalCount(int criticalCount) {
@@ -55,15 +59,19 @@ public class RemoteGuardReport extends GuardingReport {
 		this.itemsCount = itemsCount;
 	}
 
+	public void setLastWarningAt(Calendar lastWarningAt) {
+		this.lastWarningAt = lastWarningAt;
+	}
+
 	public void trySetStarted(Calendar dateOrNull) {
 		if (dateOrNull != null) {
-			super.setStarted(dateOrNull);
+			super.setStartedAt(dateOrNull);
 		}
 	}
 
 	public void trySetStopped(Calendar dateOrNull) {
 		if (dateOrNull != null) {
-			super.setStopped(dateOrNull);
+			super.setStoppedAt(dateOrNull);
 		}
 	}
 
@@ -94,7 +102,7 @@ public class RemoteGuardReport extends GuardingReport {
 
 	public void trySetLastWarnAt(Calendar lastWarnAtOrNull) {
 		if (lastWarnAtOrNull != null) {
-			this.lastWarnAt = lastWarnAtOrNull;
+			this.lastWarningAt = lastWarnAtOrNull;
 		}
 	}
 
@@ -110,7 +118,7 @@ public class RemoteGuardReport extends GuardingReport {
 		this.trySetDescription(description);
 	}
 
-	public void trySetTo(RemoteGuardReport report) {
+	public void trySetTo(SimplifiedGuardReport report) {
 		trySetTo(report.getStartedAt(), report.getStoppedAt(), report.getLastWarningAt(), report.getItemsCount(),
 				report.getWarningsCount(), report.getCriticalCount(), report.getDescription());
 	}
@@ -121,7 +129,7 @@ public class RemoteGuardReport extends GuardingReport {
 		int result = super.hashCode();
 		result = prime * result + criticalCount;
 		result = prime * result + itemsCount;
-		result = prime * result + ((lastWarnAt == null) ? 0 : lastWarnAt.hashCode());
+		result = prime * result + ((lastWarningAt == null) ? 0 : lastWarningAt.hashCode());
 		result = prime * result + warningsCount;
 		return result;
 	}
@@ -134,15 +142,15 @@ public class RemoteGuardReport extends GuardingReport {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		RemoteGuardReport other = (RemoteGuardReport) obj;
+		SimplifiedGuardReport other = (SimplifiedGuardReport) obj;
 		if (criticalCount != other.criticalCount)
 			return false;
 		if (itemsCount != other.itemsCount)
 			return false;
-		if (lastWarnAt == null) {
-			if (other.lastWarnAt != null)
+		if (lastWarningAt == null) {
+			if (other.lastWarningAt != null)
 				return false;
-		} else if (!lastWarnAt.equals(other.lastWarnAt))
+		} else if (!lastWarningAt.equals(other.lastWarningAt))
 			return false;
 		if (warningsCount != other.warningsCount)
 			return false;
@@ -152,7 +160,25 @@ public class RemoteGuardReport extends GuardingReport {
 	@Override
 	public String toString() {
 		return "RemoteGuardReport [itemsCount=" + itemsCount + ", warningsCount=" + warningsCount + ", criticalCount="
-				+ criticalCount + ", lastWarnAt=" + lastWarnAt + "]";
+				+ criticalCount + ", lastWarnAt=" + lastWarningAt + "]";
 	}
 
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		SimplifiedGuardReport report = new SimplifiedGuardReport();
+
+		report.trySetTo(this);
+
+		return report;
+	}
+
+	@Override
+	public String jaxonDescription() {
+		return DESC;
+	}
+
+	public static SimplifiedGuardReport create(GuardingReport report) {
+		return new SimplifiedGuardReport(report.getStartedAt(), report.getStoppedAt(), report.getLastWarningAt(),
+				report.getWarningsCount(), report.getCriticalCount(), report.getItemsCount(), report.getDescription());
+	}
 }
