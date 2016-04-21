@@ -7,6 +7,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg6.config.Hg6ConfigException;
+import cz.martlin.hg6.coreJRest.Hg6CoreConnException;
 
 @RequestScoped
 @ManagedBean(name = "configSettingsForm")
@@ -47,12 +49,18 @@ public class ConfigSettingsForm implements Serializable {
 	public void save() {
 		checkAndWarn();
 
-		boolean success = homeguard.setToAndSave(config);
-		if (success) {
+		try {
+			homeguard.setToAndSave(config);
 			Utils.info("Uloženo", "Konfigurační soubor byl uložen");
-		} else {
+
+		} catch (Hg6ConfigException e) {
 			Utils.error("Chyba", "Konfigurační soubor se nepodařilo uložit");
+			e.printStackTrace();
+		} catch (Hg6CoreConnException e) {
+			Utils.error("Chyba", "Konfigurační soubor uložen, ale nepodařilo se o tom informovat hg6core");
+			e.printStackTrace(); // TODO log
 		}
+
 	}
 
 	public void reset() {
@@ -62,12 +70,13 @@ public class ConfigSettingsForm implements Serializable {
 	}
 
 	public void reload() {
-
-		boolean success = homeguard.loadConfig();
-		if (success) {
+		try {
+			homeguard.loadConfig();
 			Utils.info("Načteno", "Konfigurační soubor byl načten znovu");
-		} else {
+
+		} catch (Hg6ConfigException e) {
 			Utils.error("Chyba", "Konfigurační soubor se nepodařilo načíst");
+
 		}
 	}
 

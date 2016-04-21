@@ -2,7 +2,8 @@ package cz.martlin.hg6.app;
 
 import java.util.Calendar;
 
-import cz.martlin.hg5.logic.config.Hg6Config;
+import cz.martlin.hg6.config.Hg6Config;
+import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.hg6.core.Hg6Core;
 import cz.martlin.hg6.coreJRest.Hg6CommandsProcessor;
 import cz.martlin.hg6.db.Hg6Database;
@@ -40,10 +41,10 @@ public class Hg6CommandsProcessorImpl implements Hg6CommandsProcessor {
 		try {
 			return db.loadLastReport().toString();
 			// TODO like this?
-			//TODO fix reporting ... somehow...
+			// TODO fix reporting ... somehow...
 		} catch (Hg6DbException e) {
 			return null; // TODO exception ...
-		} 
+		}
 	}
 
 	@Override
@@ -54,10 +55,17 @@ public class Hg6CommandsProcessorImpl implements Hg6CommandsProcessor {
 			return null;
 		}
 	}
-	
+
 	@Override
 	public boolean configChanged() {
-		return cfg.load();
+		try {
+			cfg.load();
+		} catch (Hg6ConfigException e) {
+			// TODO log
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 
 }

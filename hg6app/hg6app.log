@@ -270,3 +270,18 @@ Caused by: java.net.BindException: Adresa je užívána
 	at java.net.ServerSocket.<init>(ServerSocket.java:128)
 	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:55)
 	... 4 common frames omitted
+19:53:51.038 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at line 58]
+19:53:56.102 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at line 63]
+20:05:35.114 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at line 72]
+20:05:35.115 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at line 80]
+02:44:10.671 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at line 58]
+02:44:10.755 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at line 63]
+02:46:54.796 [WaiterThread] WARN  c.m.j.p.h.UnhandledReqsHandler Came request with command strop which cannot be handled. Original arguments:  [at line 51]
+02:47:00.018 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at line 72]
+02:47:00.019 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at line 80]
+02:47:05.424 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at line 58]
+02:47:05.450 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at line 63]
+02:47:52.249 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard stopping [at line 72]
+02:47:52.250 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at line 80]
+02:48:07.723 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at line 58]
+02:48:07.750 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at line 63]

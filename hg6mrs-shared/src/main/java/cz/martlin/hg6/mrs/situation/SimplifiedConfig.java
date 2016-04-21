@@ -2,6 +2,7 @@ package cz.martlin.hg6.mrs.situation;
 
 import java.io.Serializable;
 
+import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.jaxon.jaxon.JaxonSerializable;
 
 public class SimplifiedConfig implements Serializable, JaxonSerializable, Cloneable {
@@ -51,9 +52,10 @@ public class SimplifiedConfig implements Serializable, JaxonSerializable, Clonea
 		return true;
 	}
 
+
 	@Override
 	public String toString() {
-		return "RemoteConfig [interval=" + interval + "]";
+		return "SimplifiedConfig [interval=" + interval + "]";
 	}
 
 	@Override
@@ -69,6 +71,14 @@ public class SimplifiedConfig implements Serializable, JaxonSerializable, Clonea
 	@Override
 	public String jaxonDescription() {
 		return DESC;
+	}
+
+	public static SimplifiedConfig create(Configuration config) {
+		SimplifiedConfig simpl = new SimplifiedConfig();
+		
+		simpl.setInterval(config.getMrsInterval());
+		
+		return simpl;
 	}
 
 }

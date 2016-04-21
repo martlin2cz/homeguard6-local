@@ -1,0 +1,183 @@
+20.04.2016 20:59:30.212 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+20.04.2016 20:59:30.368 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: File not found
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:115)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: java.io.FileNotFoundException: config.props (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:112)
+	... 6 common frames omitted
+20.04.2016 21:00:05.047 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+20.04.2016 21:00:05.111 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: File not found
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:115)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: java.io.FileNotFoundException: config.props (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:112)
+	... 6 common frames omitted
+20.04.2016 21:00:05.112 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: {}cz.martlin.hg6.config.Hg6Config@22f71333
+20.04.2016 21:00:42.907 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+20.04.2016 21:00:42.980 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: File not found
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:115)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: java.io.FileNotFoundException: config.props (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:112)
+	... 6 common frames omitted
+20.04.2016 21:00:42.981 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: {}cz.martlin.hg6.config.Hg6Config@22f71333
+20.04.2016 21:01:16.139 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file/dir config.props in /home/martin/hg6. But exists?
+20.04.2016 21:01:16.244 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: Cannot parse document
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parseFromSource(KlaxonToXMLImpl.java:181)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:147)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:113)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: org.xml.sax.SAXParseException: Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:348)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parseFromSource(KlaxonToXMLImpl.java:179)
+	... 8 common frames omitted
+20.04.2016 21:01:16.246 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: {}cz.martlin.hg6.config.Hg6Config@6aaa5eb0
+20.04.2016 21:01:44.028 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file/dir config.props in /home/martin/hg6. But exists?
+20.04.2016 21:01:44.211 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: Cannot parse document
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parseFromSource(KlaxonToXMLImpl.java:181)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:147)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:113)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: org.xml.sax.SAXParseException: Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:348)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parseFromSource(KlaxonToXMLImpl.java:179)
+	... 8 common frames omitted
+20.04.2016 21:01:44.216 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: {}Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]
+20.04.2016 21:02:19.286 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file/dir config.xml in /home/martin/hg6. But exists?
+20.04.2016 21:02:19.348 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: File not found
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:115)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: java.io.FileNotFoundException: /home/martin/hg6/config.xml (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:112)
+	... 6 common frames omitted
+20.04.2016 21:02:19.349 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]
+20.04.2016 21:02:36.790 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file/dir config.xml in /home/martin/hg6. But exists?
+20.04.2016 21:02:36.916 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.jack.data.misc.JackException: Converting to Object failed
+	at cz.martlin.jaxon.jack.JackConverter.toObject(JackConverter.java:55)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.documentToObject(JaxonConverter.java:67)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:116)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: cz.martlin.jaxon.jack.data.misc.JackException: Could not create setter of mrsInterval
+	at cz.martlin.jaxon.jack.ReflectionAndJack.createSetter(ReflectionAndJack.java:235)
+	at cz.martlin.jaxon.jack.ReflectionAndJack.setValueTo(ReflectionAndJack.java:192)
+	at cz.martlin.jaxon.jack.process.DataObjectsFieldsProcessor.build(DataObjectsFieldsProcessor.java:104)
+	at cz.martlin.jaxon.jack.process.DataObjectsFieldsProcessor.toObject(DataObjectsFieldsProcessor.java:56)
+	at cz.martlin.jaxon.jack.JackImplementation.convertJackToObject(JackImplementation.java:91)
+	at cz.martlin.jaxon.jack.JackConverter.toObject(JackConverter.java:53)
+	... 6 common frames omitted
+Caused by: java.lang.NoSuchMethodException: cz.martlin.hg5.logic.config.Configuration.setMrsInterval(int)
+	at java.lang.Class.getMethod(Class.java:1786)
+	at cz.martlin.jaxon.jack.ReflectionAndJack.createSetter(ReflectionAndJack.java:233)
+	... 11 common frames omitted
+20.04.2016 21:02:36.917 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]
+20.04.2016 23:51:24.869 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file or dir config.xml in /home/martin/hg6. But exists?
+20.04.2016 23:51:25.013 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]
+20.04.2016 23:52:43.604 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file or dir config.xml in /home/martin/hg6. But exists?
+20.04.2016 23:52:43.742 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]
+20.04.2016 23:52:55.477 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file or dir config.xml in /home/martin/hg6. But exists?
+20.04.2016 23:52:55.614 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]
+20.04.2016 23:53:32.839 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file or dir config.xml in /home/martin/hg6. But exists?
+20.04.2016 23:53:32.930 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]

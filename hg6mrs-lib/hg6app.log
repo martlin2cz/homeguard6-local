@@ -1,0 +1,1006 @@
+20.04.2016 18:44:10.382 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 18:44:10.389 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 18:44:10.482 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 18:44:10.484 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 18:44:10.943 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 18:44:10.943 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 18:44:10.945 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:39:48.363 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:40:24.400 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:40:24.408 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:40:24.435 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:40:24.440 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:40:24.953 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:40:24.954 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:40:24.964 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:40:24.972 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 19:40:24.973 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:40:24.973 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:40:24.977 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:40:24.977 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:40:25.134 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:40:25.134 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:40:25.141 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:47:49.807 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:47:49.813 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:47:49.833 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:47:49.835 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:47:50.306 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:47:50.307 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:47:50.308 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:47:50.310 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 19:47:50.311 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:47:50.311 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:47:50.313 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:47:50.313 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:47:50.411 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:47:50.412 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:47:50.412 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:48:32.255 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:48:32.264 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:48:32.285 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:48:32.288 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:48:32.782 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:48:32.783 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:48:32.785 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:48:32.787 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 19:48:32.789 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:48:32.794 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:48:32.818 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:48:32.818 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:48:32.913 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:48:32.915 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:48:32.917 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:49:26.429 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:49:26.451 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:49:26.597 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:49:26.600 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:49:27.017 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:49:27.017 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:49:27.019 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:49:27.040 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 19:49:27.041 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:49:27.041 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:49:27.049 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:49:27.049 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:49:27.211 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:49:27.211 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:49:27.212 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:53:50.024 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:53:50.031 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:53:50.055 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:53:50.058 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:53:50.686 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:53:50.687 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:53:50.697 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:53:50.699 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 19:53:50.706 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:53:50.706 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:53:50.711 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+20.04.2016 19:53:50.711 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:53:50.834 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:53:50.835 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:53:50.835 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:53:50.838 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 19:53:50.839 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 19:53:50.839 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:114 Changing status to STARTED
+20.04.2016 19:53:56.107 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:127 Changing report to RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:53:56.108 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:130 Report have been changed. God bless us
+20.04.2016 19:53:56.267 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+20.04.2016 19:53:56.281 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:150 Changing config to RemoteConfig [interval=15]
+20.04.2016 19:53:56.281 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=93, warningsCount=46, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 19:59:51.598 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:59:51.607 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:59:51.631 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 19:59:51.635 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:59:52.174 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=6, warningsCount=1, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:59:52.175 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:59:52.177 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:59:52.178 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=6, warningsCount=1, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 19:59:52.179 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 19:59:52.179 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 19:59:52.183 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 19:59:52.184 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 19:59:52.310 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=6, warningsCount=1, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:59:52.311 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 19:59:52.311 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 19:59:52.318 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 19:59:52.319 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 19:59:52.319 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:114 Changing status to STARTED
+20.04.2016 19:59:52.320 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:127 Changing report to RemoteGuardReport [itemsCount=6, warningsCount=1, criticalCount=0, lastWarnAt=null]
+20.04.2016 19:59:52.320 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:130 Report have been changed. God bless us
+20.04.2016 19:59:52.442 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+20.04.2016 19:59:52.452 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:150 Changing config to RemoteConfig [interval=15]
+20.04.2016 19:59:52.453 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=6, warningsCount=1, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:03:04.418 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 20:03:04.426 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 20:03:04.450 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 20:03:04.453 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 20:03:05.048 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=9, warningsCount=3, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:03:05.050 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 20:03:05.054 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 20:03:05.059 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=9, warningsCount=3, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:03:05.061 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 20:03:05.061 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 20:03:05.065 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 20:03:05.074 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 20:03:05.225 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=9, warningsCount=3, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:03:05.226 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 20:03:05.226 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 20:03:05.238 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 20:03:05.238 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 20:03:05.239 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:114 Changing status to STARTED
+20.04.2016 20:03:05.239 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:127 Changing report to RemoteGuardReport [itemsCount=9, warningsCount=3, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:03:05.240 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:130 Report have been changed. God bless us
+20.04.2016 20:03:05.378 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+20.04.2016 20:03:05.378 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:150 Changing config to RemoteConfig [interval=15]
+20.04.2016 20:03:05.381 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=9, warningsCount=3, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:05:17.612 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 20:05:17.619 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 20:05:17.670 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 20:05:17.681 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 20:05:18.166 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=11, warningsCount=5, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:05:18.167 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 20:05:18.168 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 20:05:18.170 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:19 Current situation is: Situation [status=STARTED, report=RemoteGuardReport [itemsCount=11, warningsCount=5, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=null]]
+20.04.2016 20:05:18.172 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=11, warningsCount=5, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:05:18.176 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 20:05:18.177 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 20:05:18.180 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 20:05:18.181 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 20:05:18.361 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=11, warningsCount=5, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:05:18.363 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 20:05:18.365 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 20:05:18.375 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 20:05:18.378 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 20:05:18.380 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:114 Changing status to STARTED
+20.04.2016 20:05:18.382 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:127 Changing report to RemoteGuardReport [itemsCount=11, warningsCount=5, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:05:18.382 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:130 Report have been changed. God bless us
+20.04.2016 20:05:18.508 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+20.04.2016 20:05:18.526 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:150 Changing config to RemoteConfig [interval=15]
+20.04.2016 20:05:18.526 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STARTED, report=RemoteGuardReport [itemsCount=11, warningsCount=5, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:05:18.527 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:27 Updated to: Situation [status=STARTED, report=RemoteGuardReport [itemsCount=11, warningsCount=5, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:05:34.521 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 20:05:34.528 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 20:05:34.562 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 20:05:34.566 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 20:05:34.988 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:05:34.988 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 20:05:34.990 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 20:05:34.992 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:19 Current situation is: Situation [status=STARTED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=null]]
+20.04.2016 20:05:34.993 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:05:34.993 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+20.04.2016 20:05:34.994 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+20.04.2016 20:05:34.996 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STARTED
+20.04.2016 20:05:34.998 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+20.04.2016 20:05:35.107 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:05:35.107 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+20.04.2016 20:05:35.108 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is RemoteConfig [interval=null]
+20.04.2016 20:05:35.110 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 20:05:35.111 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_END, CHANGED_REPORT_DESC, CHANGED_REPORT_ITEMS]]
+20.04.2016 20:05:35.111 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:114 Changing status to STOPPED
+20.04.2016 20:05:35.119 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:127 Changing report to RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null]
+20.04.2016 20:05:35.121 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:130 Report have been changed. God bless us
+20.04.2016 20:05:35.228 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+20.04.2016 20:05:35.230 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:150 Changing config to RemoteConfig [interval=15]
+20.04.2016 20:05:35.232 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:05:35.234 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:27 Updated to: Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=15]]
+20.04.2016 20:06:46.421 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:19 Current situation is: Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=null]]
+20.04.2016 20:06:46.596 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:130 Report have been changed. God bless us
+20.04.2016 20:06:46.714 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+20.04.2016 20:06:46.717 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:27 Updated to: Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=20]]
+20.04.2016 20:13:28.289 [main] WARN 
+				c.m.h.l.c.Hg6Config:39 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+20.04.2016 20:13:28.327 [main] ERROR
+				c.m.h.l.c.ConfigLoader:185 Cannot load config
+java.io.FileNotFoundException: config.props (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:181)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:52)
+	at cz.martlin.hg5.logic.config.Hg6Config.load(Hg6Config.java:55)
+	at cz.martlin.hg5.logic.config.Hg6Config.get(Hg6Config.java:27)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncerTestApp.main(SituationsMrsSyncerTestApp.java:10)
+20.04.2016 20:13:28.334 [main] ERROR
+				c.m.h.l.c.ConfigLoader:143 Error during loading config file: 
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at cz.martlin.hg5.logic.config.ConfigLoader.setTo(ConfigLoader.java:125)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg5.logic.config.Hg6Config.load(Hg6Config.java:55)
+	at cz.martlin.hg5.logic.config.Hg6Config.get(Hg6Config.java:27)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncerTestApp.main(SituationsMrsSyncerTestApp.java:10)
+20.04.2016 20:13:28.335 [main] WARN 
+				c.m.h.l.c.Hg6Config:29 Config file load failed. Will be used default instead.
+21.04.2016 00:11:50.250 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+21.04.2016 00:11:50.372 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncerTestApp.main(SituationsMrsSyncerTestApp.java:10)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: File not found
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:115)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: java.io.FileNotFoundException: config.xml (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:112)
+	... 6 common frames omitted
+21.04.2016 00:11:51.107 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+21.04.2016 00:11:51.171 [main] ERROR
+				c.m.h.l.p.f.FileSystemManTools:73 Cannot load logs
+java.nio.file.NoSuchFileException: reports/logs
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newDirectoryStream(UnixFileSystemProvider.java:427)
+	at java.nio.file.Files.newDirectoryStream(Files.java:457)
+	at java.nio.file.Files.list(Files.java:3451)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.logsFiles(FileSystemManTools.java:66)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:118)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:154)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:87)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:96)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:70)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:44)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:34)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:21)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncerTestApp.main(SituationsMrsSyncerTestApp.java:13)
+21.04.2016 00:16:21.889 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:19 Current situation is: Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 00:16:22.073 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:130 Report have been changed. God bless us
+21.04.2016 00:16:22.218 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+21.04.2016 00:16:22.219 [main] INFO 
+				c.m.h.m.l.LocalSituationCreatorTestApp:27 Updated to: Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=20]]
+21.04.2016 00:48:15.521 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+21.04.2016 00:53:09.684 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 00:53:10.733 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+21.04.2016 00:53:10.887 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 00:57:49.925 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 00:57:50.694 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+21.04.2016 00:57:50.841 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 01:19:45.778 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 01:19:46.540 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+21.04.2016 01:19:46.671 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 01:25:33.921 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 01:25:34.885 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:144 Report items have been changed. Ingoring
+21.04.2016 01:25:35.031 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:03:09.219 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:03:10.550 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:03:10.837 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:06:22.523 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:06:23.445 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=DOWN, report=RemoteGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=null]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:06:23.453 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT_ITEMS]]
+21.04.2016 02:06:23.712 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:06:23.715 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:06:23.717 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:06:23.905 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:08:28.913 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:08:29.563 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:08:29.568 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:08:29.762 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:08:29.775 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:08:29.775 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:08:29.934 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:12:05.144 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:12:55.080 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:12:55.121 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:14:43.067 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:14:43.068 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:14:43.068 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:14:43.254 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:14:46.776 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:17:06.253 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:17:07.080 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:17:07.089 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:17:07.299 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:17:07.300 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_CONFIG]]
+21.04.2016 02:17:07.301 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:129 Report have been changed. God bless us
+21.04.2016 02:17:07.562 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:17:18.346 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:17:18.976 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=6, warningsCount=0, criticalCount=12, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:17:18.981 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_CONFIG]]
+21.04.2016 02:17:19.116 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]] and Situation [status=STOPPED, report=RemoteGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarnAt=null], config=RemoteConfig [interval=10]]
+21.04.2016 02:17:19.117 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:17:19.117 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:129 Report have been changed. God bless us
+21.04.2016 02:17:19.225 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:17:19.385 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:20:36.071 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:20:38.455 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=DOWN, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=null, stoppedAt=null], config=SimplifiedConfig [interval=null]]
+21.04.2016 02:20:38.467 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT_ITEMS]]
+21.04.2016 02:20:38.691 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=DOWN, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=null]]
+21.04.2016 02:20:38.692 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_METADATA]]
+21.04.2016 02:20:38.693 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:129 Report have been changed. God bless us
+21.04.2016 02:20:38.983 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:24:50.631 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:24:51.859 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=DOWN, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=null, stoppedAt=null], config=SimplifiedConfig [interval=null]]
+21.04.2016 02:24:51.871 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:24:52.054 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:24:52.058 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:24:52.191 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:24:58.303 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:24:58.922 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=6, warningsCount=0, criticalCount=12, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:24:58.927 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:24:59.058 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:24:59.063 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:24:59.064 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:24:59.184 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:25:09.818 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:25:10.736 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=6, warningsCount=0, criticalCount=12, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:25:10.747 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:25:10.945 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:25:10.946 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:25:10.946 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:25:11.027 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:30:21.212 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:30:22.411 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=DOWN, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=null, stoppedAt=null], config=SimplifiedConfig [interval=null]]
+21.04.2016 02:30:22.438 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS, CHANGED_CONFIG]]
+21.04.2016 02:30:22.642 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:30:22.644 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:30:22.789 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:31:11.960 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:31:11.978 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:31:11.978 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:31:12.024 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:31:12.040 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:31:12.721 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:31:12.728 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:31:12.734 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:31:12.810 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=6, warningsCount=0, criticalCount=12, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:31:12.814 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:31:12.816 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:31:12.816 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:31:12.817 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:31:12.820 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:31:12.821 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:31:12.988 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:31:12.990 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:31:12.997 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:31:13.003 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:31:13.010 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:31:13.011 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:31:13.011 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:31:13.011 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:31:13.012 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:31:13.135 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:33:06.453 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:33:10.768 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:33:10.769 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:33:10.835 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:33:10.848 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:33:11.477 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:33:11.502 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:33:11.512 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:33:14.441 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=6, warningsCount=0, criticalCount=12, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:34:22.744 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:34:28.028 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:34:28.029 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:34:28.075 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:34:28.079 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:37:10.723 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:37:21.762 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:37:21.806 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:37:40.125 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=6, warningsCount=0, criticalCount=12, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:37:55.538 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:39:15.631 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:39:15.631 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:39:15.632 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:39:15.634 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:39:15.634 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:40:34.673 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:40:34.684 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:40:34.686 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:40:34.724 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:40:34.728 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:40:39.836 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:40:39.842 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:40:39.850 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:40:41.303 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=6, warningsCount=0, criticalCount=12, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:40:42.770 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:41:34.594 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:34.595 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:41:34.595 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:41:34.599 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:41:34.600 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:41:36.988 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:41:36.989 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:41:36.994 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:41:36.994 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:37.710 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:41:37.710 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:41:37.711 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:41:37.711 [main] WARN 
+				c.m.h.m.l.LocalSituationCreator:143 Report items have been changed. Ingoring
+21.04.2016 02:41:37.712 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:38.142 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:41:44.468 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:41:44.476 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:41:44.477 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:41:44.507 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:41:44.510 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:41:45.142 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:41:45.150 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:41:45.161 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:41:45.227 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=12, criticalCount=6, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:45.229 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:41:45.231 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:45.232 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:41:45.232 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:41:45.234 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:41:45.234 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:41:45.427 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:41:45.429 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:41:45.453 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:41:45.457 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:45.457 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:41:45.458 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[]]
+21.04.2016 02:41:45.458 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[]]
+21.04.2016 02:41:45.458 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:45.664 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:41:52.781 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:41:52.789 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:41:52.789 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:41:52.818 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:41:52.821 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:41:53.468 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:41:53.483 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:41:53.495 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:41:53.576 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:53.583 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:41:53.587 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:89 Changing situation to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:53.588 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:41 Getting current local situation
+21.04.2016 02:41:53.588 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:54 Getting current local situation
+21.04.2016 02:41:53.591 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:63 The status is STOPPED
+21.04.2016 02:41:53.591 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:68 Getting current report
+21.04.2016 02:41:53.758 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:73 The report is SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null]
+21.04.2016 02:41:53.759 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:78 Getting current config
+21.04.2016 02:41:53.763 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:84 The config is SimplifiedConfig [interval=10]
+21.04.2016 02:41:53.764 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:53.764 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:41:53.765 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:93 Found changes to do: SituationsDiff [diffs=[]]
+21.04.2016 02:41:53.765 [main] DEBUG
+				c.m.h.m.l.LocalSituationCreator:106 Performing change SituationsDiff [diffs=[]]
+21.04.2016 02:41:53.765 [main] INFO 
+				c.m.h.m.l.LocalSituationCreator:96 Changed to Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:41:53.855 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:42:24.739 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:42:25.382 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:42:25.387 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:42:25.617 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:42:25.619 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:42:25.714 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:42:54.850 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:42:55.702 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=11]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:42:55.712 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_CONFIG]]
+21.04.2016 02:42:55.989 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=11]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:42:55.989 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_CONFIG]]
+21.04.2016 02:42:56.214 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:43:03.605 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:43:04.324 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:43:04.330 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:43:04.542 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:43:04.544 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:43:04.650 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:44:16.581 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:44:17.218 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=12, warningsCount=6, criticalCount=0, lastWarningAt=null, startedAt=Wed Apr 20 19:53:56 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:44:17.223 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS]]
+21.04.2016 02:44:17.425 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:44:17.437 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:44:17.534 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:44:29.354 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:44:30.151 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:44:30.158 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:44:30.306 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:44:30.307 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:44:30.403 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:47:04.538 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:47:05.245 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=Thu Apr 21 02:47:00 CEST 2016], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:05.256 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS, CHANGED_REPORT_ITEMS]]
+21.04.2016 02:47:05.416 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=Thu Apr 21 02:47:00 CEST 2016], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=Thu Apr 21 02:47:00 CEST 2016], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:05.416 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS]]
+21.04.2016 02:47:05.573 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:47:19.567 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:47:20.394 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:44:10 CEST 2016, stoppedAt=Thu Apr 21 02:47:00 CEST 2016], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:20.411 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS]]
+21.04.2016 02:47:20.608 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:20.616 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:47:20.735 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:47:33.787 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:47:34.509 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:34.516 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT_ITEMS]]
+21.04.2016 02:47:34.698 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:34.698 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:47:34.794 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:47:41.091 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:47:41.732 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:41.743 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:47:41.980 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:47:41.981 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:47:42.094 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:48:06.589 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:48:07.572 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=Thu Apr 21 02:47:52 CEST 2016], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:48:07.577 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS]]
+21.04.2016 02:48:07.713 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STOPPED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=Thu Apr 21 02:47:52 CEST 2016], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=Thu Apr 21 02:47:52 CEST 2016], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:48:07.718 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_STATUS]]
+21.04.2016 02:48:07.867 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized
+21.04.2016 02:48:13.584 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:17 Synchronizing
+21.04.2016 02:48:14.305 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:48:07 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:47:05 CEST 2016, stoppedAt=Thu Apr 21 02:47:52 CEST 2016], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:48:14.312 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS]]
+21.04.2016 02:48:14.477 [main] INFO 
+				c.m.h.m.d.SituationDiffer:21 Computing diff between Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:48:07 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]] and Situation [status=STARTED, report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Thu Apr 21 02:48:07 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=10]]
+21.04.2016 02:48:14.478 [main] DEBUG
+				c.m.h.m.d.SituationDiffer:31 Computed diff: SituationsDiff [diffs=[]]
+21.04.2016 02:48:14.621 [main] INFO 
+				c.m.h.m.s.SituationsMrsSyncerTestApp:19 Synchronized

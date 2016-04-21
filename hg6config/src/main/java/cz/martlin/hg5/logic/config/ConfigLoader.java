@@ -1,17 +1,15 @@
 package cz.martlin.hg5.logic.config;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Reader;
 import java.io.Serializable;
-import java.io.Writer;
-import java.util.Properties;
 
-import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import cz.martlin.hg6.config.Hg6ConfigException;
+import cz.martlin.jaxon.config.Config;
+import cz.martlin.jaxon.jaxon.JaxonConverter;
+import cz.martlin.jaxon.jaxon.JaxonException;
 
 /**
  * Implements loading and saving of {@link Configuration}.
@@ -24,170 +22,62 @@ public class ConfigLoader implements Serializable {
 
 	private final Logger LOG = LoggerFactory.getLogger(getClass());
 
-	private static final String COMMENT = "Homeguard configuration file";
-
+	private final JaxonConverter jaxon;
 	private final File file;
 
 	public ConfigLoader(File file) {
 		this.file = file;
+
+		Config config = new Config();
+		this.jaxon = new JaxonConverter(config);
 	}
 
 	/**
 	 * Loads config file into given config instance.
 	 * 
 	 * @param config
-	 * @return true if succeeds
+	 * @throws Hg6ConfigException
+	 * @throws JaxonException
 	 */
-	public boolean load(Configuration config) {
+	public void load(Configuration config) throws Hg6ConfigException {
 		if (file == null) {
-			LOG.warn("Config file not specified, will not load 'em");
-			return false;
+			throw new Hg6ConfigException("Config file not specified");
 		}
 
 		LOG.info("Loading config file from:  {}", file.getAbsolutePath());
 
-		Properties props = new Properties();
-		boolean success = true;
+		Configuration fromFile;
+		try {
+			fromFile = (Configuration) jaxon.objectFromFile(file);
+		} catch (JaxonException e) {
+			throw new Hg6ConfigException("Cannot load config file", e);
+		}
+		config.setTo(fromFile);
 
-		success &= load(file, props);
-		success &= setTo(config, props);
+		LOG.info("Config file loaded");
 
-		LOG.info("Config file loaded, succes? {}", success);
-
-		return success;
 	}
 
 	/**
 	 * Saves given config into file.
 	 * 
 	 * @param config
-	 * @return true if succeeds
+	 * @throws Hg6ConfigException
 	 */
-	public boolean save(Configuration config) {
+	public void save(Configuration config) throws Hg6ConfigException {
 		if (file == null) {
-			LOG.warn("Config file not specified, will not save config");
-			return false;
+			throw new Hg6ConfigException("Config file not specified");
 		}
 
 		LOG.info("Saving config into file:  {}", file.getAbsolutePath());
 
-		Properties props = new Properties();
-		boolean success = true;
-
-		success &= setTo(props, config);
-		success &= save(props, file);
-
-		LOG.info("Config file saved, succes? {}", success);
-
-		return success;
-	}
-
-	/**
-	 * Sets given properties into given config
-	 * 
-	 * @param props
-	 * @param config
-	 * @return true if succeeds
-	 */
-	private boolean setTo(Properties props, Configuration config) {
-		props.put("samplesInterval", //
-				Integer.toString(config.getSamplesInterval()));
-		props.put("sampleLenght", //
-				Integer.toString(config.getSampleLenght()));
-
-		props.put("warningNoiseThreshold", //
-				Double.toString(config.getWarningNoiseThreshold()));
-		props.put("criticalNoiseThreshold", //
-				Double.toString(config.getCriticalNoiseThreshold()));
-		props.put("warningNoiseAmount", //
-				Double.toString(config.getWarningNoiseAmount()));
-		props.put("criticalNoiseAmount", //
-				Double.toString(config.getCriticalNoiseAmount()));
-
-		props.put("logsRootDir", //
-				config.getLogsRootDir().getPath());
-		props.put("defaultDescription", //
-				config.getDefaultDescription());
-
-		return true;
-	}
-
-	/**
-	 * Sets given config into given properties
-	 * 
-	 * @param config
-	 * @param props
-	 * @return true if succeeds
-	 */
-	private boolean setTo(Configuration config, Properties props) {
 		try {
-			config.setSamplesInterval(//
-					Integer.parseInt(props.getProperty("samplesInterval")));
-			config.setSampleLenght(//
-					Integer.parseInt(props.getProperty("sampleLenght")));
-
-			config.setWarningNoiseThreshold(//
-					Double.parseDouble(props.getProperty("warningNoiseThreshold")));
-			config.setCriticalNoiseThreshold(//
-					Double.parseDouble(props.getProperty("criticalNoiseThreshold")));
-			config.setWarningNoiseAmount(//
-					Double.parseDouble(props.getProperty("warningNoiseAmount")));
-			config.setCriticalNoiseAmount(//
-					Double.parseDouble(props.getProperty("criticalNoiseAmount")));
-
-			config.setLogsRootDir(//
-					new File(props.getProperty("logsRootDir")));
-			config.setDefaultDescription(//
-					props.getProperty("defaultDescription"));
-		} catch (Exception e) {
-			LOG.error("Error during loading config file: ", e);
-			return false;
+			jaxon.objectToFile(config, file);
+		} catch (JaxonException e) {
+			throw new Hg6ConfigException("Cannot save config file", e);
 		}
 
-		return true;
-	}
-
-	/**
-	 * Saves given properties into file. If fails logs and returns false.
-	 * 
-	 * @param props
-	 * @param file
-	 * @return true if succeeds
-	 */
-	private boolean save(Properties props, File file) {
-		Writer writer = null;
-		try {
-			writer = new FileWriter(file);
-			props.store(writer, COMMENT);
-			return true;
-		} catch (IOException e) {
-			LOG.error("Cannot save config", e);
-			return false;
-		} finally {
-			IOUtils.closeQuietly(writer);
-		}
-	}
-
-	/**
-	 * Loads from file into given properties. If fails logs and returns false.
-	 * 
-	 * @param file
-	 * @param props
-	 * @return true if succeeds
-	 */
-	private boolean load(File file, Properties props) {
-		Reader reader = null;
-		try {
-			reader = new FileReader(file);
-			props.load(reader);
-			return true;
-		} catch (IOException e) {
-			LOG.error("Cannot load config", e);
-			return false;
-		} finally {
-			IOUtils.closeQuietly(reader);
-		}
-
+		LOG.info("Config file saved");
 	}
 
 }

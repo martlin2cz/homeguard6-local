@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg5.logic.config.Configuration;
-import cz.martlin.hg5.logic.config.Hg6Config;
+import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.core.Hg6Core;
 import cz.martlin.hg6.coreJRest.Hg6CommandsProcessor;
 import cz.martlin.hg6.coreJRest.Hg6CoreServer;

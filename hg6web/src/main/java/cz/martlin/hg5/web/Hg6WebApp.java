@@ -5,8 +5,9 @@ import java.util.Calendar;
 import java.util.Set;
 
 import cz.martlin.hg5.logic.config.Configuration;
-import cz.martlin.hg5.logic.config.Hg6Config;
 import cz.martlin.hg5.logic.data.GuardingReport;
+import cz.martlin.hg6.config.Hg6Config;
+import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.hg6.coreJRest.Hg6CoreClient;
 import cz.martlin.hg6.coreJRest.Hg6CoreConnException;
 import cz.martlin.hg6.db.Hg6Database;
@@ -35,27 +36,21 @@ public class Hg6WebApp implements Serializable {
 		cfg.setTo(config);
 	}
 
-	public boolean saveConfig() {
-		return cfg.save();
+	public void saveConfig() throws Hg6ConfigException {
+		cfg.save();
 	}
 
-	public boolean loadConfig() {
-		return cfg.load();
+	public void loadConfig() throws Hg6ConfigException {
+		cfg.load();
 	}
 
 	public Configuration getConfig() {
 		return cfg.getConfig();
 	}
 
-	public boolean setToAndSave(Configuration config) {
-		boolean succ = cfg.setToAndSave(config);
-		try {
-			client.configChanged();
-		} catch (Hg6CoreConnException e) {
-			//FIXME HACK
-			Utils.warn("Pozor", "Konfigurace byla uložena, ale nepodařilo se informovat o změně homeguard.");
-		}
-		return succ;
+	public void setToAndSave(Configuration config) throws Hg6ConfigException, Hg6CoreConnException {
+		cfg.setToAndSave(config);
+		client.configChanged();
 	}
 
 	public void setConfigToDefault() {
@@ -101,7 +96,5 @@ public class Hg6WebApp implements Serializable {
 	public void stop() throws Hg6CoreConnException {
 		client.stop();
 	}
-
-
 
 }

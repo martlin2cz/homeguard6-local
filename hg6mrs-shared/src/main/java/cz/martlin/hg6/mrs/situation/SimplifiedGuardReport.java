@@ -119,8 +119,8 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 	}
 
 	public void trySetTo(SimplifiedGuardReport report) {
-		trySetTo(report.getStartedAt(), report.getStoppedAt(), report.getLastWarningAt(), report.getItemsCount(),
-				report.getWarningsCount(), report.getCriticalCount(), report.getDescription());
+		trySetTo(report.getStartedAt(), report.getStoppedAt(), report.getLastWarningAt(), report.getWarningsCount(),
+				report.getCriticalCount(), report.getItemsCount(), report.getDescription());
 	}
 
 	@Override
@@ -159,8 +159,10 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 
 	@Override
 	public String toString() {
-		return "RemoteGuardReport [itemsCount=" + itemsCount + ", warningsCount=" + warningsCount + ", criticalCount="
-				+ criticalCount + ", lastWarnAt=" + lastWarningAt + "]";
+		return "SimplifiedGuardReport [itemsCount=" + itemsCount + ", warningsCount=" + warningsCount
+				+ ", criticalCount=" + criticalCount + ", lastWarningAt=" + lastWarningAt + ", startedAt="
+				+ (getStartedAt() != null ? getStartedAt().getTime() : "null") + ", stoppedAt="
+				+ (getStoppedAt() != null ? getStoppedAt().getTime() : "null") + "]";
 	}
 
 	@Override

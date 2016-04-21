@@ -32,10 +32,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg5.logic.config.Configuration;
-import cz.martlin.hg5.logic.config.Hg6Config;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
+import cz.martlin.hg6.config.Hg6Config;
 
 public class FileSystemManTools implements Serializable {
 	private static final long serialVersionUID = 7701899175538486900L;

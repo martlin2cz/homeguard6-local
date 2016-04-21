@@ -92,4 +92,8 @@ public class Hg6Database {
 		}
 	}
 
+	public GuardingReport loadNewestReport() throws Hg6DbException {
+		return loadLastReport(); // TODO like this?
+	}
+
 }

@@ -4,8 +4,8 @@ package cz.martlin.hg6db.fsman;
 import org.junit.Before;
 
 import cz.martlin.hg5.logic.config.Configuration;
-import cz.martlin.hg5.logic.config.Hg6Config;
 import cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools;
+import cz.martlin.hg6.config.Hg6Config;
 
 public class Test {
 	private final Configuration config = Hg6Config.get().createDefault();

@@ -1,15 +1,18 @@
-package cz.martlin.hg5.logic.config;
+package cz.martlin.hg6.config;
 
 import java.io.File;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import cz.martlin.hg5.logic.config.ConfigLoader;
+import cz.martlin.hg5.logic.config.Configuration;
+
 public class Hg6Config {
 	private static final Logger LOG = LoggerFactory.getLogger(Hg6Config.class);
 
 	private static final String HOME_PROP_NAME = "HOMEGUARD6_HOME";
-	private static final File CONFIG_FILE = createFile("config.props");
+	private static final File CONFIG_FILE = createFile("config.xml");
 
 	private static Hg6Config instance = null;
 
@@ -24,9 +27,10 @@ public class Hg6Config {
 		if (instance == null) {
 			instance = new Hg6Config();
 
-			boolean succ = instance.load();
-			if (!succ) {
-				LOG.warn("Config file load failed. Will be used default instead.");
+			try {
+				instance.load();
+			} catch (Hg6ConfigException e) {
+				LOG.warn("Config file load failed. Will be used default instead.", e);
 			}
 		}
 
@@ -40,7 +44,7 @@ public class Hg6Config {
 
 			return new File(name);
 		} else {
-			LOG.info("Using file/dir {} in {}. But exists?", name, dir);
+			LOG.info("Using file or dir {} in {}. But exists?", name, dir);
 
 			File dirFile = new File(dir);
 			return new File(dirFile, name);
@@ -51,21 +55,21 @@ public class Hg6Config {
 		return config;
 	}
 
-	public boolean load() {
-		return loader.load(config);
+	public void load() throws Hg6ConfigException {
+		loader.load(config);
 	}
 
-	public boolean save() {
-		return loader.save(config);
+	public void save() throws Hg6ConfigException {
+		loader.save(config);
 	}
 
-	public boolean setTo(Configuration other) {
+	public void setTo(Configuration other) {
 		config.setTo(other);
-		return true;
 	}
 
-	public boolean setToAndSave(Configuration other) {
-		return setTo(other) && save();
+	public void setToAndSave(Configuration other) throws Hg6ConfigException {
+		setTo(other);
+		save();
 	}
 
 	public Configuration makeCopy() {
@@ -73,8 +77,9 @@ public class Hg6Config {
 		other.setTo(config);
 		return other;
 	}
-	
+
 	public Configuration createDefault() {
 		return new Configuration();
 	}
+
 }

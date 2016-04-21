@@ -15,6 +15,9 @@ public class Situation implements Serializable, JaxonSerializable, Cloneable {
 
 	public Situation() {
 		super();
+		this.status = GuardingStatus.DOWN;
+		this.report = new SimplifiedGuardReport();
+		this.config = new SimplifiedConfig();
 	}
 
 	public Situation(GuardingStatus status, SimplifiedGuardReport report, SimplifiedConfig config) {
@@ -101,6 +104,14 @@ public class Situation implements Serializable, JaxonSerializable, Cloneable {
 		clone.setStatus(status);
 
 		return clone;
+	}
+
+	public Situation duplicate() {
+		try {
+			return (Situation) clone();
+		} catch (CloneNotSupportedException e) {
+			return null;
+		}
 	}
 
 	@Override

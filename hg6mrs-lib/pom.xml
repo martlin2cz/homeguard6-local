@@ -27,6 +27,12 @@
 
 		<dependency>
 			<groupId>cz.martlin</groupId>
+			<artifactId>hg6db</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cz.martlin</groupId>
 			<artifactId>hg6mrs-cli</artifactId>
 			<version>${project.version}</version>
 		</dependency>

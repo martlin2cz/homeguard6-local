@@ -71,6 +71,11 @@ public class Hg6MrsClient {
 					.accept(MediaType.APPLICATION_XML_TYPE)//
 					.get(ClientResponse.class);
 			xml = response.getEntity(String.class);
+
+			if (Protocol.OK_STATUS != response.getStatus()) {
+				throw new IllegalStateException(
+						"Got status code " + response.getStatus() + " but expected " + Protocol.OK_STATUS);
+			}
 		} catch (Exception e) {
 			throw new Hg6MrsException("Seding get remote situation failed", e);
 		}

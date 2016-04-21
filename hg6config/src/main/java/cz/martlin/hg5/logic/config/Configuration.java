@@ -3,8 +3,13 @@ package cz.martlin.hg5.logic.config;
 import java.io.File;
 import java.io.Serializable;
 
-public class Configuration implements Serializable, HasSamplesEntryConfig {
+import cz.martlin.hg6.config.Hg6Config;
+import cz.martlin.jaxon.jaxon.JaxonSerializable;
+
+public class Configuration implements Serializable, JaxonSerializable, HasSamplesEntryConfig {
 	private static final long serialVersionUID = -5676212208946459691L;
+
+	private static final String DESC = null;
 
 	private int samplesInterval = 5 * 60 /* 10 */;
 	private int sampleLenght = 20 /* 1 */;
@@ -19,10 +24,16 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 	private File logsRootDir = new File("reports");
 	private String defaultDescription = "Nepřítomnost";
 
+	private String mrsBaseUrl = "http://localhost:9080/mrs/ws";
+	private int mrsInterval = 10;
+	private boolean mrsEnabled = true;
+
 	/**
-	 * Use {@link Hg6Config} as possible
+	 * Use {@link Hg6Config} as possible.
+	 * 
+	 * TODO make protected, only for testing
 	 */
-	protected Configuration() {
+	public Configuration() {
 	}
 
 	public int getSamplesInterval() {
@@ -101,6 +112,30 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 		this.defaultDescription = defaultDescription;
 	}
 
+	public String getMrsBaseUrl() {
+		return mrsBaseUrl;
+	}
+
+	public void setMrsBaseUrl(String mrsUrl) {
+		this.mrsBaseUrl = mrsUrl;
+	}
+
+	public int getMrsInterval() {
+		return mrsInterval;
+	}
+
+	public void setMrsInterval(int mrsInterval) {
+		this.mrsInterval = mrsInterval;
+	}
+
+	public boolean isMrsEnabled() {
+		return mrsEnabled;
+	}
+
+	public void setMrsEnabled(boolean mrsEnabled) {
+		this.mrsEnabled = mrsEnabled;
+	}
+
 	public void setTo(Configuration other) {
 		this.samplesInterval = other.samplesInterval;
 		this.sampleLenght = other.sampleLenght;
@@ -114,6 +149,9 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 		this.logsRootDir = other.logsRootDir;
 		this.defaultDescription = other.defaultDescription;
 
+		this.mrsBaseUrl = other.mrsBaseUrl;
+		this.mrsInterval = other.mrsInterval;
+		this.mrsEnabled = other.mrsEnabled;
 	}
 
 	@Override
@@ -127,7 +165,11 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((defaultDescription == null) ? 0 : defaultDescription.hashCode());
 		result = prime * result + ((logsRootDir == null) ? 0 : logsRootDir.hashCode());
+		result = prime * result + ((mrsBaseUrl == null) ? 0 : mrsBaseUrl.hashCode());
+		result = prime * result + (mrsEnabled ? 1231 : 1237);
+		result = prime * result + mrsInterval;
 		result = prime * result + sampleLenght;
+		result = prime * result + samplesGroup;
 		result = prime * result + samplesInterval;
 		temp = Double.doubleToLongBits(warningNoiseAmount);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -159,7 +201,18 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 				return false;
 		} else if (!logsRootDir.equals(other.logsRootDir))
 			return false;
+		if (mrsBaseUrl == null) {
+			if (other.mrsBaseUrl != null)
+				return false;
+		} else if (!mrsBaseUrl.equals(other.mrsBaseUrl))
+			return false;
+		if (mrsEnabled != other.mrsEnabled)
+			return false;
+		if (mrsInterval != other.mrsInterval)
+			return false;
 		if (sampleLenght != other.sampleLenght)
+			return false;
+		if (samplesGroup != other.samplesGroup)
 			return false;
 		if (samplesInterval != other.samplesInterval)
 			return false;
@@ -173,14 +226,16 @@ public class Configuration implements Serializable, HasSamplesEntryConfig {
 	@Override
 	public String toString() {
 		return "Configuration [samplesInterval=" + samplesInterval + ", sampleLenght=" + sampleLenght
-				+ ", warningNoiseThreshold=" + warningNoiseThreshold + ", criticalNoiseThreshold="
-				+ criticalNoiseThreshold + ", warningNoiseAmount=" + warningNoiseAmount + ", criticalNoiseAmount="
-				+ criticalNoiseAmount + ", logsRootDir=" + logsRootDir + ", defaultDescription=" + defaultDescription
-				+ "]";
+				+ ", samplesGroup=" + samplesGroup + ", warningNoiseThreshold=" + warningNoiseThreshold
+				+ ", criticalNoiseThreshold=" + criticalNoiseThreshold + ", warningNoiseAmount=" + warningNoiseAmount
+				+ ", criticalNoiseAmount=" + criticalNoiseAmount + ", logsRootDir=" + logsRootDir
+				+ ", defaultDescription=" + defaultDescription + ", mrsBaseUrl=" + mrsBaseUrl + ", mrsInterval="
+				+ mrsInterval + ", mrsEnabled=" + mrsEnabled + "]";
 	}
 
-	public String getMRSurl() {
-		return "TODOOO in config";
+	@Override
+	public String jaxonDescription() {
+		return DESC;
 	}
 
 }
