@@ -28,6 +28,9 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 	private int mrsInterval = 10;
 	private boolean mrsEnabled = true;
 
+	private int coreJRestPort = 6_417;
+	private int mrsJRestPort = 6_254;
+
 	/**
 	 * Use {@link Hg6Config} as possible.
 	 * 
@@ -136,6 +139,22 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 		this.mrsEnabled = mrsEnabled;
 	}
 
+	public int getCoreJRestPort() {
+		return coreJRestPort;
+	}
+
+	public void setCoreJRestPort(int coreJRestPort) {
+		this.coreJRestPort = coreJRestPort;
+	}
+
+	public int getMrsJRestPort() {
+		return mrsJRestPort;
+	}
+
+	public void setMrsJRestPort(int mrsJRestPort) {
+		this.mrsJRestPort = mrsJRestPort;
+	}
+
 	public void setTo(Configuration other) {
 		this.samplesInterval = other.samplesInterval;
 		this.sampleLenght = other.sampleLenght;
@@ -152,12 +171,21 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 		this.mrsBaseUrl = other.mrsBaseUrl;
 		this.mrsInterval = other.mrsInterval;
 		this.mrsEnabled = other.mrsEnabled;
+
+		this.coreJRestPort = other.coreJRestPort;
+		this.mrsJRestPort = other.mrsJRestPort;
+	}
+
+	@Override
+	public String jaxonDescription() {
+		return DESC;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + coreJRestPort;
 		long temp;
 		temp = Double.doubleToLongBits(criticalNoiseAmount);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -168,6 +196,7 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 		result = prime * result + ((mrsBaseUrl == null) ? 0 : mrsBaseUrl.hashCode());
 		result = prime * result + (mrsEnabled ? 1231 : 1237);
 		result = prime * result + mrsInterval;
+		result = prime * result + mrsJRestPort;
 		result = prime * result + sampleLenght;
 		result = prime * result + samplesGroup;
 		result = prime * result + samplesInterval;
@@ -187,6 +216,8 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 		if (getClass() != obj.getClass())
 			return false;
 		Configuration other = (Configuration) obj;
+		if (coreJRestPort != other.coreJRestPort)
+			return false;
 		if (Double.doubleToLongBits(criticalNoiseAmount) != Double.doubleToLongBits(other.criticalNoiseAmount))
 			return false;
 		if (Double.doubleToLongBits(criticalNoiseThreshold) != Double.doubleToLongBits(other.criticalNoiseThreshold))
@@ -210,6 +241,8 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 			return false;
 		if (mrsInterval != other.mrsInterval)
 			return false;
+		if (mrsJRestPort != other.mrsJRestPort)
+			return false;
 		if (sampleLenght != other.sampleLenght)
 			return false;
 		if (samplesGroup != other.samplesGroup)
@@ -230,12 +263,8 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 				+ ", criticalNoiseThreshold=" + criticalNoiseThreshold + ", warningNoiseAmount=" + warningNoiseAmount
 				+ ", criticalNoiseAmount=" + criticalNoiseAmount + ", logsRootDir=" + logsRootDir
 				+ ", defaultDescription=" + defaultDescription + ", mrsBaseUrl=" + mrsBaseUrl + ", mrsInterval="
-				+ mrsInterval + ", mrsEnabled=" + mrsEnabled + "]";
-	}
-
-	@Override
-	public String jaxonDescription() {
-		return DESC;
+				+ mrsInterval + ", mrsEnabled=" + mrsEnabled + ", coreJRestPort=" + coreJRestPort + ", mrsJRestPort="
+				+ mrsJRestPort + "]";
 	}
 
 }

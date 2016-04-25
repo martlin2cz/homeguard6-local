@@ -1,4 +1,4 @@
-package cz.martlin.hg6.coreJRest;
+package cz.martlin.hg6.mrsJRest;
 
 import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.jrest.impl.jarmil.JarmilWaiterShift;
@@ -12,22 +12,20 @@ import cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget;
 
 public class Protocol {
 
-	private static final String NAME = "hg6core";
+	public static final String NAME = "hg6mrs";
 
-	public static final String START_METHOD = "start";
-	public static final String STOP_METHOD = "stop";
-	public static final String IS_RUNNING_METHOD = "isRunning";
-	public static final String SIMPLE_INFO_METHOD = "simpleInfo";
-	public static final String CURRENT_STARTED_METHOD = "currentReportStartedAt";
-	public static final String CONFIG_CHANGED_METHOD = "configChanged";
+	public static final String START_LOOP_METHOD = "startLoop";
+	public static final String STOP_LOOP_METHOD = "stopLooop";
+	public static final String SYNCHRONIZE_METHOD = "synchronize";
+	public static final String IS_LOOP_RUNNING_METHOD = "isLoopRunning";
 
-	private final int port;
+	public final int port;
 
-	public Protocol(Configuration configuration) {
-		port = configuration.getCoreJRestPort();
+	public Protocol(Configuration config) {
+		this.port = config.getMrsJRestPort();
 	}
 
-	public JarmilWaiterProtocol getWaiterProtocol(Hg6CoreCmdsProcessor processor) {
+	public JarmilWaiterProtocol getWaiterProtocol(Hg6MrsCmdsProcessor processor) {
 		TargetOnWaiter target = ObjectOnWaiterTarget.create(NAME, processor);
 		return JarmilWaiterProtocol.createSingle(port, target);
 	}
@@ -36,7 +34,7 @@ public class Protocol {
 		return JarmilGuestProtocol.create(port, host);
 	}
 
-	public JarmilWaiterShift getWaiterShift(Hg6CoreCmdsProcessor processor) {
+	public JarmilWaiterShift getWaiterShift(Hg6MrsCmdsProcessor processor) {
 		JarmilWaiterProtocol protocol = getWaiterProtocol(processor);
 		return new JarmilWaiterShift(protocol);
 	}

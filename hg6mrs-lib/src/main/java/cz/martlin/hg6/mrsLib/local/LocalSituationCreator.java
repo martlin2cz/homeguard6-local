@@ -31,7 +31,7 @@ public class LocalSituationCreator {
 
 	public LocalSituationCreator(Hg6Config config) {
 		this.config = config;
-		this.core = new Hg6CoreClient();
+		this.core = new Hg6CoreClient(config);
 		this.db = new Hg6Database(config.getConfig());
 
 		this.differ = new SituationDiffer();

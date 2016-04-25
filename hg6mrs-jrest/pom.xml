@@ -2,10 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>hg6mrs-app</artifactId>
-	<name>Application performing hg6mrs-conn</name>
-
-
+	<artifactId>hg6mrs-jrest</artifactId>
+	<name>Homeguard6 mrs client's jrest server</name>
 	<parent>
 		<groupId>cz.martlin</groupId>
 		<artifactId>homeguard6local</artifactId>
@@ -13,17 +11,19 @@
 	</parent>
 
 	<dependencies>
+		<!-- JRest -->
+		<dependency>
+			<groupId>cz.martlin</groupId>
+			<artifactId>JRest</artifactId>
+			<version>1.3-testing</version>
+		</dependency>
+
 		<dependency>
 			<groupId>cz.martlin</groupId>
 			<artifactId>hg6mrs-lib</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>cz.martlin</groupId>
-			<artifactId>hg6mrs-jrest</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 	</dependencies>
+
+
 </project>

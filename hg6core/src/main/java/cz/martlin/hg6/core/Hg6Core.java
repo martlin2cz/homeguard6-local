@@ -1,14 +1,9 @@
 package cz.martlin.hg6.core;
 
-import java.util.Calendar;
-import java.util.Set;
-
 import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
-import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg5.logic.guard.GuardingPerformer;
 import cz.martlin.hg6.db.Hg6Database;
-import cz.martlin.hg6.db.Hg6DbException;
 
 public class Hg6Core {
 

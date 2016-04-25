@@ -13,7 +13,8 @@
 		<file>hg6app.log</file>
 
 		<encoder>
-			<pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{10}:%line %msg%n</pattern>
+			<pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level
+				%logger{10}:%line %msg%n</pattern>
 		</encoder>
 	</appender>
 
@@ -24,9 +25,14 @@
 		<appender-ref ref="LOGFILE" />
 	</root>
 
+
+
 	<logger level="info" name="cz.martlin.hg6.app.Hg6ServiceMain" />
 	<logger level="warn" name="cz.martlin.jrest.waiter.RequestsProcessor" />
 	<logger level="debug" name="cz.martlin.hg5.logic.guard.GuardingPerformer" />
+
+	<logger level="info"
+		name="cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl" />
 
 </configuration>
 

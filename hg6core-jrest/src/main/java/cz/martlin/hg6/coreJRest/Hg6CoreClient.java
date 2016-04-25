@@ -1,130 +1,73 @@
 package cz.martlin.hg6.coreJRest;
 
-import java.text.ParseException;
 import java.util.Calendar;
-import java.util.Date;
 
-import cz.martlin.jrest.guest.JRestGuest;
+import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg6.config.Hg6Config;
+import cz.martlin.jrest.impl.jarmil.SingleJarmilGuest;
 import cz.martlin.jrest.misc.JRestException;
-import cz.martlin.jrest.protocol.reqresp.JRestRequest;
-import cz.martlin.jrest.protocol.reqresp.JRestResponse;
-import cz.martlin.jrest.protocol.reqresp.ResponseStatus;
 
 public class Hg6CoreClient {
-	//private final Logger LOG = LoggerFactory.getLogger(getClass());
+	// private final Logger LOG = LoggerFactory.getLogger(getClass());
 
-	private final JRestGuest guest;
+	private final SingleJarmilGuest guest;
 
-	public Hg6CoreClient() {
-		Protocol protocol = new Protocol();
-		guest = protocol.getGuest();
+	public Hg6CoreClient(Hg6Config config) {
+		Protocol protocol = new Protocol(config.getConfig());
+		guest = protocol.getGuest(null);
 	}
 
-	public Hg6CoreClient(String host) {
-		Protocol protocol = new Protocol();
+	public Hg6CoreClient(Configuration configuration, String host) {
+		Protocol protocol = new Protocol(configuration);
 		guest = protocol.getGuest(host);
 	}
 
 	public void start() throws Hg6CoreConnException {
-		JRestRequest request = new JRestRequest(Protocol.START_COMMAND);
 		try {
-			JRestResponse response = guest.sendRequest(request);
-
-			boolean isOK = response.is(ResponseStatus.OK);
-			if (!isOK) {
-				throw new JRestException("Got no OK response: " + response);
-			}
+			guest.invoke(Protocol.START_METHOD);
 		} catch (JRestException e) {
-			throw new Hg6CoreConnException("Cannot send start command", e);
+			throw new Hg6CoreConnException("Cannot invoke start", e);
 		}
 	}
 
 	public void stop() throws Hg6CoreConnException {
-		JRestRequest request = new JRestRequest(Protocol.STOP_COMMAND);
 		try {
-			JRestResponse response = guest.sendRequest(request);
-
-			boolean isOK = response.is(ResponseStatus.OK);
-			if (!isOK) {
-				throw new JRestException("Got no OK response: " + response);
-			}
+			guest.invoke(Protocol.STOP_METHOD);
 		} catch (JRestException e) {
-			throw new Hg6CoreConnException("Cannot send stop command", e);
+			throw new Hg6CoreConnException("Cannot invoke stop", e);
 		}
 	}
 
 	public Boolean isRunning() throws Hg6CoreConnException {
-		JRestRequest request = new JRestRequest(Protocol.IS_RUNNING_COMMAND);
 		try {
-			JRestResponse response = guest.sendRequest(request);
-
-			boolean isOK = response.is(ResponseStatus.OK);
-			if (!isOK) {
-				throw new JRestException("Got no OK response: " + response);
-			}
-			return Boolean.parseBoolean(response.getData());
+			return guest.invoke(Protocol.IS_RUNNING_METHOD);
 		} catch (JRestException e) {
-			throw new Hg6CoreConnException("Cannot send isRunning command", e);
+			throw new Hg6CoreConnException("Cannot invoke isRunning", e);
 		}
 	}
 
 	public String simpleInfo() throws Hg6CoreConnException {
-		JRestRequest request = new JRestRequest(Protocol.SIMPLE_INFO_COMMAND);
 		try {
-			JRestResponse response = guest.sendRequest(request);
-
-			boolean isOK = response.is(ResponseStatus.OK);
-			if (!isOK) {
-				throw new JRestException("Got no OK response: " + response);
-			}
-			return response.getData();
+			return guest.invoke(Protocol.SIMPLE_INFO_METHOD);
 		} catch (JRestException e) {
-			throw new Hg6CoreConnException("Cannot send simpleInfo command", e);
+			throw new Hg6CoreConnException("Cannot invoke simpleInfo", e);
 		}
 	}
 
 	public Calendar getCurrentStartedAt() throws Hg6CoreConnException {
-		JRestRequest request = new JRestRequest(Protocol.CURRENT_STARTED_COMMAND);
 		try {
-			JRestResponse response = guest.sendRequest(request);
-
-			boolean isOK = response.is(ResponseStatus.OK);
-			if (!isOK) {
-				throw new JRestException("Got no OK response: " + response);
-			}
-
-			return responseDataToCalendar(response);
-
-		} catch (JRestException | ParseException e) {
-			throw new Hg6CoreConnException("Cannot send currentStatedAt command", e);
+			return guest.invoke(Protocol.CURRENT_STARTED_METHOD);
+		} catch (JRestException e) {
+			throw new Hg6CoreConnException("Cannot invoke currentStartedAT", e);
 		}
 	}
 
 	public void configChanged() throws Hg6CoreConnException {
-		JRestRequest request = new JRestRequest(Protocol.CONFIG_CHANGED_COMMAND);
 		try {
-			JRestResponse response = guest.sendRequest(request);
-
-			boolean isOK = response.is(ResponseStatus.OK);
-			if (!isOK) {
-				throw new JRestException("Got no OK response: " + response);
-			}
+			guest.invoke(Protocol.CONFIG_CHANGED_METHOD);
 		} catch (JRestException e) {
-			throw new Hg6CoreConnException("Cannot config changed command", e);
+			throw new Hg6CoreConnException("Cannot invoke configChanged", e);
 		}
 	}
-
-	
-	private Calendar responseDataToCalendar(JRestResponse response) throws ParseException {
-		String data = response.getData();
-
-		Calendar cal = Calendar.getInstance();
-
-		Date parsed = Protocol.DATE_FORMAT.parse(data);
-		cal.setTime(parsed);
-
-		return cal;
-	}
-
 
 }

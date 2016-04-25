@@ -285,3 +285,178 @@ Caused by: java.net.BindException: Adresa je užívána
 02:47:52.250 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard stopped [at line 80]
 02:48:07.723 [WaiterThread] DEBUG c.m.h.l.g.GuardingPerformer Homeguard starting [at line 58]
 02:48:07.750 [WaiterThread] INFO  c.m.h.l.g.GuardingPerformer Homeguard started [at line 63]
+25.04.2016 00:50:16.437 [main] INFO  c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:50:16.443 [WaiterThread] ERROR c.m.j.w.JRestWaiter:55 Cannot start server
+cz.martlin.jrest.misc.JRestException: Cannot start server
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:59)
+	at cz.martlin.jrest.waiter.JRestServer.<init>(JRestServer.java:42)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:53)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.BindException: Adresa je užívána
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:128)
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:55)
+	... 4 common frames omitted
+25.04.2016 00:50:58.442 [main] INFO  c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:50:58.898 [main] INFO  c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:50:58.903 [WaiterThread] ERROR c.m.j.w.JRestWaiter:55 Cannot start server
+cz.martlin.jrest.misc.JRestException: Cannot start server
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:59)
+	at cz.martlin.jrest.waiter.JRestServer.<init>(JRestServer.java:42)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:53)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.BindException: Adresa je užívána
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:128)
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:55)
+	... 4 common frames omitted
+25.04.2016 00:51:30.369 [WaiterThread] ERROR c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: " " waiterStopper stop
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: " " waiterStopper stop
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: No enum constant cz.martlin.jrest.impl.jarmil.target.TargetType. 
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at cz.martlin.jrest.impl.jarmil.target.TargetType.valueOf(TargetType.java:9)
+	at cz.martlin.jrest.impl.jarmil.serializers.TargetsSerializer.deserializeType(TargetsSerializer.java:51)
+	at cz.martlin.jrest.impl.jarmil.serializers.TargetsSerializer.deserialize(TargetsSerializer.java:34)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.deserializeTarget(JarmilShellLikeSerializer.java:88)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:67)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:26)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+25.04.2016 00:51:45.088 [WaiterThread] ERROR c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: ����
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: ����
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Request need to have at least three parts, but have 1
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:64)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:26)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+25.04.2016 00:54:16.812 [WaiterThread] ERROR c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: " " echoer echo
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: " " echoer echo
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: No enum constant cz.martlin.jrest.impl.jarmil.target.TargetType. 
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at cz.martlin.jrest.impl.jarmil.target.TargetType.valueOf(TargetType.java:9)
+	at cz.martlin.jrest.impl.jarmil.serializers.TargetsSerializer.deserializeType(TargetsSerializer.java:51)
+	at cz.martlin.jrest.impl.jarmil.serializers.TargetsSerializer.deserialize(TargetsSerializer.java:34)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.deserializeTarget(JarmilShellLikeSerializer.java:88)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:67)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:26)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+25.04.2016 00:55:00.166 [main] INFO  c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:55:48.213 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:56:24.170 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=fooo, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method fooo on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 00:57:37.031 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:58:13.224 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:58:17.164 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=start", parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method start" on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 00:59:05.574 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:28 Homeguard6 service is running
+25.04.2016 00:59:16.074 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:22 The Hg6 started
+25.04.2016 00:59:24.356 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:22 The Hg6 started
+25.04.2016 00:59:29.001 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=isRunning, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method isRunning on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 01:00:34.616 [WaiterThread] ERROR
+				c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: object waiterStopper stop "Bye...."
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: object waiterStopper stop "Bye...."
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Cannot serialize object Bye....
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserialize(ValuesSerializer.java:113)
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserialize(ValuesSerializer.java:71)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.deserializeParameters(JarmilShellLikeSerializer.java:102)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:69)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:26)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Illegal base64 character 2e
+	at java.util.Base64$Decoder.decode0(Base64.java:714)
+	at java.util.Base64$Decoder.decode(Base64.java:526)
+	at java.util.Base64$Decoder.decode(Base64.java:549)
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserializeObject(ValuesSerializer.java:179)
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserialize(ValuesSerializer.java:111)
+	... 12 common frames omitted

@@ -14,17 +14,17 @@
 
 
 	<dependencies>
-		<!-- JRest -->
-		<dependency>
-			<groupId>cz.martlin</groupId>
-			<artifactId>JRest</artifactId>
-			<version>1.1</version>
-		</dependency>
-
 		<dependency>
 			<groupId>cz.martlin</groupId>
 			<artifactId>hg6config</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+
+		<!-- JRest -->
+		<dependency>
+			<groupId>cz.martlin</groupId>
+			<artifactId>JRest</artifactId>
+			<version>1.3-testing</version>
 		</dependency>
 	</dependencies>
 </project>

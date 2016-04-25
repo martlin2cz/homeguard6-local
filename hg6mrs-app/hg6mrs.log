@@ -23,3 +23,121 @@ java.lang.NumberFormatException: null
 15.04.2016 02:40:20.951 [main] WARN  c.m.h.l.c.Hg6Config:29 Config file load failed. Will be used default instead.
 15.04.2016 02:40:20.971 [main] INFO  c.m.h.m.MrsConnectorApp:20 MRS some started
 15.04.2016 02:42:36.069 [main] INFO  c.m.h.m.MrsConnectorApp:20 MRS some started
+23.04.2016 14:29:31.273 [WaiterThread] ERROR c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: echoer echo "hi"
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: echoer echo "hi"
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Object of name echo not found
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.deserializeObject(JarmilShellLikeSerializer.java:113)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:84)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:31)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+23.04.2016 14:30:03.724 [WaiterThread] ERROR c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: " " echoer echo "Hellllo"
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: " " echoer echo "Hellllo"
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Cannot serialize object Hellllo
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserialize(ValuesSerializer.java:113)
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserialize(ValuesSerializer.java:71)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.deserializeParameters(JarmilShellLikeSerializer.java:146)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:88)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:31)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+Caused by: java.io.StreamCorruptedException: invalid stream header: 1DE96596
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:806)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:299)
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserializeObject(ValuesSerializer.java:181)
+	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserialize(ValuesSerializer.java:111)
+	... 12 common frames omitted
+23.04.2016 14:38:19.920 [WaiterThread] ERROR c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: " " hg6mrs start
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: " " hg6mrs start
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchMethodException: Cannot find the method start on cz.martlin.hg6.run.Hg6Mrs
+	at cz.martlin.jrest.impl.jarmil.handlers.MethodsFinder.findMethod(MethodsFinder.java:57)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.deserializeMethod(JarmilShellLikeSerializer.java:101)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:90)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:31)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+23.04.2016 14:39:27.043 [WaiterThread] ERROR c.m.j.w.RequestsProcessor:101 An unahndled error occured during the handling of request: " " waiterStopper stopWaiter
+cz.martlin.jrest.misc.JRestException: Cannot deseriliaze request: " " waiterStopper stopWaiter
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:52)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:90)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchMethodException: Cannot find the method stopWaiter on cz.martlin.jrest.impl.jarmil.handlers.WaiterStopper
+	at cz.martlin.jrest.impl.jarmil.handlers.MethodsFinder.findMethod(MethodsFinder.java:57)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.deserializeMethod(JarmilShellLikeSerializer.java:101)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:90)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToRequest(JarmilShellLikeSerializer.java:31)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeRequest(BaseShellLikeSerializer.java:50)
+	... 7 common frames omitted
+25.04.2016 01:28:41.805 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:27 MRS Conn local started
+25.04.2016 01:29:11.382 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=start, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method start on cz.martlin.hg6.mrsJRest.TestingHg6MrsConnCmdsProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 01:29:28.068 [WaiterThread] INFO 
+				c.m.h.m.TestingHg6MrsConnCmdsProcImpl:22 Loop started
+25.04.2016 01:32:13.347 [WaiterThread] INFO 
+				c.m.h.m.TestingHg6MrsConnCmdsProcImpl:32 Synchronized
+25.04.2016 01:32:27.654 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stop on cz.martlin.hg6.mrsJRest.TestingHg6MrsConnCmdsProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 01:32:40.525 [WaiterThread] INFO 
+				c.m.h.m.TestingHg6MrsConnCmdsProcImpl:27 Loop stopped
+25.04.2016 01:33:42.231 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
+25.04.2016 02:04:36.043 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started

@@ -181,3 +181,39 @@ Caused by: java.lang.NoSuchMethodException: cz.martlin.hg5.logic.config.Configur
 				c.m.h.c.Hg6Config:47 Using file or dir config.xml in /home/martin/hg6. But exists?
 20.04.2016 23:53:32.930 [main] INFO 
 				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=null, mrsInterval=0, mrsEnabled=false]
+25.04.2016 01:40:18.466 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file or dir config.xml in /home/martin/hg6. But exists?
+25.04.2016 01:40:18.644 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.config.ConfigTestingApp.main(ConfigTestingApp.java:10)
+Caused by: cz.martlin.jaxon.jack.data.misc.JackException: Converting to Object failed
+	at cz.martlin.jaxon.jack.JackConverter.toObject(JackConverter.java:55)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.documentToObject(JaxonConverter.java:67)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:116)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: cz.martlin.jaxon.jack.data.misc.JackException: Could not invoke setter setCoreJRestPort with value null
+	at cz.martlin.jaxon.jack.ReflectionAndJack.invokeSetter(ReflectionAndJack.java:274)
+	at cz.martlin.jaxon.jack.ReflectionAndJack.setValueTo(ReflectionAndJack.java:193)
+	at cz.martlin.jaxon.jack.process.DataObjectsFieldsProcessor.build(DataObjectsFieldsProcessor.java:104)
+	at cz.martlin.jaxon.jack.process.DataObjectsFieldsProcessor.toObject(DataObjectsFieldsProcessor.java:56)
+	at cz.martlin.jaxon.jack.JackImplementation.convertJackToObject(JackImplementation.java:91)
+	at cz.martlin.jaxon.jack.JackConverter.toObject(JackConverter.java:53)
+	... 6 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at cz.martlin.jaxon.jack.ReflectionAndJack.invokeSetter(ReflectionAndJack.java:270)
+	... 11 common frames omitted
+25.04.2016 01:40:18.645 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=http://localhost:9080/mrs/ws, mrsInterval=10, mrsEnabled=true, coreJRestPort=6417, mrsJRestPort=6254]
+25.04.2016 01:40:34.397 [main] INFO 
+				c.m.h.c.Hg6Config:47 Using file or dir config.xml in /home/martin/hg6. But exists?
+25.04.2016 01:40:34.568 [main] INFO 
+				c.m.h.c.ConfigTestingApp:11 I have config: Configuration [samplesInterval=300, sampleLenght=20, samplesGroup=64, warningNoiseThreshold=0.5, criticalNoiseThreshold=0.8, warningNoiseAmount=0.2, criticalNoiseAmount=0.1, logsRootDir=reports, defaultDescription=Nepřítomnost, mrsBaseUrl=http://localhost:9080/mrs/ws, mrsInterval=10, mrsEnabled=true, coreJRestPort=6417, mrsJRestPort=6254]

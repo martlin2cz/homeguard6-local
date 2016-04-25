@@ -10,7 +10,7 @@ public class ConfigTestingApp {
 		Hg6Config config = Hg6Config.get();
 		LOG.info("I have config: {}", config.getConfig());
 		
-		//config.setToAndSave(config.createDefault());
+		config.setToAndSave(config.createDefault());
 
 	}
 

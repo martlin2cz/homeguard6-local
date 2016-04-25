@@ -27,7 +27,7 @@ public class Hg6WebApp implements Serializable {
 
 	public Hg6WebApp(Hg6Config cfg) {
 
-		this.client = new Hg6CoreClient();
+		this.client = new Hg6CoreClient(cfg);
 		this.db = new Hg6Database(cfg.getConfig());
 		this.cfg = cfg;
 	}

@@ -29,6 +29,7 @@
 		<module>hg6mrs-app</module>
 		<module>hg6mrs-lib</module>
 		<module>hg6mrs-shared</module>
+		<module>hg6mrs-jrest</module>
 	</modules>
 
 

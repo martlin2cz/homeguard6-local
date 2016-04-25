@@ -5,11 +5,11 @@ import java.util.Calendar;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.hg6.core.Hg6Core;
-import cz.martlin.hg6.coreJRest.Hg6CommandsProcessor;
+import cz.martlin.hg6.coreJRest.Hg6CoreCmdsProcessor;
 import cz.martlin.hg6.db.Hg6Database;
 import cz.martlin.hg6.db.Hg6DbException;
 
-public class Hg6CommandsProcessorImpl implements Hg6CommandsProcessor {
+public class Hg6CommandsProcessorImpl implements Hg6CoreCmdsProcessor {
 
 	private final Hg6Core hg;
 	private final Hg6Config cfg;
@@ -37,14 +37,8 @@ public class Hg6CommandsProcessorImpl implements Hg6CommandsProcessor {
 	}
 
 	@Override
-	public String getSimpleInfo() {
-		try {
-			return db.loadLastReport().toString();
-			// TODO like this?
-			// TODO fix reporting ... somehow...
-		} catch (Hg6DbException e) {
-			return null; // TODO exception ...
-		}
+	public String getSimpleInfo() throws Hg6DbException {
+		return db.loadLastReport().toString();
 	}
 
 	@Override
@@ -57,15 +51,13 @@ public class Hg6CommandsProcessorImpl implements Hg6CommandsProcessor {
 	}
 
 	@Override
-	public boolean configChanged() {
-		try {
-			cfg.load();
-		} catch (Hg6ConfigException e) {
-			// TODO log
-			e.printStackTrace();
-			return false;
-		}
-		return true;
+	public void configChanged() throws Hg6ConfigException {
+		cfg.load();
+	}
+
+	@Override
+	public String getJarmilTargetDescription() {
+		return "Completed Hg6CommandsProcessor implementation using the hg6core";
 	}
 
 }
