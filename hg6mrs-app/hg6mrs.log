@@ -141,3 +141,84 @@ java.lang.NoSuchMethodException: Cannot find the method stop on cz.martlin.hg6.m
 				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
 25.04.2016 02:04:36.043 [main] INFO 
 				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
+25.04.2016 02:37:20.416 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
+25.04.2016 02:38:51.229 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:126 Method invocation of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=synchronize, parameters=[]] failed
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.mrs.Hg6MrsException: Cannot change local situation
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.changeToSituation(LocalSituationCreator.java:99)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:46)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:29)
+	at cz.martlin.hg6.mrsApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:33)
+	... 17 common frames omitted
+Caused by: cz.martlin.hg6.coreJRest.Hg6CoreConnException: Cannot invoke start
+	at cz.martlin.hg6.coreJRest.Hg6CoreClient.start(Hg6CoreClient.java:29)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.doStatusChange(LocalSituationCreator.java:118)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.doSituationChange(LocalSituationCreator.java:108)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.changeToSituation(LocalSituationCreator.java:95)
+	... 20 common frames omitted
+Caused by: cz.martlin.jrest.misc.JRestException: Cannot deseriliaze response: OK null void
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeResponse(BaseShellLikeSerializer.java:72)
+	at cz.martlin.jrest.guest.JRestGuest.sendRequest(JRestGuest.java:55)
+	at cz.martlin.jrest.impl.jarmil.SingleJarmilGuest.invoke(SingleJarmilGuest.java:43)
+	at cz.martlin.hg6.coreJRest.Hg6CoreClient.start(Hg6CoreClient.java:27)
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: void
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToResponse(JarmilShellLikeSerializer.java:38)
+	at cz.martlin.jrest.impl.jarmil.serializers.JarmilShellLikeSerializer.listToResponse(JarmilShellLikeSerializer.java:26)
+	at cz.martlin.jrest.protocol.serializers.BaseShellLikeSerializer.deserializeResponse(BaseShellLikeSerializer.java:70)
+	... 26 common frames omitted
+25.04.2016 11:35:47.034 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
+27.04.2016 02:17:03.013 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:126 Method invocation of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=synchronize, parameters=[]] failed
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at cz.martlin.hg6.mrs.diff.SituationDiffer.diffReports(SituationDiffer.java:44)
+	at cz.martlin.hg6.mrs.diff.SituationDiffer.computeDifferences(SituationDiffer.java:27)
+	at cz.martlin.hg6.mrsLib.sync.SituationsSyncerCore.synchronize(SituationsSyncerCore.java:12)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:24)
+	at cz.martlin.hg6.mrsApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:33)
+	... 16 common frames omitted
+27.04.2016 02:21:44.339 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started

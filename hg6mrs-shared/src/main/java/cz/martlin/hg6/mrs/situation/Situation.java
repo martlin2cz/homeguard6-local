@@ -15,9 +15,10 @@ public class Situation implements Serializable, JaxonSerializable, Cloneable {
 
 	public Situation() {
 		super();
-		this.status = GuardingStatus.DOWN;
-		this.report = new SimplifiedGuardReport();
-		this.config = new SimplifiedConfig();
+		this.status = GuardingStatus.UNKNOWN;
+		// TODO will cause everything to fail god damn lol
+		// this.report = new SimplifiedGuardReport();
+		// this.config = new SimplifiedConfig();
 	}
 
 	public Situation(GuardingStatus status, SimplifiedGuardReport report, SimplifiedConfig config) {

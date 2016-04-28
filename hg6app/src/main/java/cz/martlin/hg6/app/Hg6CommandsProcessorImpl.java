@@ -32,7 +32,7 @@ public class Hg6CommandsProcessorImpl implements Hg6CoreCmdsProcessor {
 	}
 
 	@Override
-	public boolean getIsRunning() {
+	public boolean isRunning() {
 		return hg.isRunning();
 	}
 

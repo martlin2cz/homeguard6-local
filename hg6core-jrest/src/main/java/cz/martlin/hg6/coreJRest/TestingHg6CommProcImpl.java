@@ -9,6 +9,8 @@ public class TestingHg6CommProcImpl implements Hg6CoreCmdsProcessor {
 
 	private final Logger LOG = LoggerFactory.getLogger(getClass());
 
+	private boolean running;
+
 	public TestingHg6CommProcImpl() {
 	}
 
@@ -19,17 +21,19 @@ public class TestingHg6CommProcImpl implements Hg6CoreCmdsProcessor {
 
 	@Override
 	public void start() {
+		running = true;
 		LOG.info("The Hg6 started");
 	}
 
 	@Override
 	public void stop() {
+		running = false;
 		LOG.info("The Hg6 stopped");
 	}
 
 	@Override
-	public boolean getIsRunning() {
-		return true;
+	public boolean isRunning() {
+		return running;
 	}
 
 	@Override

@@ -125,6 +125,11 @@ public class LocalSituationCreator {
 	}
 
 	private void doReportChange(SimplifiedGuardReport report, SituationsDiff diff) throws Hg6DbException {
+		if (report == null) {
+			LOG.warn("Tried to do diffs on null report: " + diff);
+			return;
+		}
+
 		if (diff.has(SituationDifference.CHANGED_REPORT)) {
 			LOG.warn("Report have been changed. God bless us");
 		}
@@ -145,8 +150,12 @@ public class LocalSituationCreator {
 	}
 
 	private void doConfigChange(SimplifiedConfig config, SituationsDiff diff) throws Hg6ConfigException {
+		if (config == null) {
+			LOG.warn("Tried to do diffs on null config: " + diff);
+			return;
+		}
 
-		if (diff.has(SituationDifference.CHANGED_CONFIG)) {
+		if (diff.has(SituationDifference.CHANGED_CONFIG_INTERVAL)) {
 			LOG.info("Saving changed config: {}", config);
 
 			Configuration cfg = this.config.getConfig();
@@ -154,6 +163,10 @@ public class LocalSituationCreator {
 			cfg.setMrsInterval(config.getInterval());
 
 			this.config.save();
+		}
+
+		if (diff.has(SituationDifference.CHANGED_CONFIG_RUNNING)) {
+			LOG.warn("Hg6mrs loop running/stopped status have been changed. Will not be performed.");
 		}
 	}
 }

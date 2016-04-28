@@ -33,20 +33,41 @@ public class SituationDiffer {
 	}
 
 	protected void diffConfigs(SituationsDiff diffs, SimplifiedConfig from, SimplifiedConfig to) {
-		boolean changed = !Objects.equals(from, to);
-		if (changed) {
-			diffs.add(SituationDifference.CHANGED_CONFIG);
+		if (from == null && to == null) {
+			return;
+		}
+
+		boolean changedInterval = true, changedRunning = true;
+
+		if (from != null && to != null) {
+			changedInterval = from.getInterval() != to.getInterval();
+			changedRunning = from.isRunning() != to.isRunning();
+		}
+
+		if (changedInterval) {
+			diffs.add(SituationDifference.CHANGED_CONFIG_INTERVAL);
+		}
+		if (changedRunning) {
+			diffs.add(SituationDifference.CHANGED_CONFIG_RUNNING);
 		}
 
 	}
 
 	protected void diffReports(SituationsDiff diffs, SimplifiedGuardReport from, SimplifiedGuardReport to) {
-		boolean changedReportStart = !Objects.equals(from.getStartedAt(), to.getStartedAt());
-		boolean changedReportStop = !Objects.equals(from.getStartedAt(), to.getStartedAt());
-		boolean changedReportDesc = !Objects.equals(from.getStartedAt(), to.getStartedAt());
-		boolean changedReportItems = !Objects.equals(from.getItemsCount(), to.getItemsCount())
-				|| !Objects.equals(from.getWarningsCount(), to.getWarningsCount())
-				|| !Objects.equals(from.getCriticalCount(), to.getCriticalCount());
+		if (from == null && to == null) {
+			return;
+		}
+		boolean changedReportStart = true, changedReportStop = true, changedReportDesc = true,
+				changedReportItems = true;
+
+		if (from != null && to != null) {
+			changedReportStart = !Objects.equals(from.getStartedAt(), to.getStartedAt());
+			changedReportStop = !Objects.equals(from.getStartedAt(), to.getStartedAt());
+			changedReportDesc = !Objects.equals(from.getStartedAt(), to.getStartedAt());
+			changedReportItems = !Objects.equals(from.getItemsCount(), to.getItemsCount())
+					|| !Objects.equals(from.getWarningsCount(), to.getWarningsCount())
+					|| !Objects.equals(from.getCriticalCount(), to.getCriticalCount());
+		}
 
 		if (changedReportStart) {
 			diffs.add(SituationDifference.CHANGED_REPORT);
@@ -61,7 +82,12 @@ public class SituationDiffer {
 	}
 
 	protected void diffStatuses(SituationsDiff diffs, GuardingStatus from, GuardingStatus to) {
-		boolean changedStatus = !Objects.equals(from, to);
+		boolean changedStatus = true;
+
+		if (from != null && to != null) {
+			changedStatus = !Objects.equals(from, to);
+		}
+
 		if (changedStatus) {
 			diffs.add(SituationDifference.CHANGED_STATUS);
 		}

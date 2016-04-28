@@ -460,3 +460,76 @@ Caused by: java.lang.IllegalArgumentException: Illegal base64 character 2e
 	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserializeObject(ValuesSerializer.java:179)
 	at cz.martlin.jrest.impl.jarmil.serializers.ValuesSerializer.deserialize(ValuesSerializer.java:111)
 	... 12 common frames omitted
+25.04.2016 02:12:17.881 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:27 Homeguard6 service is running
+25.04.2016 02:12:55.150 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=isRunning, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method isRunning on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 02:13:30.773 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=isRunning, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method isRunning on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 02:13:39.983 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:27 Homeguard6 service is running
+25.04.2016 02:14:04.966 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:25 The Hg6 started
+25.04.2016 02:14:25.834 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:31 The Hg6 stopped
+25.04.2016 02:36:36.217 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=isLoopRunning, parameters=[]] not found
+java.lang.IllegalArgumentException: Target ObjectOnGuestTarget [name=hg6mrs] not found in current environment
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findWaiterTarget(JarmilRequestsPerformer.java:78)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+25.04.2016 02:38:51.224 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:25 The Hg6 started
+25.04.2016 13:17:01.985 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:31 The Hg6 stopped
+25.04.2016 13:41:30.896 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:25 The Hg6 started
+26.04.2016 14:29:14.898 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:31 The Hg6 stopped
+26.04.2016 23:37:04.093 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:25 The Hg6 started
+27.04.2016 00:15:56.163 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:31 The Hg6 stopped
+27.04.2016 02:43:22.962 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:25 The Hg6 started
+27.04.2016 02:45:08.169 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:31 The Hg6 stopped
+27.04.2016 03:31:41.468 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:25 The Hg6 started

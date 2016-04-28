@@ -24,7 +24,7 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 	public SimplifiedGuardReport(Calendar startedAt, Calendar stoppedAt, Calendar lastWarnAt, Integer warningsCount,
 			Integer criticalCount, Integer itemsCount, String description) {
 
-		trySetTo(startedAt, stoppedAt, lastWarnAt, warningsCount, criticalCount, itemsCount, description);
+		setTo(startedAt, stoppedAt, lastWarnAt, warningsCount, criticalCount, itemsCount, description);
 	}
 
 	@Override
@@ -63,64 +63,33 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 		this.lastWarningAt = lastWarningAt;
 	}
 
-	public void trySetStarted(Calendar dateOrNull) {
-		if (dateOrNull != null) {
-			super.setStartedAt(dateOrNull);
-		}
+	public void setTo(Calendar startedAt, Calendar stoppedAt, Calendar lastWarnAt, int warningsCount, int criticalCount,
+			int itemsCount, String description) {
+
+		this.setStartedAt(startedAt);
+		this.setStoppedAt(stoppedAt);
+		this.setLastWarningAt(lastWarnAt);
+		this.setItemsCount(itemsCount);
+		this.setWarningsCount(warningsCount);
+		this.setCriticalCount(criticalCount);
+		this.setDescription(description);
 	}
 
-	public void trySetStopped(Calendar dateOrNull) {
-		if (dateOrNull != null) {
-			super.setStoppedAt(dateOrNull);
-		}
-	}
-
-	public void trySetDescription(String descriptionOrNull) {
-		if (descriptionOrNull != null) {
-			super.setDescription(descriptionOrNull);
-		}
-	}
-
-	public void trySetCriticalCount(Integer criticalCountOrNull) {
-		if (criticalCountOrNull != null) {
-			this.criticalCount = criticalCountOrNull;
-		}
-	}
-
-	public void trySetWarningsCount(Integer warningsCountOrNull) {
-		if (warningsCountOrNull != null) {
-			this.warningsCount = warningsCountOrNull;
-		}
-
-	}
-
-	public void trySetItemsCount(Integer itemsCountOrNull) {
-		if (itemsCountOrNull != null) {
-			this.itemsCount = itemsCountOrNull;
-		}
-	}
-
-	public void trySetLastWarnAt(Calendar lastWarnAtOrNull) {
-		if (lastWarnAtOrNull != null) {
-			this.lastWarningAt = lastWarnAtOrNull;
-		}
-	}
-
-	public void trySetTo(Calendar startedAt, Calendar stoppedAt, Calendar lastWarnAt, Integer warningsCount,
-			Integer criticalCount, Integer itemsCount, String description) {
-
-		this.trySetStarted(startedAt);
-		this.trySetStopped(stoppedAt);
-		this.trySetLastWarnAt(lastWarnAt);
-		this.trySetItemsCount(itemsCount);
-		this.trySetWarningsCount(warningsCount);
-		this.trySetCriticalCount(criticalCount);
-		this.trySetDescription(description);
-	}
-
-	public void trySetTo(SimplifiedGuardReport report) {
-		trySetTo(report.getStartedAt(), report.getStoppedAt(), report.getLastWarningAt(), report.getWarningsCount(),
+	public void setTo(SimplifiedGuardReport report) {
+		setTo(report.getStartedAt(), report.getStoppedAt(), report.getLastWarningAt(), report.getWarningsCount(),
 				report.getCriticalCount(), report.getItemsCount(), report.getDescription());
+	}
+
+	public void setItemsTo(SimplifiedGuardReport report) {
+		this.setItemsCount(report.getItemsCount());
+		this.setWarningsCount(report.getWarningsCount());
+		this.setCriticalCount(report.getCriticalCount());
+	}
+
+	public void setMetadataTo(SimplifiedGuardReport report) {
+		this.setStartedAt(report.getStartedAt());
+		this.setStoppedAt(report.getStoppedAt());
+		this.setDescription(report.getDescription());
 	}
 
 	@Override
@@ -169,9 +138,17 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 	protected Object clone() throws CloneNotSupportedException {
 		SimplifiedGuardReport report = new SimplifiedGuardReport();
 
-		report.trySetTo(this);
+		report.setTo(this);
 
 		return report;
+	}
+
+	public SimplifiedGuardReport cloneQuietly() {
+		try {
+			return (SimplifiedGuardReport) clone();
+		} catch (CloneNotSupportedException e) {
+			return null;
+		}
 	}
 
 	@Override
@@ -183,4 +160,5 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 		return new SimplifiedGuardReport(report.getStartedAt(), report.getStoppedAt(), report.getLastWarningAt(),
 				report.getWarningsCount(), report.getCriticalCount(), report.getItemsCount(), report.getDescription());
 	}
+
 }

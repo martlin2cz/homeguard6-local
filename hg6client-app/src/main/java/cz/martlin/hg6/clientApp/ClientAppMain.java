@@ -1,4 +1,4 @@
-package cz.martling.hg6.clientApp;
+package cz.martlin.hg6.clientApp;
 
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.coreJRest.Hg6CoreClient;

@@ -1,7 +1,7 @@
 package cz.martlin.hg6.mrs.situation;
 
 public enum GuardingStatus {
-	STARTED, STOPPED, DOWN;
+	STARTED, STOPPED, UNKNOWN;
 
 	private GuardingStatus() {
 	}

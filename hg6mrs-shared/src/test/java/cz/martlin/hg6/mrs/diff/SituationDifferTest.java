@@ -1,6 +1,7 @@
 package cz.martlin.hg6.mrs.diff;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -20,7 +21,7 @@ public class SituationDifferTest {
 
 		SituationsDiff diff1 = differ.computeDifferences(s1, s2);
 		LOG.debug("Diff1: {}", diff1);
-		assertTrue(diff1.hasNoChanges());
+		assertTrue(diff1.isHasNoChanges());
 	}
 
 	@Test
@@ -34,7 +35,7 @@ public class SituationDifferTest {
 		SituationsDiff diff1 = differ.computeDifferences(s1, s2);
 		LOG.debug("Diff1: {}", diff1);
 
-		assertFalse(diff1.hasNoChanges());
+		assertFalse(diff1.isHasNoChanges());
 		assertTrue(diff1.has(SituationDifference.CHANGED_STATUS));
 	}
 

@@ -10,7 +10,7 @@ public interface Hg6CoreCmdsProcessor extends JarmilTarget {
 
 	public void stop();
 
-	public boolean getIsRunning();
+	public boolean isRunning();
 
 	public String getSimpleInfo() throws Exception;
 

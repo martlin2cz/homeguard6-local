@@ -1,4 +1,5 @@
 package cz.martlin.hg6.mrs.situation;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -16,8 +17,13 @@ public class TestingSituationsCreator {
 
 		SimplifiedGuardReport report = new SimplifiedGuardReport(//
 				cal(19, 4, 17, 14, 26), cal(19, 4, 20, 5, 6), cal(19, 4, 19, 30, 11), 10, 3, 420, "Testing 1");
+
 		GuardingStatus status = GuardingStatus.STARTED;
-		SimplifiedConfig config = new SimplifiedConfig(9);
+
+		SimplifiedConfig config = new SimplifiedConfig();
+		config.setInterval(9);
+		config.setRunning(true);
+
 		return new Situation(status, report, config);
 	}
 

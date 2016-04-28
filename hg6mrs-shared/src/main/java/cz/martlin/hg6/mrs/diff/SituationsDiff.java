@@ -6,7 +6,7 @@ import java.util.EnumSet;
 public class SituationsDiff implements Serializable {
 	private static final long serialVersionUID = -8609764042945763556L;
 
-	EnumSet<SituationDifference> diffs;
+	private EnumSet<SituationDifference> diffs;
 
 	public SituationsDiff() {
 		diffs = EnumSet.of(SituationDifference.CHANGED_STATUS);
@@ -21,7 +21,7 @@ public class SituationsDiff implements Serializable {
 		return diffs.contains(diff);
 	}
 
-	public boolean hasNoChanges() {
+	public boolean isHasNoChanges() {
 		return diffs.isEmpty();
 	}
 
