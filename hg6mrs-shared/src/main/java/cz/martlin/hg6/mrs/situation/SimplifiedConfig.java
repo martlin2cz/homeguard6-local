@@ -10,18 +10,9 @@ public class SimplifiedConfig implements Serializable, JaxonSerializable, Clonea
 
 	private static final String DESC = "Simplified Hg6 configuration";
 
-	private boolean running;
 	private int interval;
 
 	public SimplifiedConfig() {
-	}
-
-	public boolean isRunning() {
-		return running;
-	}
-
-	public void setRunning(boolean running) {
-		this.running = running;
 	}
 
 	public int getInterval() {
@@ -37,7 +28,6 @@ public class SimplifiedConfig implements Serializable, JaxonSerializable, Clonea
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + interval;
-		result = prime * result + (running ? 1231 : 1237);
 		return result;
 	}
 
@@ -52,14 +42,12 @@ public class SimplifiedConfig implements Serializable, JaxonSerializable, Clonea
 		SimplifiedConfig other = (SimplifiedConfig) obj;
 		if (interval != other.interval)
 			return false;
-		if (running != other.running)
-			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "SimplifiedConfig [running=" + running + ", interval=" + interval + "]";
+		return "SimplifiedConfig [interval=" + interval + "]";
 	}
 
 	@Override
@@ -67,7 +55,6 @@ public class SimplifiedConfig implements Serializable, JaxonSerializable, Clonea
 		SimplifiedConfig config = new SimplifiedConfig();
 
 		config.setInterval(getInterval());
-		config.setRunning(isRunning());
 
 		return config;
 
@@ -82,7 +69,6 @@ public class SimplifiedConfig implements Serializable, JaxonSerializable, Clonea
 		SimplifiedConfig simpl = new SimplifiedConfig();
 
 		simpl.setInterval(config.getMrsInterval());
-		simpl.setRunning(config.isMrsEnabled());
 
 		return simpl;
 	}

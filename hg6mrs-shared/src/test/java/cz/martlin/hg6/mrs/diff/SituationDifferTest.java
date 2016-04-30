@@ -7,8 +7,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg6.mrs.situation.GuardingStatus;
 import cz.martlin.hg6.mrs.situation.Situation;
+import cz.martlin.hg6.mrs.situation.Status;
 
 public class SituationDifferTest {
 	private final Logger LOG = LoggerFactory.getLogger(getClass());
@@ -29,14 +29,17 @@ public class SituationDifferTest {
 		Situation s1 = new Situation();
 		Situation s2 = new Situation();
 
-		s1.setStatus(GuardingStatus.STARTED);
-		s2.setStatus(GuardingStatus.STOPPED);
+		s1.setStatus(new Status());
+		s1.getStatus().setCoreRunning(null);
+
+		s2.setStatus(new Status());
+		s2.getStatus().setCoreRunning(false);
 
 		SituationsDiff diff1 = differ.computeDifferences(s1, s2);
 		LOG.debug("Diff1: {}", diff1);
 
 		assertFalse(diff1.isHasNoChanges());
-		assertTrue(diff1.has(SituationDifference.CHANGED_STATUS));
+		assertTrue(diff1.has(SituationDifference.CHANGED_CORE_STATUS));
 	}
 
 }

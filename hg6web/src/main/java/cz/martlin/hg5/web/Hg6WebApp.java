@@ -1,7 +1,9 @@
 package cz.martlin.hg5.web;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Set;
 
 import cz.martlin.hg5.logic.config.Configuration;
@@ -64,8 +66,9 @@ public class Hg6WebApp implements Serializable {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 
-	public Set<GuardingReport> reportsAt(Calendar day) throws Hg6DbException {
-		return db.loadReportsAtDay(day);
+	public List<GuardingReport> reportsAt(Calendar day) throws Hg6DbException {
+		Set<GuardingReport> set = db.loadReportsAtDay(day);
+		return new ArrayList<>(set);
 	}
 
 	public GuardingReport currentReport() throws Hg6DbException, Hg6CoreConnException {

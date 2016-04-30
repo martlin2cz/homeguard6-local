@@ -42,7 +42,7 @@ public class Hg6CommandsProcessorImpl implements Hg6CoreCmdsProcessor {
 	}
 
 	@Override
-	public Calendar getCurrentReportStartedAt() {
+	public Calendar currentReportStartedAt() {
 		if (hg.isRunning()) {
 			return hg.currentlyRunningReport().getStartedAt();
 		} else {

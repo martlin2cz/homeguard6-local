@@ -5,10 +5,10 @@ import java.util.Objects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg6.mrs.situation.GuardingStatus;
 import cz.martlin.hg6.mrs.situation.SimplifiedConfig;
 import cz.martlin.hg6.mrs.situation.SimplifiedGuardReport;
 import cz.martlin.hg6.mrs.situation.Situation;
+import cz.martlin.hg6.mrs.situation.Status;
 
 public class SituationDiffer {
 
@@ -37,18 +37,14 @@ public class SituationDiffer {
 			return;
 		}
 
-		boolean changedInterval = true, changedRunning = true;
+		boolean changedInterval = true;
 
 		if (from != null && to != null) {
 			changedInterval = from.getInterval() != to.getInterval();
-			changedRunning = from.isRunning() != to.isRunning();
 		}
 
 		if (changedInterval) {
 			diffs.add(SituationDifference.CHANGED_CONFIG_INTERVAL);
-		}
-		if (changedRunning) {
-			diffs.add(SituationDifference.CHANGED_CONFIG_RUNNING);
 		}
 
 	}
@@ -81,15 +77,25 @@ public class SituationDiffer {
 
 	}
 
-	protected void diffStatuses(SituationsDiff diffs, GuardingStatus from, GuardingStatus to) {
-		boolean changedStatus = true;
-
-		if (from != null && to != null) {
-			changedStatus = !Objects.equals(from, to);
+	protected void diffStatuses(SituationsDiff diffs, Status from, Status to) {
+		if (from == null && to == null) {
+			return;
 		}
 
-		if (changedStatus) {
-			diffs.add(SituationDifference.CHANGED_STATUS);
+		boolean changedCoreStatus = true;
+		boolean changedMrsConnStatus = true;
+
+		if (from != null && to != null) {
+			changedCoreStatus = !Objects.equals(from.getCoreRunning(), to.getCoreRunning());
+			changedMrsConnStatus = !Objects.equals(from.getMrsConnRunning(), to.getMrsConnRunning());
+		}
+
+		if (changedCoreStatus) {
+			diffs.add(SituationDifference.CHANGED_CORE_STATUS);
+		}
+		
+		if (changedMrsConnStatus) {
+			diffs.add(SituationDifference.CHANGED_MRS_STATUS);
 		}
 	}
 

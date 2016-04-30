@@ -58,7 +58,7 @@ public class Hg6CoreClient {
 		try {
 			return guest.invoke(Protocol.CURRENT_STARTED_METHOD);
 		} catch (JRestException e) {
-			throw new Hg6CoreConnException("Cannot invoke currentStartedAT", e);
+			throw new Hg6CoreConnException("Cannot invoke currentStartedAt", e);
 		}
 	}
 

@@ -10,11 +10,10 @@
 	</appender>
 
 	<appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
-		<file>hg6app.log</file>
+		<file>${sys:HOMEGUARD6_HOME}/logs/hg6core-app.log</file>
 
 		<encoder>
-			<pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level
-				%logger{10}:%line %msg%n</pattern>
+			<pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{10}:%line %msg%n</pattern>
 		</encoder>
 	</appender>
 
@@ -32,7 +31,13 @@
 	<logger level="debug" name="cz.martlin.hg5.logic.guard.GuardingPerformer" />
 
 	<logger level="info"
-		name="cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl" />
+		name="cz.martlin.jrest.impl.jarmil.target.TargetOnWaiter" />
+
+	<logger level="info" name="cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl" />
+	
+	
+	<logger level="info" name="cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl" />
+	
 
 </configuration>
 

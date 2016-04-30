@@ -1,6 +1,7 @@
 package cz.martlin.hg6.coreJRest;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,8 +43,15 @@ public class TestingHg6CommProcImpl implements Hg6CoreCmdsProcessor {
 	}
 
 	@Override
-	public Calendar getCurrentReportStartedAt() {
-		return null; // nope
+	public Calendar currentReportStartedAt() {
+		if (running) {
+			LOG.warn(
+					"Hg6 is running, should be returned current report, but - this is just an simulation, no record is currently recorded, returning predefined testing report, which should work");
+			return new GregorianCalendar(2016, Calendar.MAY, 21, 0, 48, 7);
+		} else {
+			LOG.warn("Not running, is it OK to queryy current report?");
+			return null;
+		}
 	}
 
 	@Override

@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.org/ui">
+
+<composite:interface name="statusPanel"
+	displayName="Panel with status.What else?"
+	shortDescription="Panel with status.What else?">
+
+	<composite:attribute name="status" displayName="The Hg6 status object"
+		shortDescription="The Hg6 status object"
+		type="cz.martlin.hg6.web.Hg6Status" required="true" />
+
+
+	<composite:attribute name="reports"
+		displayName="The Hg6 reports object"
+		shortDescription="The Hg6 statureports object"
+		type="cz.martlin.hg6.web.Hg6Reports" required="true" />
+
+
+</composite:interface>
+
+<composite:implementation>
+
+	<p:panel id="guardMainPanel" styleClass="centered some-margin">
+		<!--  THE TEXT -->
+
+		<c:choose>
+			<c:when test="#{not cc.attrs.status.success}">
+				<h1>Homeguard je v poruše</h1>
+			</c:when>
+			<c:when test="#{cc.attrs.status.running}">
+				<h1>Homeguard běží</h1>
+			</c:when>
+			<c:when test="#{not cc.attrs.status.running}">
+				<h1>Homeguard zastaven</h1>
+			</c:when>
+			<c:otherwise>
+				<h1>Něco je špatně, neidentifikovaný stav</h1>
+			</c:otherwise>
+		</c:choose>
+
+		<!-- START/STOP BUTTONS -->
+		<c:if test="#{cc.attrs.status.running}">
+			<p:commandButton styleClass="mega-button" value="Zastavit"
+				icon="ui-icon-stop" action="${cc.attrs.status.stop}"
+				update="wholePageForm" />
+		</c:if>
+		<c:if test="#{not cc.attrs.status.running}">
+			<p:commandButton styleClass="mega-button" value="Spustit"
+				icon="ui-icon-play" action="${cc.attrs.status.start}"
+				update="wholePageForm" oncomplete="showCurrentReport();" />
+		</c:if>
+
+
+		<!--  OTHER IN COMMON STUFF -->
+		<p:remoteCommand name="showCurrentReport"
+			action="#{cc.attrs.reports.showCurrentReport}" update="@all" />
+
+		<p:button onclick="PF('configFormDial').show(); return false;"
+			value="Nastavení" icon="ui-icon-wrench" />
+
+	</p:panel>
+</composite:implementation>
+</html>

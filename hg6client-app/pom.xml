@@ -21,7 +21,7 @@
 
 		<dependency>
 			<groupId>cz.martlin</groupId>
-			<artifactId>hg6mrs-jrest</artifactId>
+			<artifactId>hg6mrs-conn-jrest</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 

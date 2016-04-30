@@ -533,3 +533,191 @@ java.lang.IllegalArgumentException: Target ObjectOnGuestTarget [name=hg6mrs] not
 				c.m.h.c.TestingHg6CommProcImpl:31 The Hg6 stopped
 27.04.2016 03:31:41.468 [WaiterThread] INFO 
 				c.m.h.c.TestingHg6CommProcImpl:25 The Hg6 started
+28.04.2016 11:01:39.740 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=currentReportStartedAt, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method currentReportStartedAt on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+28.04.2016 11:03:51.857 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=currentReportStartedAt, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method currentReportStartedAt on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+28.04.2016 11:05:33.704 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=currentReportStartedAt, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method currentReportStartedAt on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+28.04.2016 11:09:03.190 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=currentReportStartedAt, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method currentReportStartedAt on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+28.04.2016 11:14:48.894 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=currentReportStartedAt, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method currentReportStartedAt on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+28.04.2016 11:30:34.490 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=currentReportStartedAt, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method currentReportStartedAt on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+28.04.2016 11:31:10.332 [WaiterThread] INFO 
+				c.m.h.c.TestingHg6CommProcImpl:31 The Hg6 stopped
+28.04.2016 11:32:31.340 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+28.04.2016 11:32:31.434 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.app.Hg6ServiceMain.main(Hg6ServiceMain.java:17)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: File not found
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:115)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: java.io.FileNotFoundException: config.xml (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:112)
+	... 6 common frames omitted
+28.04.2016 11:32:31.444 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+28.04.2016 11:32:31.445 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+28.04.2016 11:32:31.480 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:27 Homeguard6 service is running
+28.04.2016 11:32:31.486 [WaiterThread] ERROR
+				c.m.j.w.JRestWaiter:55 Cannot start server
+cz.martlin.jrest.misc.JRestException: Cannot start server
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:59)
+	at cz.martlin.jrest.waiter.JRestServer.<init>(JRestServer.java:42)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:53)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.BindException: Adresa je užívána
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:128)
+	at cz.martlin.jrest.waiter.JRestServer.startServer(JRestServer.java:55)
+	... 4 common frames omitted
+28.04.2016 11:33:34.466 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+28.04.2016 11:33:34.559 [main] WARN 
+				c.m.h.c.Hg6Config:33 Config file load failed. Will be used default instead.
+cz.martlin.hg6.config.Hg6ConfigException: Cannot load config file
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:53)
+	at cz.martlin.hg6.config.Hg6Config.load(Hg6Config.java:59)
+	at cz.martlin.hg6.config.Hg6Config.get(Hg6Config.java:31)
+	at cz.martlin.hg6.app.Hg6ServiceMain.main(Hg6ServiceMain.java:17)
+Caused by: cz.martlin.jaxon.k2xml.KlaxonToXMLException: File not found
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:115)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLConverter.parse(KlaxonToXMLConverter.java:33)
+	at cz.martlin.jaxon.jaxon.JaxonConverter.objectFromFile(JaxonConverter.java:115)
+	at cz.martlin.hg5.logic.config.ConfigLoader.load(ConfigLoader.java:51)
+	... 3 common frames omitted
+Caused by: java.io.FileNotFoundException: config.xml (Adresář nebo soubor neexistuje)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at cz.martlin.jaxon.k2xml.KlaxonToXMLImpl.parse(KlaxonToXMLImpl.java:112)
+	... 6 common frames omitted
+28.04.2016 11:33:34.571 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+28.04.2016 11:33:34.573 [main] WARN 
+				c.m.h.c.Hg6Config:43 Hg6 home dir property HOMEGUARD6_HOME not set, using current directory instead
+28.04.2016 11:33:34.623 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:27 Homeguard6 service is running
+28.04.2016 11:34:05.233 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:27 Homeguard6 service is running
+28.04.2016 11:34:16.897 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6core], method=isRunnung, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method isRunnung on cz.martlin.hg6.coreJRest.TestingHg6CommProcImpl
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+28.04.2016 11:35:14.012 [main] INFO 
+				c.m.h.a.Hg6ServiceMain:27 Homeguard6 service is running

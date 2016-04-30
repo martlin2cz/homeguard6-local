@@ -9,30 +9,26 @@ public class Situation implements Serializable, JaxonSerializable, Cloneable {
 
 	private static final String DESC = "Hg6 local/remote situation";
 
-	private GuardingStatus status;
+	private Status status;
 	private SimplifiedGuardReport report;
 	private SimplifiedConfig config;
 
 	public Situation() {
 		super();
-		this.status = GuardingStatus.UNKNOWN;
-		// TODO will cause everything to fail god damn lol
-		// this.report = new SimplifiedGuardReport();
-		// this.config = new SimplifiedConfig();
 	}
 
-	public Situation(GuardingStatus status, SimplifiedGuardReport report, SimplifiedConfig config) {
+	public Situation(Status status, SimplifiedGuardReport report, SimplifiedConfig config) {
 		super();
 		this.status = status;
 		this.report = report;
 		this.config = config;
 	}
 
-	public GuardingStatus getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(GuardingStatus status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 
@@ -81,10 +77,15 @@ public class Situation implements Serializable, JaxonSerializable, Cloneable {
 				return false;
 		} else if (!report.equals(other.report))
 			return false;
-		if (status != other.status)
+		if (status == null) {
+			if (other.status != null)
+				return false;
+		} else if (!status.equals(other.status))
 			return false;
 		return true;
 	}
+	
+	
 
 	@Override
 	public String toString() {
@@ -95,14 +96,16 @@ public class Situation implements Serializable, JaxonSerializable, Cloneable {
 	public Object clone() throws CloneNotSupportedException {
 		Situation clone = new Situation();
 
+		if (status != null) {
+			clone.setStatus((Status) status.clone());
+		}
+
 		if (config != null) {
 			clone.setConfig((SimplifiedConfig) config.clone());
 		}
 		if (report != null) {
 			clone.setReport((SimplifiedGuardReport) report.clone());
 		}
-
-		clone.setStatus(status);
 
 		return clone;
 	}

@@ -14,7 +14,7 @@ public interface Hg6CoreCmdsProcessor extends JarmilTarget {
 
 	public String getSimpleInfo() throws Exception;
 
-	public Calendar getCurrentReportStartedAt();
+	public Calendar currentReportStartedAt();
 
 	public void configChanged() throws Exception;
 

@@ -3,10 +3,10 @@ package cz.martlin.hg6.mrsCli;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg6.mrs.Hg6MrsException;
+import cz.martlin.hg6.mrs.misc.Hg6MrsException;
 import cz.martlin.hg6.mrs.situation.Situation;
 import cz.martlin.hg6.mrs.situation.TestingSituationsCreator;
-import cz.martlin.hg6.mrsConn.Hg6MrsClient;
+import cz.martlin.hg6.mrsCli.Hg6MrsClient;
 
 public class SimpleClientApp {
 	private static final Logger LOG = LoggerFactory.getLogger(SimpleClientApp.class);

@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:hg6="http://java.sun.com/jsf/composite/hg6">
+
+<composite:interface name="reportsPanel"
+	displayName="Panel with reports. What else?"
+	shortDescription="Panel with reports. What else?">
+
+	<composite:attribute name="reports"
+		displayName="The Hg6 reports object"
+		shortDescription="The Hg6 statureports object"
+		type="cz.martlin.hg6.web.Hg6Reports" required="true" />
+
+	<composite:attribute name="status" displayName="The Hg6 status object"
+		shortDescription="The Hg6 status object"
+		type="cz.martlin.hg6.web.Hg6Status" required="true" />
+
+
+</composite:interface>
+
+<composite:implementation>
+	<p:panel id="reportsPanel" styleClass="some-margin">
+
+		<hg6:reportsButtonsPanel reports="#{cc.attrs.reports}"
+			status="#{cc.attrs.status}" />
+
+		<c:if test="#{cc.attrs.reports.reportDisplayed}">
+			<hg6:reportPanel report="#{cc.attrs.reports.displayedReport}"
+				reports="#{cc.attrs.reports}" entriesListCollapsed="false" />
+		</c:if>
+
+	</p:panel>
+</composite:implementation>
+</html>

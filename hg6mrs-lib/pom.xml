@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>hg6mrs-lib</artifactId>
+	<artifactId>hg6mrs-conn-lib</artifactId>
 	<name>Homeguard 6 connector to martlin's remote services library</name>
 
 	<parent>
@@ -25,6 +25,8 @@
 			<version>${project.version}</version>
 		</dependency>
 
+
+
 		<dependency>
 			<groupId>cz.martlin</groupId>
 			<artifactId>hg6db</artifactId>
@@ -36,6 +38,8 @@
 			<artifactId>hg6mrs-cli</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+
 
 	</dependencies>
 </project>

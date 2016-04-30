@@ -21,6 +21,7 @@ import cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools;
 import cz.martlin.hg5.web.charts.RIsimpleChartRenderer;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.core.Hg6Core;
+import cz.martlin.hg6.db.Hg6DbException;
 
 public class SomeImprovedAudioProcessorTest {
 
@@ -69,7 +70,7 @@ public class SomeImprovedAudioProcessorTest {
 	@Test
 	public void calculateCharts() {
 		System.out.println("Warining: Charting test not supported. Skipping");
-		
+
 		// File humChart = calculateChart("hum");
 		// System.out.println("Hum chart: " + humChart);
 		//
@@ -157,7 +158,12 @@ public class SomeImprovedAudioProcessorTest {
 
 	private SoundTrack loadTrackOfName(String name) {
 		File file = getFileOf(name);
-		return fsmant.loadSoundTrack(file);
+		try {
+			return fsmant.loadSoundTrack(file);
+		} catch (Hg6DbException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	private File getFileOf(String name) {

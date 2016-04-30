@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:hg5="http://java.sun.com/jsf/composite/hg5">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>#{mainForm.appName}</title>
+</h:head>
+
+<h:body>
+	<h:outputStylesheet library="css" name="styles.css" />
+
+	<h:form id="wholePageForm">
+		
+
+		<p:panel id="recordsPanel" styleClass="some-margin">
+			
+
+			<c:if test="#{guardingReportPanel.reportShown}">
+				<hg5:reportPanel report="#{guardingReportPanel.report}" />
+			</c:if>
+		</p:panel>
+
+		<div class="footer">
+			<h:outputText value="#{mainForm.appName}" />
+			<span> </span>
+			<h:outputText value="#{mainForm.version}" />
+			<span> by </span>
+			<h:outputText value="#{mainForm.author}" />
+		</div>
+
+	</h:form>
+
+
+	<hg5:settingsPopup action="#{mainForm.settingsChanged}" />
+
+	<p:growl id="growl" showDetail="true" sticky="true" />
+
+	<p:ajaxStatus onstart="PF('statusDialog').show()"
+		onsuccess="PF('statusDialog').hide()" />
+
+	<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+		closable="false" resizable="false" showHeader="false">
+		<p:graphicImage name="loading.gif" library="image" />
+	</p:dialog>
+
+
+	<p:ajaxExceptionHandler
+		type="javax.faces.application.ViewExpiredException"
+		onexception="alert('Sezení vypršelo, stránka bude obnovena'); location.href = location.href;" />
+
+	<p:ajaxExceptionHandler type="java.lang.Exception"
+		onexception="alert('Došlo k chybě (výjimka #{pfExceptionHandler.type}), zkuste obnovit stránku')" />
+
+</h:body>
+</html>

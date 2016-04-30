@@ -222,3 +222,1757 @@ Caused by: java.lang.NullPointerException: null
 	... 16 common frames omitted
 27.04.2016 02:21:44.339 [main] INFO 
 				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
+30.04.2016 20:38:29.918 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
+30.04.2016 20:38:44.619 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:126 Method invocation of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=synchronize, parameters=[]] failed
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.mrs.Hg6MrsException: Seding get remote situation failed
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:80)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentRemote(SituationsMrsSyncer.java:39)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:23)
+	at cz.martlin.hg6.mrsApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	... 17 common frames omitted
+Caused by: com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Spojení odmítnuto
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:149)
+	at com.sun.jersey.api.client.Client.handle(Client.java:648)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:670)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:503)
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:72)
+	... 20 common frames omitted
+Caused by: java.net.ConnectException: Spojení odmítnuto
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1512)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler._invoke(URLConnectionClientHandler.java:240)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:147)
+	... 25 common frames omitted
+30.04.2016 20:40:41.667 [main] INFO 
+				c.m.h.m.Hg6MrsLocalApp:25 MRS Conn local started
+30.04.2016 20:42:26.519 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:126 Method invocation of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=synchronize, parameters=[]] failed
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.mrs.Hg6MrsException: Seding get remote situation failed
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:80)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentRemote(SituationsMrsSyncer.java:39)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:23)
+	at cz.martlin.hg6.mrsApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	... 17 common frames omitted
+Caused by: com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Spojení odmítnuto
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:149)
+	at com.sun.jersey.api.client.Client.handle(Client.java:648)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:670)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:503)
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:72)
+	... 20 common frames omitted
+Caused by: java.net.ConnectException: Spojení odmítnuto
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1512)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler._invoke(URLConnectionClientHandler.java:240)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:147)
+	... 25 common frames omitted
+30.04.2016 20:44:48.008 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:126 Method invocation of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=synchronize, parameters=[]] failed
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.mrs.Hg6MrsException: Seding get remote situation failed
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:80)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentRemote(SituationsMrsSyncer.java:39)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:23)
+	at cz.martlin.hg6.mrsApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	... 17 common frames omitted
+Caused by: com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Spojení odmítnuto
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:149)
+	at com.sun.jersey.api.client.Client.handle(Client.java:648)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:670)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:503)
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:72)
+	... 20 common frames omitted
+Caused by: java.net.ConnectException: Spojení odmítnuto
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1512)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler._invoke(URLConnectionClientHandler.java:240)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:147)
+	... 25 common frames omitted
+30.04.2016 20:48:48.809 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:126 Method invocation of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=synchronize, parameters=[]] failed
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.mrs.Hg6MrsException: Seding get remote situation failed
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:80)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentRemote(SituationsMrsSyncer.java:39)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:23)
+	at cz.martlin.hg6.mrsApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	... 17 common frames omitted
+Caused by: com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Spojení odmítnuto
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:149)
+	at com.sun.jersey.api.client.Client.handle(Client.java:648)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:670)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:503)
+	at cz.martlin.hg6.mrsConn.Hg6MrsClient.getRemoteSituation(Hg6MrsClient.java:72)
+	... 20 common frames omitted
+Caused by: java.net.ConnectException: Spojení odmítnuto
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1512)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler._invoke(URLConnectionClientHandler.java:240)
+	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:147)
+	... 25 common frames omitted
+30.04.2016 21:01:51.550 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:86 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:83)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:46)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:35)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:22)
+	at cz.martlin.hg6.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 9 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-03.02.2016 00:59:01.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 10 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ".305E.305E2"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeMetadata(FileSystemManTools.java:131)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:111)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 14 common frames omitted
+30.04.2016 21:01:51.555 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:86 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:83)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:46)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:35)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:22)
+	at cz.martlin.hg6.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 9 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-05.03.2016 22:29:02.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 10 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ".305E.305E22"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeMetadata(FileSystemManTools.java:131)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:111)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 14 common frames omitted
+30.04.2016 21:03:52.083 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:86 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:83)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:46)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.changeToSituation(LocalSituationCreator.java:114)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:47)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:30)
+	at cz.martlin.hg6.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 10 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-05.03.2016 22:29:02.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 11 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 15 common frames omitted
+30.04.2016 21:03:52.432 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationCreator:175 Tried to do diffs on null report: SituationsDiff [diffs=[]]
+30.04.2016 21:04:29.628 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationCreator:175 Tried to do diffs on null report: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS]]
+30.04.2016 21:05:30.239 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:86 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:83)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:46)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:35)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:22)
+	at cz.martlin.hg6.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 9 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-03.02.2016 00:59:01.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 10 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ".317E2317E2"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 14 common frames omitted
+30.04.2016 21:06:54.461 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:86 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:83)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:46)
+	at cz.martlin.hg6.mrsLib.local.LocalSituationCreator.changeToSituation(LocalSituationCreator.java:114)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:47)
+	at cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:30)
+	at cz.martlin.hg6.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 10 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-01.02.2016 14:58:43.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 11 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ".31E1.31E1"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeMetadata(FileSystemManTools.java:131)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:111)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 15 common frames omitted
+30.04.2016 21:06:54.832 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationCreator:180 Report have been changed. God bless us
+30.04.2016 21:07:31.830 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationCreator:175 Tried to do diffs on null report: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS]]
+30.04.2016 21:13:46.312 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:02:34.300 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:02:51.338 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:10:10.241 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:10:10.937 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:04:26 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:10:10.942 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:10:11.166 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:10:11.166 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:04:26 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:12:29.208 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:12:29.391 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:04:26 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:12:29.394 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:12:29.514 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:12:29.516 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:04:26 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:13:58.226 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:13:58.352 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:04:26 CEST 2016, stoppedAt=Sat Apr 30 22:13:46 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:13:58.352 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:13:58.427 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:13:58.428 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=2, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:04:26 CEST 2016, stoppedAt=Sat Apr 30 22:13:46 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:24:38.665 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:24:38.780 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:24:38.781 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:24:38.843 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:22.090 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:26:22.601 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:22.660 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:22.660 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:26:22.867 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:22.868 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.206 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:26:52.222 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:26:52.232 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.mrsConnLib.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 9 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-29.02.2016 18:49:03.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$parseLogs$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 10 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "273.E273E11"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 14 common frames omitted
+30.04.2016 22:26:52.232 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 24 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-26.02.2016 23:28:04.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$parseLogs$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 25 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "273.E273E11"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 29 common frames omitted
+30.04.2016 22:26:52.238 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.238 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.267 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.267 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:26:52.278 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.279 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:26:52.289 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer.changeToSituation(LocalSituationPerformer.java:45)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:50)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:33)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.mrsConnLib.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 10 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-05.03.2016 22:10:10.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$parseLogs$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 11 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "10E"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeMetadata(FileSystemManTools.java:131)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:111)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 15 common frames omitted
+30.04.2016 22:26:52.294 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.295 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[]]
+30.04.2016 22:26:52.295 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.436 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:26:52.439 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS]]
+30.04.2016 22:26:52.440 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:10.472 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:27:10.490 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:27:10.649 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:10.663 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:10.663 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:27:10.744 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:10.745 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:52.314 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:27:52.417 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:52.445 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:52.445 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:27:52.529 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:52.530 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:58.684 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:27:58.698 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:27:58.735 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:58.750 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:58.751 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:27:58.797 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:27:58.797 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:28:46.612 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:28:46.643 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:28:47.172 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:28:47.243 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:28:47.250 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:28:47.544 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:28:47.546 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:28:47.547 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:29:39.877 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:29:39.897 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:29:40.190 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:29:40.214 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:29:40.215 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:29:40.415 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:29:40.416 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:29:40.417 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:31:29.990 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:31:30.014 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:31:30.565 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:31:30.625 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:31:30.626 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:31:30.804 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:31:30.805 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:31:30.805 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:33:57.652 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:33:57.706 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:33:58.336 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:33:58.767 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:33:58.767 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:33:58.938 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:33:58.939 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:08.045 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:35:08.170 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:08.213 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:08.214 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:35:08.341 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:08.342 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:17.934 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:35:17.982 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:18.011 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:18.012 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:35:18.066 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:18.067 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:37.344 [WaiterThread] ERROR
+				c.m.j.i.j.h.JarmilRequestsPerformer:121 Target (or method) of request JarmilRequest [target=ObjectOnGuestTarget [name=hg6mrs], method=stopLooop, parameters=[]] not found
+java.lang.NoSuchMethodException: Cannot find the method stopLooop on cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc
+	at cz.martlin.jrest.impl.jarmil.misc.MethodsFinder.findMethod(MethodsFinder.java:56)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.findMethod(JarmilRequestsPerformer.java:104)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:58)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+30.04.2016 22:35:37.374 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:35:37.433 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:37.462 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:37.464 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:35:37.544 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:35:37.545 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:36:26.010 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:36:26.079 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:36:26.096 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:36:26.097 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:36:26.162 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:36:26.163 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.462 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:37:47.481 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:37:47.489 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.mrsConnLib.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 9 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-21.04.2016 02:48:07.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 10 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 14 common frames omitted
+30.04.2016 22:37:47.493 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.597 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.598 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:37:47.638 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer.changeToSituation(LocalSituationPerformer.java:45)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:50)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:33)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.mrsConnLib.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 10 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-29.02.2016 18:49:03.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 11 common frames omitted
+Caused by: java.lang.NumberFormatException: multiple points
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1890)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 15 common frames omitted
+30.04.2016 22:37:47.639 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 24 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-21.04.2016 02:48:07.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 25 common frames omitted
+Caused by: java.lang.NumberFormatException: multiple points
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1890)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 29 common frames omitted
+30.04.2016 22:37:47.643 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.642 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.649 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[]]
+30.04.2016 22:37:47.671 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.689 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.690 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:37:47.898 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:37:47.900 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[CHANGED_REPORT, CHANGED_REPORT_METADATA, CHANGED_REPORT_ITEMS]]
+30.04.2016 22:37:47.902 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 22:38:42.028 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:48:14.086 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:48:14.701 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:48:15.572 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:48:15.573 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:48:15.833 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:48:15.835 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:05.983 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:49:05.983 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:49:06.115 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:06.148 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:06.150 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:49:06.224 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:06.225 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:49:06.225 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:06.381 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:06.400 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:06.401 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:49:06.503 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:49:06.506 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:49:06.507 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:50:06.530 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:50:06.597 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:50:06.611 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:50:06.611 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:50:06.668 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:50:06.668 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:50:06.668 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:51:06.679 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:51:06.737 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:51:10.654 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:51:10.654 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:51:10.725 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:51:10.725 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:51:10.725 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:52:10.739 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:52:10.796 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:52:10.809 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:52:10.811 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:52:10.856 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:52:10.857 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 22:52:10.857 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:53:10.870 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:53:10.940 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:53:11.648 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:53:11.649 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 22:53:11.704 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:53:11.705 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 22:53:19.095 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:07:24.007 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:07:24.947 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:07:25.039 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:07:25.039 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:07:25.289 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:07:25.290 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 23:07:25.291 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:07:53.683 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:07:53.847 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:07:53.875 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:07:53.876 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:07:53.964 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:07:53.965 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 23:07:53.965 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:07.811 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:07.811 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:07.853 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsRunner.startLoop(Hg6MrsRunner.java:26)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.startLoop(Hg6MrsConnRealCmdProc.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 25 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-05.03.2016 20:26:36.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 26 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeMetadata(FileSystemManTools.java:131)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:111)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 30 common frames omitted
+30.04.2016 23:09:07.867 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:07.903 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:07.906 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:07.930 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer.changeToSituation(LocalSituationPerformer.java:45)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:50)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:33)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsRunner.startLoop(Hg6MrsRunner.java:26)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.startLoop(Hg6MrsConnRealCmdProc.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 26 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-29.02.2016 18:49:03.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 27 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 31 common frames omitted
+30.04.2016 23:09:07.944 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:07.947 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[]]
+30.04.2016 23:09:07.948 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.007 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:08.014 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 24 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-26.02.2016 23:28:04.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 25 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeMetadata(FileSystemManTools.java:131)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:111)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 29 common frames omitted
+30.04.2016 23:09:08.022 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.045 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.045 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:08.061 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer.changeToSituation(LocalSituationPerformer.java:45)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:50)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:33)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.synchronize(Hg6MrsConnRealCmdProc.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 25 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-03.02.2016 00:59:01.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 26 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeMetadata(FileSystemManTools.java:131)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:111)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 30 common frames omitted
+30.04.2016 23:09:08.067 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.068 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[]]
+30.04.2016 23:09:08.084 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.254 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.280 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.281 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:08.463 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:08.463 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:50.802 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:50.975 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:51.008 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:51.009 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:09:51.097 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:09:51.098 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:11:33.608 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:11:33.692 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:11:33.714 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:11:33.714 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:11:33.784 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:11:33.785 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:12:33.812 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:12:33.899 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:12:33.916 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:12:33.917 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:12:33.966 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:12:33.966 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=3, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 22:13:58 CEST 2016, stoppedAt=Sat Apr 30 22:24:38 CEST 2016], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.464 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:13:44.467 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:13:44.709 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsRunner.startLoop(Hg6MrsRunner.java:26)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.startLoop(Hg6MrsConnRealCmdProc.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 25 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-26.02.2016 23:28:04.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 26 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 30 common frames omitted
+30.04.2016 23:13:44.717 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.807 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.809 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:13:44.816 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.getCurrentLocal(SituationsMrsSyncer.java:38)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:25)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.mrsConnLib.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 9 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-04.02.2016 19:09:40.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 10 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at java.text.DigitList.getLong(DigitList.java:195)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2051)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:1869)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 14 common frames omitted
+30.04.2016 23:13:44.833 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.885 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.885 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:13:44.954 [hg6mrs loop runner thread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer.changeToSituation(LocalSituationPerformer.java:45)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:50)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:33)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsSyncLoop.run(Hg6MrsSyncLoop.java:47)
+	at cz.martlin.hg6.mrsConnLib.run.Th6MrsRunnerRunnable.run(Th6MrsRunnerRunnable.java:13)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 10 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-10.03.2016 20:56:31.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 11 common frames omitted
+Caused by: java.lang.NumberFormatException: multiple points
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1890)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 15 common frames omitted
+30.04.2016 23:13:44.958 [WaiterThread] ERROR
+				c.m.h.m.l.LocalSituationCreator:81 Cannot load report
+cz.martlin.hg6.db.Hg6DbException: Cannot load last report
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:226)
+	at cz.martlin.hg6.db.Hg6Database.loadLastReport(Hg6Database.java:58)
+	at cz.martlin.hg6.db.Hg6Database.loadNewestReport(Hg6Database.java:63)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentReport(LocalSituationCreator.java:78)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator.getCurrentLocalSituation(LocalSituationCreator.java:39)
+	at cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer.changeToSituation(LocalSituationPerformer.java:45)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.commitNewLocal(SituationsMrsSyncer.java:50)
+	at cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncer.synchronize(SituationsMrsSyncer.java:33)
+	at cz.martlin.hg6.mrsConnLib.run.Hg6MrsRunner.startLoop(Hg6MrsRunner.java:26)
+	at cz.martlin.hg6.mrsConnApp.Hg6MrsConnRealCmdProc.startLoop(Hg6MrsConnRealCmdProc.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cz.martlin.jrest.impl.jarmil.targets.waiter.ObjectOnWaiterTarget.invoke(ObjectOnWaiterTarget.java:63)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.invokeMethod(JarmilRequestsPerformer.java:108)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilRequestsPerformer.perform(JarmilRequestsPerformer.java:65)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:39)
+	at cz.martlin.jrest.impl.jarmil.handler.JarmilHandler.handle(JarmilHandler.java:16)
+	at cz.martlin.jrest.waiter.RequestsProcessor.process(RequestsProcessor.java:137)
+	at cz.martlin.jrest.waiter.RequestsProcessor.processWithEncoding(RequestsProcessor.java:93)
+	at cz.martlin.jrest.waiter.JRestServer.processRequest(JRestServer.java:125)
+	at cz.martlin.jrest.waiter.JRestServer.awaitAndProcess(JRestServer.java:80)
+	at cz.martlin.jrest.waiter.JRestWaiter.runServer(JRestWaiter.java:81)
+	at cz.martlin.jrest.waiter.JRestWaiter.runWaiter(JRestWaiter.java:61)
+	at cz.martlin.jrest.waiter.WaiterRunnable.run(WaiterRunnable.java:21)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot load all reports
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:155)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadLastReport(FileSystemReportsManager.java:218)
+	... 26 common frames omitted
+Caused by: cz.martlin.hg6.db.Hg6DbException: Cannot read content of log file /home/martin/hg6/reports/logs/log-29.02.2016 18:49:03.log
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:94)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.lambda$0(FileSystemReportsManager.java:196)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.parseLogs(FileSystemReportsManager.java:194)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager.loadAllReports(FileSystemReportsManager.java:151)
+	... 27 common frames omitted
+Caused by: java.lang.NumberFormatException: multiple points
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1890)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.text.DigitList.getDouble(DigitList.java:169)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:2056)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:2162)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1514)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseDate(FileSystemManTools.java:359)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeReportItem(FileSystemManTools.java:183)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.deserializeLogFileLines(FileSystemManTools.java:113)
+	at cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools.parseLogFile(FileSystemManTools.java:92)
+	... 31 common frames omitted
+30.04.2016 23:13:44.970 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.971 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[]]
+30.04.2016 23:13:44.971 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.973 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:13:44.973 [hg6mrs loop runner thread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:106 Tried to do diffs on null report: SituationsDiff [diffs=[]]
+30.04.2016 23:13:44.974 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=false, mrsConnRunning=true], report=null, config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:35.875 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:14:36.272 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:36.285 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:36.285 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:14:36.492 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:36.493 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=0, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:45.087 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:14:45.278 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:45.297 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:45.298 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:14:45.408 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:14:45.408 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:15:45.424 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:15:45.516 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:15:45.536 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:15:45.537 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:15:45.612 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:15:45.613 [hg6mrs loop runner thread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:16:22.948 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:16:23.026 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:16:23.037 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:43 Changing situation to Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:16:23.037 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:36 Getting current local situation
+30.04.2016 23:16:23.095 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationCreator:43 Got local situation: Situation [status=Status [coreRunning=true, mrsConnRunning=false], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]
+30.04.2016 23:16:23.095 [WaiterThread] WARN 
+				c.m.h.m.l.LocalSituationPerformer:87 Trying to change status of hg6 mrs core. No, I won't do that.
+30.04.2016 23:16:23.095 [WaiterThread] INFO 
+				c.m.h.m.l.LocalSituationPerformer:50 Changed to situation Situation [status=Status [coreRunning=true, mrsConnRunning=true], report=SimplifiedGuardReport [itemsCount=1, warningsCount=0, criticalCount=0, lastWarningAt=null, startedAt=Sat Apr 30 23:14:23 CEST 2016, stoppedAt=null], config=SimplifiedConfig [interval=1]]

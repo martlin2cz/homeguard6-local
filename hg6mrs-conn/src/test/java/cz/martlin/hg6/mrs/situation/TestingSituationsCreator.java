@@ -9,20 +9,18 @@ public class TestingSituationsCreator {
 		return new Situation();
 	}
 
-	public Situation createEmpty(GuardingStatus status) {
-		return new Situation(status, null, null);
-	}
-
 	public Situation createBasic() {
 
 		SimplifiedGuardReport report = new SimplifiedGuardReport(//
 				cal(19, 4, 17, 14, 26), cal(19, 4, 20, 5, 6), cal(19, 4, 19, 30, 11), 10, 3, 420, "Testing 1");
 
-		GuardingStatus status = GuardingStatus.STARTED;
-
 		SimplifiedConfig config = new SimplifiedConfig();
 		config.setInterval(9);
-		config.setRunning(true);
+
+		Status status = new Status();
+
+		status.setCoreRunning(false);
+		status.setMrsConnRunning(true);
 
 		return new Situation(status, report, config);
 	}

@@ -24,6 +24,7 @@ import cz.martlin.hg6.db.Hg6DbException;
 
 @ViewScoped
 @ManagedBean(name = "guardingReportPanel")
+@Deprecated
 public class GuardingReportPanel implements Serializable {
 	private static final long serialVersionUID = 1329899742372452384L;
 
@@ -47,15 +48,15 @@ public class GuardingReportPanel implements Serializable {
 
 	private Set<GuardingReport> todaysReports() {
 		Calendar today = Calendar.getInstance();
-		Set<GuardingReport> reports;
+		List<GuardingReport> reports;
 		try {
 			reports = homeguard.reportsAt(today);
 		} catch (Hg6DbException e) {
 			LOG.error("todaysReports failed", e);
 			Utils.error("Chyba", "Nepodařilo se načíst záznamy");
-			reports = Collections.emptySet();
+			reports = Collections.emptyList();
 		}
-		return reports;
+		return null;	//TODO XXX deprecated
 	}
 
 	public List<GuardingReport> getReportsAtDay() {
@@ -98,7 +99,7 @@ public class GuardingReportPanel implements Serializable {
 		Calendar day = Calendar.getInstance();
 		day.setTime((Date) event.getObject());
 
-		Set<GuardingReport> reports;
+		List<GuardingReport> reports;
 		try {
 			reports = homeguard.reportsAt(day);
 		} catch (Hg6DbException e) {

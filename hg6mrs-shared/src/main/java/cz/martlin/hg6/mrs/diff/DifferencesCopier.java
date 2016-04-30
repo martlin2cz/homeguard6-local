@@ -2,6 +2,7 @@ package cz.martlin.hg6.mrs.diff;
 
 import cz.martlin.hg6.mrs.situation.SimplifiedConfig;
 import cz.martlin.hg6.mrs.situation.Situation;
+import cz.martlin.hg6.mrs.situation.Status;
 
 public class DifferencesCopier {
 
@@ -24,12 +25,20 @@ public class DifferencesCopier {
 				to.getConfig().setInterval(from.getConfig().getInterval());
 			}
 			break;
-		case CHANGED_CONFIG_RUNNING:
-			if (to.getConfig() == null) {
-				to.setConfig(new SimplifiedConfig());
+		case CHANGED_MRS_STATUS:
+			if (to.getStatus() == null) {
+				to.setStatus(new Status());
 			}
-			if (from.getConfig() != null) {
-				to.getConfig().setRunning(from.getConfig().isRunning());
+			if (from.getStatus() != null) {
+				to.getStatus().setMrsConnRunning(from.getStatus().getMrsConnRunning());
+			}
+			break;
+		case CHANGED_CORE_STATUS:
+			if (to.getStatus() == null) {
+				to.setStatus(new Status());
+			}
+			if (from.getStatus() != null) {
+				to.getStatus().setCoreRunning(from.getStatus().getCoreRunning());
 			}
 			break;
 		case CHANGED_REPORT:
@@ -48,9 +57,6 @@ public class DifferencesCopier {
 			if (from.getReport() != null) {
 				to.getReport().setMetadataTo(from.getReport());
 			}
-			break;
-		case CHANGED_STATUS:
-			to.setStatus(from.getStatus());
 			break;
 		default:
 			throw new IllegalArgumentException("Unsupported difference: " + difference);

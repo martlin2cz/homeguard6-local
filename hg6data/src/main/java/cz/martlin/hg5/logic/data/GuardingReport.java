@@ -1,12 +1,12 @@
 package cz.martlin.hg5.logic.data;
 
 import java.io.Serializable;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+
+import cz.martlin.hg5.logic.reporting.ReportsReporter;
 
 /**
  * Represents report of guarding instance. Contains list of audio samples
@@ -126,51 +126,20 @@ public class GuardingReport implements Serializable, Comparable<GuardingReport> 
 		}
 	}
 
+	public String getDatesSummary() {
+		return ReportsReporter.getDatesSummary(this);
+	}
+
+	public String getItemsSummary() {
+		return ReportsReporter.getItemsSummary(this);
+	}
+
+	public String getOthersMetasSummary() {
+		return ReportsReporter.getOtherMetasSummary(this);
+	}
+
 	public String getCzechSummary() {
-		//TODO refactor to some reporter
-		final DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
-
-		StringBuilder stb = new StringBuilder();
-
-		stb.append("Zaznamenávání bylo spuštěno ");
-		if (getStartedAt() != null) {
-			stb.append(dateFormat.format(getStartedAt().getTime()));
-		} else {
-			stb.append("neznámo kdy");
-		}
-
-		stb.append(" a ");
-		if (getStoppedAt() != null) {
-			stb.append(dateFormat.format(getStoppedAt().getTime()));
-		} else {
-			stb.append("ještě beží");
-		}
-
-		stb.append(". Zaznamenáno bylo ");
-		stb.append(String.format("%d", getItemsCount()));
-
-		stb.append(" záznamů, z nichž je ");
-		stb.append(String.format("%d (%d%%)", getWarningsCount(), (int) (getWarningsRatio() * 100)));
-
-		stb.append(" varovných a ");
-		stb.append(String.format("%d (%d%%)", getCriticalCount(), (int) (getCriticalsRatio() * 100)));
-
-		stb.append(" dokonce kritických.");
-
-		if (getLastWarningAt() != null) {
-			stb.append(" Poslední varovný (nebo kritický) záznam nastal v ");
-			stb.append(dateFormat.format(getLastWarningAt().getTime()));
-			stb.append(".");
-		}
-
-		if (getDescription() != null) {
-			stb.append("Popis: ");
-			stb.append(getDescription());
-		} else {
-			stb.append("Popis nebyl uveden.");
-		}
-
-		return stb.toString();
+		return ReportsReporter.getCzechSummary(this);
 	}
 
 	@Override

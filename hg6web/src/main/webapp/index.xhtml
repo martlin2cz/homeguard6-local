@@ -5,7 +5,8 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:hg5="http://java.sun.com/jsf/composite/hg5">
+	xmlns:hg5="http://java.sun.com/jsf/composite/hg5"
+	xmlns:hg6="http://java.sun.com/jsf/composite/hg6">
 <h:head>
 	<meta charset="UTF-8" />
 	<title>#{mainForm.appName}</title>
@@ -15,106 +16,12 @@
 	<h:outputStylesheet library="css" name="styles.css" />
 
 	<h:form id="wholePageForm">
-		<p:panel id="guardMainPanel" styleClass="centered some-margin">
-			<!--  HEADER -->
-			<c:if test="#{mainForm.running}">
-				<h1>#{mainForm.appName} běží</h1>
-			</c:if>
-			<c:if test="#{not mainForm.running}">
-				<h1>#{mainForm.appName} je vypnutý</h1>
-			</c:if>
 
-			<!-- START/STOP BUTTONS -->
-			<c:if test="#{mainForm.running}">
-				<p:commandButton styleClass="mega-button" value="Zastavit"
-					icon="ui-icon-stop" action="${mainForm.stop}"
-					update="wholePageForm" />
-			</c:if>
-			<c:if test="#{not mainForm.running}">
-				<p:commandButton styleClass="mega-button" value="Spustit"
-					icon="ui-icon-play" action="${mainForm.start}"
-					update="wholePageForm" oncomplete="showCurrentReport();" />
-			</c:if>
+		<hg6:statusPanel status="#{hg6status}" reports="#{hg6reports}" />
 
-			<!-- CURRENTLY RUNNING GUARD OTHER STUFF -->
-			<c:if test="#{mainForm.running}">
-				<!-- 				<p:poll interval="#{mainForm.config.samplesInterval}" update="@all" /> -->
-			</c:if>
+		<hg6:reportsPanel status="#{hg6status}" reports="#{hg6reports}" />
 
-			<!--  OTHER IN COMMON STUFF -->
-			<p:remoteCommand name="showCurrentReport"
-				action="#{guardingReportPanel.showCurrentReport}"
-				update="recordsPanel" />
-
-			<p:button onclick="PF('configFormDial').show(); return false;"
-				value="Nastavení" icon="ui-icon-wrench" />
-
-		</p:panel>
-
-		<p:panel id="recordsPanel" styleClass="some-margin">
-			<p:outputPanel id="recordPanelButtons" styleClass="centered">
-
-				<p:commandButton value="Zobrazit poslední záznam"
-					icon="ui-icon-star" action="#{guardingReportPanel.showLastReport}"
-					update="@all" rendered="#{not mainForm.running}"
-					styleClass="big-margin" />
-
-				<p:commandButton value="Zobrazit aktuální záznam"
-					icon="ui-icon-heart"
-					action="#{guardingReportPanel.showCurrentReport}" update="@all"
-					rendered="#{mainForm.running}" styleClass="big-margin" />
-
-<!-- 				<p:commandButton value="Obnovit" icon="ui-icon-refresh" process="@none" update="@all" -->
-<!-- 					rendered="#{mainForm.running}" styleClass="big-margin" /> -->
-
-				<p:commandButton id="showAtDayButton" value="Zobrazit záznam ze dne"
-					icon="ui-icon-calendar" styleClass="big-margin" />
-				<p:overlayPanel id="showAtDayPanel" for="showAtDayButton"
-					hideEffect="fade" dynamic="true" showCloseIcon="true">
-					<p:calendar mode="inline" timeOnly="false">
-						<p:ajax event="dateSelect"
-							listener="#{guardingReportPanel.loadReportsAtDay}"
-							update="reportsAtDayList" />
-					</p:calendar>
-
-					<p:dataList value="#{guardingReportPanel.reportsAtDay}"
-						var="report" id="reportsAtDayList" type="unordered"
-						itemType="none"
-						emptyMessage="Tento den nebyly zaznamenán žádné záznamy">
-
-						<p:commandButton id="chooseButton" icon="ui-icon-search" title="Zobrazit"
-							action="#{guardingReportPanel.showReport(report.startedAt)}"
-							update="@all" styleClass="open-report-button" />
-
-						<h:outputLabel for="chooseButton" value="#{report.startedAt.time}">
-							<f:convertDateTime pattern="dd.MM., HH:mm" />
-						</h:outputLabel>
-						<span>: </span>
-						<h:outputLabel for="chooseButton" value="#{report.description}"
-							title="#{report.description}" styleClass="with-overflow-hidden">
-						</h:outputLabel>
-					</p:dataList>
-				</p:overlayPanel>
-
-
-				<p:commandButton value="Skrýt" icon="ui-icon-closethick"
-					rendered="#{guardingReportPanel.reportShown}"
-					action="#{guardingReportPanel.hideReport}" update="@all"
-					styleClass="big-margin" />
-			</p:outputPanel>
-
-			<c:if test="#{guardingReportPanel.reportShown}">
-				<hg5:reportPanel report="#{guardingReportPanel.report}" />
-			</c:if>
-		</p:panel>
-
-		<div class="footer">
-			<h:outputText value="#{mainForm.appName}" />
-			<span> </span>
-			<h:outputText value="#{mainForm.version}" />
-			<span> by </span>
-			<h:outputText value="#{mainForm.author}" />
-		</div>
+		<hg6:footer />
 
 	</h:form>
 

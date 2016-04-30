@@ -12,6 +12,14 @@
 		<version>0.1.0</version>
 	</parent>
 
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<!-- needed to use Primefaces Themes lol -->
 	<repositories>
 		<repository>
 			<name>Primefaces</name>
@@ -35,7 +43,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
+			<version>3.1.0</version>
 		</dependency>
 
 		<!-- UI - primefaces -->
@@ -73,25 +81,29 @@
 			<artifactId>hg6core-jrest</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+
 	</dependencies>
 	<build>
 		<plugins>
-			<!-- Compiler -->
+
+			<!-- http://crunchify.com/how-to-fix-cannot-change-version-of-project-facet-dynamic-web-module-to-3-0-error-in-eclipse/ -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
+				<version>3.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 
 			<!-- http://stackoverflow.com/questions/5351948/webxml-attribute-is-required-error-in-maven -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-			</plugin>
+			<!-- <plugin> -->
+			<!-- <groupId>org.apache.maven.plugins</groupId> -->
+			<!-- <artifactId>maven-war-plugin</artifactId> -->
+			<!-- <version></version> -->
+			<!-- </plugin> -->
 
 
 			<!-- http://kosalads.blogspot.cz/2014/03/maven-deploy-war-in-tomcat-7.html -->

@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>hg6mrs-app</artifactId>
+	<artifactId>hg6mrs-conn-app</artifactId>
 	<name>Application performing hg6mrs-conn</name>
 
 
@@ -15,13 +15,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>cz.martlin</groupId>
-			<artifactId>hg6mrs-lib</artifactId>
+			<artifactId>hg6mrs-conn-lib</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>cz.martlin</groupId>
-			<artifactId>hg6mrs-jrest</artifactId>
+			<artifactId>hg6mrs-conn-jrest</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 

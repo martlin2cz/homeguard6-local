@@ -36,6 +36,7 @@ import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg6.config.Hg6Config;
+import cz.martlin.hg6.db.Hg6DbException;
 
 public class FileSystemManTools implements Serializable {
 	private static final long serialVersionUID = 7701899175538486900L;
@@ -59,8 +60,9 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param dayOrNull
 	 * @return
+	 * @throws Hg6DbException
 	 */
-	public Set<File> logsFiles(Calendar dayOrNull) {
+	public Set<File> logsFiles(Calendar dayOrNull) throws Hg6DbException {
 		File logsDir = logsDir();
 		try {
 			Set<File> files = Files.list(logsDir.toPath()).map((path) -> path.toFile()).collect(Collectors.toSet());
@@ -70,8 +72,7 @@ public class FileSystemManTools implements Serializable {
 			}
 			return files;
 		} catch (IOException e) {
-			LOG.error("Cannot load logs", e);
-			return null;
+			throw new Hg6DbException("Cannot load logs", e);
 		}
 	}
 
@@ -81,16 +82,16 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param logFile
 	 * @return
+	 * @throws Hg6DbException
 	 */
-	public GuardingReport parseLogFile(File logFile) {
+	public GuardingReport parseLogFile(File logFile) throws Hg6DbException {
 		FileReader fr = null;
 		try {
 			fr = new FileReader(logFile);
 			List<String> lines = IOUtils.readLines(fr);
 			return deserializeLogFileLines(lines);
 		} catch (Exception e) {
-			LOG.error("Cannot read content of log file " + logFile, e);
-			return null;
+			throw new Hg6DbException("Cannot read content of log file " + logFile, e);
 		} finally {
 			IOUtils.closeQuietly(fr);
 		}
@@ -203,8 +204,9 @@ public class FileSystemManTools implements Serializable {
 	 * @param file
 	 * @param track
 	 * @return true if success
+	 * @throws Hg6DbException
 	 */
-	public boolean saveSoundTrack(File file, SoundTrack track) {
+	public boolean saveSoundTrack(File file, SoundTrack track) throws Hg6DbException {
 		InputStream bais = null;
 		AudioInputStream ais = null;
 		try {
@@ -213,8 +215,7 @@ public class FileSystemManTools implements Serializable {
 			AudioSystem.write(ais, AudioFileFormat.Type.WAVE, file);
 			return true;
 		} catch (IOException e) {
-			LOG.error("Cannot write WAV", e);
-			return false;
+			throw new Hg6DbException("Cannot write WAV", e);
 		} finally {
 			IOUtils.closeQuietly(bais);
 			IOUtils.closeQuietly(ais);
@@ -226,8 +227,9 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param file
 	 * @return
+	 * @throws Hg6DbException
 	 */
-	public SoundTrack loadSoundTrack(File file) {
+	public SoundTrack loadSoundTrack(File file) throws Hg6DbException {
 		AudioInputStream ais = null;
 		try {
 			ais = AudioSystem.getAudioInputStream(file);
@@ -235,8 +237,7 @@ public class FileSystemManTools implements Serializable {
 			byte[] bytes = IOUtils.toByteArray(ais);
 			return new SoundTrack(bytes, format);
 		} catch (IOException | UnsupportedAudioFileException e) {
-			LOG.error("Cannot read wav", e);
-			return null;
+			throw new Hg6DbException("Cannot read wav", e);
 		} finally {
 			IOUtils.closeQuietly(ais);
 		}
@@ -247,18 +248,16 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param file
 	 * @param message
-	 * @return true if success
+	 * @throws Hg6DbException
 	 */
-	public boolean appendLine(File file, String message) {
+	public void appendLine(File file, String message) throws Hg6DbException {
 		FileWriter writer = null;
 		try {
 			writer = new FileWriter(file, true);
 			writer.write(message);
 			writer.write(System.lineSeparator());
-			return true;
 		} catch (IOException e) {
-			LOG.error("Cannot append line", e);
-			return false;
+			throw new Hg6DbException("Cannot append line", e);
 		} finally {
 			IOUtils.closeQuietly(writer);
 		}
@@ -269,15 +268,15 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param file
 	 * @return
+	 * @throws Hg6DbException
 	 */
-	public byte[] loadRawSoundTrackWavBytes(File file) {
+	public byte[] loadRawSoundTrackWavBytes(File file) throws Hg6DbException {
 		FileInputStream fis = null;
 		try {
 			fis = new FileInputStream(file);
 			return IOUtils.toByteArray(fis);
 		} catch (IOException e) {
-			LOG.error("Cannot load wav content", e);
-			return null;
+			throw new Hg6DbException("Cannot load wav content", e);
 		} finally {
 			IOUtils.closeQuietly(fis);
 		}
@@ -366,8 +365,12 @@ public class FileSystemManTools implements Serializable {
 	}
 
 	public File logFile(GuardingReport report) {
+		return logFile(report.getStartedAt());
+	}
+
+	public File logFile(Calendar startedAt) {
 		File logsDir = logsDir();
-		File logFile = new File(logsDir, logFileName(report.getStartedAt()));
+		File logFile = new File(logsDir, logFileName(startedAt));
 		return logFile;
 	}
 

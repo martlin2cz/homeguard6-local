@@ -21,11 +21,13 @@ public class MainForm implements Serializable {
 	public MainForm() {
 	}
 
-	public Configuration getConfig() {
+	@Deprecated
+	public Configuration getXXX_Config() {
 		return homeguard.getConfig();
 	}
 
-	public GuardingReport getCurrentReport() {
+	@Deprecated
+	public GuardingReport getXXX_CurrentReport() {
 		try {
 			return homeguard.currentReport();
 		} catch (Hg6DbException | Hg6CoreConnException e) {
@@ -34,7 +36,8 @@ public class MainForm implements Serializable {
 		}
 	}
 
-	public GuardingReport getLastReport() {
+	@Deprecated
+	public GuardingReport getXXX_LastReport() {
 		try {
 			return homeguard.lastReport();
 		} catch (Hg6DbException e) {
@@ -43,7 +46,8 @@ public class MainForm implements Serializable {
 		}
 	}
 
-	public boolean isRunning() {
+	@Deprecated
+	public boolean isXXX_Running() {
 		try {
 			return homeguard.isRunning();
 		} catch (Hg6CoreConnException e) {
@@ -66,7 +70,8 @@ public class MainForm implements Serializable {
 
 	/////////////////////////////////////////////////////////////////////////////
 
-	public void start() {
+	@Deprecated
+	public void xxx_start() {
 		try {
 			homeguard.start();
 		} catch (Hg6CoreConnException e) {
@@ -74,7 +79,8 @@ public class MainForm implements Serializable {
 		}
 	}
 
-	public void stop() {
+	@Deprecated
+	public void xxx_stop() {
 		try {
 			homeguard.stop();
 		} catch (Hg6CoreConnException e) {

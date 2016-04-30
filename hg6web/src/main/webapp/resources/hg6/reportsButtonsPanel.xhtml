@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.org/ui">
+
+<composite:interface name="reportsButtonsPanel"
+	displayName="Panel with reports buttons. What else?"
+	shortDescription="Panel with reports buttons. What else?">
+
+	<composite:attribute name="reports"
+		displayName="The Hg6 reports object"
+		shortDescription="The Hg6 statureports object"
+		type="cz.martlin.hg6.web.Hg6Reports" required="true" />
+		
+			<composite:attribute name="status" displayName="The Hg6 status object"
+		shortDescription="The Hg6 status object"
+		type="cz.martlin.hg6.web.Hg6Status" required="true" />
+		
+
+</composite:interface>
+
+<composite:implementation>
+
+
+
+
+	<p:outputPanel id="recordPanelButtons" styleClass="centered">
+
+		<p:commandButton value="Zobrazit poslední záznam" icon="ui-icon-star"
+			action="#{cc.attrs.reports.showLastReport}" update="@all"
+			rendered="#{not cc.attrs.status.running}" styleClass="big-margin" />
+
+		<p:commandButton value="Zobrazit aktuální záznam" icon="ui-icon-heart"
+			action="#{cc.attrs.reports.showCurrentReport}" update="@all"
+			rendered="#{cc.attrs.status.running}" styleClass="big-margin" />
+
+		<!-- 				<p:commandButton value="Obnovit" icon="ui-icon-refresh" process="@none" update="@all" -->
+		<!-- 					rendered="# { mainForm . running } " styleClass="big-margin" /> -->
+
+		<p:commandButton id="showAtDayButton" value="Zobrazit záznam ze dne"
+			icon="ui-icon-calendar" styleClass="big-margin" />
+			
+		<p:overlayPanel id="showAtDayPanel" for="showAtDayButton"
+			hideEffect="fade" dynamic="true" showCloseIcon="true">
+			<p:calendar mode="inline" timeOnly="false">
+				<p:ajax event="dateSelect"
+					listener="#{cc.attrs.reports.loadReportsAtDay}"
+					update="reportsAtDayList" />
+			</p:calendar>
+
+			<p:dataList value="#{cc.attrs.reports.reportsAtDay}" var="report"
+				id="reportsAtDayList" type="unordered" itemType="none"
+				emptyMessage="Tento den nebyly zaznamenán žádné záznamy">
+
+				<p:commandButton id="chooseButton" icon="ui-icon-search"
+					title="Zobrazit"
+					action="#{cc.attrs.reports.showReport(report.startedAt)}"
+					update="@all" styleClass="open-report-button" />
+
+				<h:outputLabel for="chooseButton" value="#{report.startedAt.time}">
+					<f:convertDateTime pattern="dd.MM., HH:mm" />
+				</h:outputLabel>
+				<span>: </span>
+				<h:outputLabel for="chooseButton" value="#{report.description}"
+					title="#{report.description}" styleClass="with-overflow-hidden">
+				</h:outputLabel>
+			</p:dataList>
+		</p:overlayPanel>
+
+
+		<p:commandButton value="Skrýt" icon="ui-icon-closethick"
+			rendered="#{cc.attrs.reports.reportDisplayed}"
+			action="#{cc.attrs.reports.hideReport}" update="@all"
+			styleClass="big-margin" />
+	</p:outputPanel>
+
+
+</composite:implementation>
+</html>

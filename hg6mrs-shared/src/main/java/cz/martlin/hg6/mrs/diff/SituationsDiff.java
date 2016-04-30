@@ -9,8 +9,7 @@ public class SituationsDiff implements Serializable {
 	private EnumSet<SituationDifference> diffs;
 
 	public SituationsDiff() {
-		diffs = EnumSet.of(SituationDifference.CHANGED_STATUS);
-		diffs.remove(SituationDifference.CHANGED_STATUS); // TODO hehe ... hack
+		diffs = EnumSet.noneOf(SituationDifference.class);
 	}
 
 	public void add(SituationDifference diff) {

@@ -30,6 +30,13 @@
 	<logger level="info" name="cz.martlin.hg6.mrsApp.Hg6MrsLocalApp" />
 	<logger level="warn" name="cz.martlin.jrest.waiter.RequestsProcessor" />
 
+	<!-- Show currently created/performing situation on local -->
+	<logger level="info"
+		name="cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer" />
+	<logger level="info"
+		name="cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator" />
+
+
 	<logger level="info"
 		name="cz.martlin.hg6.mrsJRest.TestingHg6MrsConnCmdsProcImpl" />
 
