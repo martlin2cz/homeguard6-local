@@ -3,8 +3,8 @@ package cz.martlin.hg6.mrsConnLib.local;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.hg6.coreJRest.Hg6CoreClient;
@@ -84,20 +84,23 @@ public class LocalSituationPerformer {
 		}
 
 		if (diff.has(SituationDifference.CHANGED_MRS_STATUS)) {
-			LOG.warn("Trying to change status of hg6 mrs core. No, I won't do that.");
+			// LOG.warn("Trying to change status of hg6 mrs core. No, I won't do
+			// that.");
+			Boolean running = status.getMrsConnRunning();
 
-			// if (running == null) {
-			// LOG.warn("Trying to change status of hg core to null.
-			// Ingorning.");
-			// }
-			// if (running == true) {
-			// LOG.debug("Starting mrs sync loop");
-			// mrs.startLoop();
-			// }
-			// if (running == false) {
-			// LOG.debug("Stopping mrs sync loop");
-			// mrs.stopLoop();
-			// }
+			if (running == null) {
+				LOG.warn("Trying to change status of mrs conn to null. Ingorning.");
+			}
+			if (running == true) {
+				LOG.warn("Trying to start mrs. Ingorning.");
+				// LOG.debug("Starting mrs sync loop");
+				// mrs.startLoop();
+			}
+			if (running == false) {
+				LOG.warn("Trying to stop mrs. Ingorning.");
+				// LOG.debug("Stopping mrs sync loop");
+				// mrs.stopLoop();
+			}
 		}
 	}
 
@@ -111,7 +114,8 @@ public class LocalSituationPerformer {
 			LOG.warn("Report have been changed. God bless us");
 		}
 
-		if (diff.has(SituationDifference.CHANGED_REPORT_METADATA)) {
+		if (diff.has(SituationDifference.CHANGED_REPORT_STOPPED) //
+				|| diff.has(SituationDifference.CHANGED_REPORT_DESC)) {
 			LOG.info("Saving changed metadata of report: {}", report);
 
 			GuardingReport rep = db.loadNewestReport();

@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
-			by default -->
+		<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<pattern>%d{dd.MM HH:mm:ss} %-5level %logger{10} %msg%n</pattern>
+			<pattern>%d{HH:mm:ss} %-5level %logger{10} %msg%n</pattern>
 		</encoder>
 	</appender>
 
 	<appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
-		<file>${sys:HOMEGUARD6_HOME}/logs/hg6core-app.log</file>
-
+		<file>${HOMEGUARD6_HOME}/logs/hg6core-app.log</file>
 		<encoder>
 			<pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{10}:%line %msg%n</pattern>
 		</encoder>
@@ -19,11 +16,10 @@
 
 
 
-	<root level="warn">
+	<root level="debug">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="LOGFILE" />
 	</root>
-
 
 
 	<logger level="info" name="cz.martlin.hg6.app.Hg6ServiceMain" />

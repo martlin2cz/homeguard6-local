@@ -31,11 +31,12 @@ import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
+import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.hg6.db.Hg6DbException;
 
 public class FileSystemManTools implements Serializable {
@@ -102,8 +103,9 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param lines
 	 * @return
+	 * @throws Hg6DbException 
 	 */
-	private GuardingReport deserializeLogFileLines(List<String> lines) {
+	private GuardingReport deserializeLogFileLines(List<String> lines) throws Hg6DbException {
 		GuardingReport report = new GuardingReport();
 
 		for (String line : lines) {
@@ -124,13 +126,18 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param line
 	 * @param report
+	 * @throws Hg6DbException
 	 */
-	private void deserializeMetadata(String line, GuardingReport report) {
-		Map<String, String> map = parseMap(line);
+	private void deserializeMetadata(String line, GuardingReport report) throws Hg6DbException {
+		try {
+			Map<String, String> map = parseMap(line);
 
-		report.setStartedAt(parseDate(map.get("startedAt")));
-		report.setStoppedAt(parseDate(map.get("stoppedAt")));
-		report.setDescription(map.get("description"));
+			report.setStartedAt(parseDate(map.get("startedAt")));
+			report.setStoppedAt(parseDate(map.get("stoppedAt")));
+			report.setDescription(map.get("description"));
+		} catch (Exception e) {
+			throw new Hg6DbException("Cannot deserialize line as metadata: " + line, e);
+		}
 	}
 
 	/**
@@ -176,26 +183,32 @@ public class FileSystemManTools implements Serializable {
 	 * 
 	 * @param line
 	 * @return
+	 * @throws Hg6ConfigException
 	 */
-	public ReportItem deserializeReportItem(String line) {
-		Map<String, String> map = parseMap(line);
+	public ReportItem deserializeReportItem(String line) throws Hg6DbException {
+		try {
+			Map<String, String> map = parseMap(line);
 
-		Calendar recordedAt = parseDate(map.get("recordedAt"));
-		int samplesCount = Integer.parseInt(map.get("samplesCount"));
-		int lenghtInSeconds = Integer.parseInt(map.getOrDefault("lenghtInSeconds", "0"));
+			Calendar recordedAt = parseDate(map.get("recordedAt"));
+			int samplesCount = Integer.parseInt(map.get("samplesCount"));
+			int lenghtInSeconds = Integer.parseInt(map.getOrDefault("lenghtInSeconds", "0"));
 
-		double maxCriticalNoiseAmount = Double
-				.parseDouble(map.getOrDefault("criticalMaxNoiseAmount", map.get("errorMaxNoiseAmount")));
-		double criticalNoiseThreshold = Double
-				.parseDouble(map.getOrDefault("criticalNoiseThreshold", map.get("errorNoiseThreshold")));
-		int criticalSamplesCount = Integer
-				.parseInt(map.getOrDefault("criticalSamplesCount", map.get("errorSamplesCount")));
-		double maxWarningNoiseAmount = Double.parseDouble(map.get("maxWarningNoiseAmount"));
-		double warningNoiseThreshold = Double.parseDouble(map.get("warningNoiseThreshold"));
-		int warningSamplesCount = Integer.parseInt(map.get("warningSamplesCount"));
+			double maxCriticalNoiseAmount = Double
+					.parseDouble(map.getOrDefault("criticalMaxNoiseAmount", map.get("errorMaxNoiseAmount")));
+			double criticalNoiseThreshold = Double
+					.parseDouble(map.getOrDefault("criticalNoiseThreshold", map.get("errorNoiseThreshold")));
+			int criticalSamplesCount = Integer
+					.parseInt(map.getOrDefault("criticalSamplesCount", map.get("errorSamplesCount")));
+			double maxWarningNoiseAmount = Double.parseDouble(map.get("maxWarningNoiseAmount"));
+			double warningNoiseThreshold = Double.parseDouble(map.get("warningNoiseThreshold"));
+			int warningSamplesCount = Integer.parseInt(map.get("warningSamplesCount"));
 
-		return new ReportItem(recordedAt, lenghtInSeconds, samplesCount, warningNoiseThreshold, criticalNoiseThreshold,
-				maxWarningNoiseAmount, maxCriticalNoiseAmount, warningSamplesCount, criticalSamplesCount);
+			return new ReportItem(recordedAt, lenghtInSeconds, samplesCount, warningNoiseThreshold,
+					criticalNoiseThreshold, maxWarningNoiseAmount, maxCriticalNoiseAmount, warningSamplesCount,
+					criticalSamplesCount);
+		} catch (Exception e) {
+			throw new Hg6DbException("Cannot deserialize line as a report item: " + line, e);
+		}
 	}
 
 	/**

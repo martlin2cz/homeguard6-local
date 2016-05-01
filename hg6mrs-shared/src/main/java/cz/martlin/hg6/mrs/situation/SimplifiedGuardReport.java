@@ -86,12 +86,6 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 		this.setCriticalCount(report.getCriticalCount());
 	}
 
-	public void setMetadataTo(SimplifiedGuardReport report) {
-		this.setStartedAt(report.getStartedAt());
-		this.setStoppedAt(report.getStoppedAt());
-		this.setDescription(report.getDescription());
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -129,7 +123,8 @@ public class SimplifiedGuardReport extends GuardingReport implements Serializabl
 	@Override
 	public String toString() {
 		return "SimplifiedGuardReport [itemsCount=" + itemsCount + ", warningsCount=" + warningsCount
-				+ ", criticalCount=" + criticalCount + ", lastWarningAt=" + lastWarningAt + ", startedAt="
+				+ ", criticalCount=" + criticalCount + ", lastWarningAt="
+				+ (lastWarningAt != null ? lastWarningAt.getTime() : "null") + ", startedAt="
 				+ (getStartedAt() != null ? getStartedAt().getTime() : "null") + ", stoppedAt="
 				+ (getStoppedAt() != null ? getStoppedAt().getTime() : "null") + "]";
 	}

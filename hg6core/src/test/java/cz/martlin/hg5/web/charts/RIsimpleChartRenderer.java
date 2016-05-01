@@ -1,4 +1,5 @@
 package cz.martlin.hg5.web.charts;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -24,6 +25,8 @@ import cz.martlin.hg6.core.Hg6Core;
  * is each group's min, average and max value rendered as 1px width bar with
  * given colors.
  * 
+ * TODO FIXME do something...
+ * 
  * @author martin
  *
  */
@@ -38,14 +41,14 @@ public class RIsimpleChartRenderer implements Serializable {
 	public static final Color BG_DEFAULT_COLOR = Color.WHITE;
 
 	private final Map<SoundTrack, byte[]> cache = new HashMap<>();
+	// FIXME how the hell can be this accessible???
+	@Deprecated
 	private final Hg6Core homeguard;
-	
-	
+
 	public RIsimpleChartRenderer(Hg6Core homeguard) {
 		this.homeguard = homeguard;
-		// TODO Auto-generated constructor stub
 	}
-	
+
 	/**
 	 * If the chart of given track have rendered chart yet, is used instead of
 	 * calculating new, else is created and cached.
@@ -90,13 +93,14 @@ public class RIsimpleChartRenderer implements Serializable {
 		LOG.info("Creating chart of track: {}", track);
 
 		throw new UnsupportedOperationException("Reporting not supported");
-		
-//		double[] samples = homeguard.getJustSimplySamplesOfTrack(track);
-//
-//		BufferedImage image = createChart(samples, width, height, mins, avgs, maxs, background);
-//		byte[] data = exportImage(image);
-//
-//		return data;
+
+		// double[] samples = homeguard.getJustSimplySamplesOfTrack(track);
+		//
+		// BufferedImage image = createChart(samples, width, height, mins, avgs,
+		// maxs, background);
+		// byte[] data = exportImage(image);
+		//
+		// return data;
 	}
 
 	/**
@@ -194,6 +198,5 @@ public class RIsimpleChartRenderer implements Serializable {
 			IOUtils.closeQuietly(baos);
 		}
 	}
-
 
 }

@@ -2,17 +2,19 @@ package cz.martlin.hg5.logic.processV1.fsman;
 
 import java.io.File;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.db.Hg6DbException;
 
 /**
@@ -145,9 +147,6 @@ public class FileSystemReportsManager implements Serializable {
 		LOG.debug("Loading all reports");
 		try {
 			Set<File> logs = tools.logsFiles(null);
-			if (logs == null) {
-				return null;
-			}
 			TreeSet<GuardingReport> reports = parseLogs(logs);
 
 			return reports;
@@ -168,9 +167,6 @@ public class FileSystemReportsManager implements Serializable {
 		try {
 
 			Set<File> logs = tools.logsFiles(day);
-			if (logs == null) {
-				return null;
-			}
 
 			TreeSet<GuardingReport> reports = parseLogs(logs);
 
@@ -215,17 +211,24 @@ public class FileSystemReportsManager implements Serializable {
 	public GuardingReport loadLastReport() throws Hg6DbException {
 		LOG.debug("Loading last report");
 		try {
-			TreeSet<GuardingReport> reports = loadAllReports();
-
-			if (reports == null) {
-				return null;
-			}
-
-			return reports.last();
+			File lastFile = lastReportsFile();
+			GuardingReport report = tools.parseLogFile(lastFile);
+			return report;
 		} catch (Hg6DbException e) {
 			throw new Hg6DbException("Cannot load last report", e);
 		}
-		/// TODO FIXME nešlo by to vylepšit?
+	}
+
+	private File lastReportsFile() throws Hg6DbException {
+		Set<File> filesSet = tools.logsFiles(null);
+		if (filesSet.isEmpty()) {
+			throw new Hg6DbException("No report");
+		}
+		
+		List<File> filesList = new ArrayList<>(filesSet);
+		File lastFile = filesList.get(filesList.size() - 1);
+		
+		return lastFile;
 	}
 
 }

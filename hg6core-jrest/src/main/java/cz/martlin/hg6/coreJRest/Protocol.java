@@ -1,6 +1,6 @@
 package cz.martlin.hg6.coreJRest;
 
-import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.jrest.impl.jarmil.JarmilWaiterShift;
 import cz.martlin.jrest.impl.jarmil.SingleJarmilGuest;
 import cz.martlin.jrest.impl.jarmil.protocol.JarmilGuestProtocol;

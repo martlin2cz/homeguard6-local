@@ -9,33 +9,53 @@
 		</encoder>
 	</appender>
 
-	<appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
-		<file>hg6app.log</file>
-
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
 		<encoder>
-			<pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level
-				%logger{10}:%line %msg%n</pattern>
+			<pattern>%d{HH:mm:ss} %-5level %logger{10} %msg%n</pattern>
 		</encoder>
 	</appender>
+
+
+	<!-- <appender name="LOGFILE" class="ch.qos.logback.core.FileAppender"> -->
+	<!-- <file>hg6app.log</file> -->
+
+	<!-- <encoder> -->
+	<!-- <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level -->
+	<!-- %logger{10}:%line %msg%n</pattern> -->
+	<!-- </encoder> -->
+	<!-- </appender> -->
 
 
 
 	<root level="warn">
 		<appender-ref ref="STDOUT" />
-		<appender-ref ref="LOGFILE" />
+		<!-- <appender-ref ref="LOGFILE" /> -->
 	</root>
 
 	<logger level="info"
-		name="cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncerTestApp" />
+		name="cz.martlin.hg6.mrsConnLib.local.LocSitCreatorAndPerformerTestApp">
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	<logger level="info"
+		name="cz.martlin.hg6.mrsConnLib.sync.SituationsMrsSyncerTestApp">
+		<appender-ref ref="CONSOLE" />
+	</logger>
+
+
+
 
 	<logger level="info" name="cz.martlin.hg6.mrsLib.sync.SituationsMrsSyncer" />
+	<logger level="debug" name="cz.martlin.hg6.mrsConnLib.sync.SituationsMerger" />
+
 
 	<logger level="info"
 		name="cz.martlin.hg6.mrsLib.local.LocalSituationCreator" />
 
 	<logger level="debug" name="cz.martlin.hg6.mrs.diff.SituationDiffer" />
 
-<logger level="warn"
+	<logger level="warn"
 		name="cz.martlin.hg6.mrsLib.local.LocalSituationCreator" />
 
 
@@ -43,8 +63,8 @@
 
 	<logger level="info"
 		name="cz.martlin.hg6.mrsLib.local.LocalSituationCreatorTestApp" />
-<!-- 	<logger level="debug" -->
-<!-- 		name="cz.martlin.hg6.mrsLib.local.LocalSituationCreator" /> -->
+	<!-- <logger level="debug" -->
+	<!-- name="cz.martlin.hg6.mrsLib.local.LocalSituationCreator" /> -->
 
 
 	<!-- <logger level="debug" -->

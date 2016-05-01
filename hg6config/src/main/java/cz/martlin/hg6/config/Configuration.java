@@ -1,9 +1,9 @@
-package cz.martlin.hg5.logic.config;
+package cz.martlin.hg6.config;
 
 import java.io.File;
 import java.io.Serializable;
 
-import cz.martlin.hg6.config.Hg6Config;
+import cz.martlin.hg5.logic.config.HasSamplesEntryConfig;
 import cz.martlin.jaxon.jaxon.JaxonSerializable;
 
 public class Configuration implements Serializable, JaxonSerializable, HasSamplesEntryConfig {
@@ -26,17 +26,15 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 
 	private String mrsBaseUrl = "http://localhost:9080/mrs/ws";
 	private int mrsInterval = 10;
-	private boolean mrsEnabled = true;
 
 	private int coreJRestPort = 6_417;
 	private int mrsJRestPort = 6_254;
 
 	/**
-	 * Use {@link Hg6Config} as possible.
+	 * Use singleton {@link Hg6Config} instead of direct constructing.
 	 * 
-	 * TODO make protected, only for testing
 	 */
-	public Configuration() {
+	protected Configuration() {
 	}
 
 	public int getSamplesInterval() {
@@ -131,14 +129,6 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 		this.mrsInterval = mrsInterval;
 	}
 
-	public boolean isMrsEnabled() {
-		return mrsEnabled;
-	}
-
-	public void setMrsEnabled(boolean mrsEnabled) {
-		this.mrsEnabled = mrsEnabled;
-	}
-
 	public int getCoreJRestPort() {
 		return coreJRestPort;
 	}
@@ -170,7 +160,6 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 
 		this.mrsBaseUrl = other.mrsBaseUrl;
 		this.mrsInterval = other.mrsInterval;
-		this.mrsEnabled = other.mrsEnabled;
 
 		this.coreJRestPort = other.coreJRestPort;
 		this.mrsJRestPort = other.mrsJRestPort;
@@ -194,7 +183,6 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 		result = prime * result + ((defaultDescription == null) ? 0 : defaultDescription.hashCode());
 		result = prime * result + ((logsRootDir == null) ? 0 : logsRootDir.hashCode());
 		result = prime * result + ((mrsBaseUrl == null) ? 0 : mrsBaseUrl.hashCode());
-		result = prime * result + (mrsEnabled ? 1231 : 1237);
 		result = prime * result + mrsInterval;
 		result = prime * result + mrsJRestPort;
 		result = prime * result + sampleLenght;
@@ -237,8 +225,6 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 				return false;
 		} else if (!mrsBaseUrl.equals(other.mrsBaseUrl))
 			return false;
-		if (mrsEnabled != other.mrsEnabled)
-			return false;
 		if (mrsInterval != other.mrsInterval)
 			return false;
 		if (mrsJRestPort != other.mrsJRestPort)
@@ -263,8 +249,7 @@ public class Configuration implements Serializable, JaxonSerializable, HasSample
 				+ ", criticalNoiseThreshold=" + criticalNoiseThreshold + ", warningNoiseAmount=" + warningNoiseAmount
 				+ ", criticalNoiseAmount=" + criticalNoiseAmount + ", logsRootDir=" + logsRootDir
 				+ ", defaultDescription=" + defaultDescription + ", mrsBaseUrl=" + mrsBaseUrl + ", mrsInterval="
-				+ mrsInterval + ", mrsEnabled=" + mrsEnabled + ", coreJRestPort=" + coreJRestPort + ", mrsJRestPort="
-				+ mrsJRestPort + "]";
+				+ mrsInterval + ", coreJRestPort=" + coreJRestPort + ", mrsJRestPort=" + mrsJRestPort + "]";
 	}
 
 }

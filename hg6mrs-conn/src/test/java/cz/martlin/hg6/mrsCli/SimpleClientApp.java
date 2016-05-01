@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg6.mrs.misc.Hg6MrsException;
 import cz.martlin.hg6.mrs.situation.Situation;
-import cz.martlin.hg6.mrs.situation.TestingSituationsCreator;
+import cz.martlin.hg6.mrs.test.TestingSituationsCreator;
 import cz.martlin.hg6.mrsCli.Hg6MrsClient;
 
 public class SimpleClientApp {

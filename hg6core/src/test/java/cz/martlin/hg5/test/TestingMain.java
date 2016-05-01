@@ -1,6 +1,6 @@
 package cz.martlin.hg5.test;
 
-import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.core.Hg6Core;
 import cz.martlin.hg6.db.Hg6Database;

@@ -2,7 +2,7 @@ package cz.martlin.hg6.coreJRest;
 
 import java.util.Calendar;
 
-import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.jrest.impl.jarmil.SingleJarmilGuest;
 import cz.martlin.jrest.misc.JRestException;

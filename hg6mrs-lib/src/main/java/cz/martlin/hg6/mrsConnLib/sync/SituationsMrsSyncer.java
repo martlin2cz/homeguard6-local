@@ -1,5 +1,8 @@
 package cz.martlin.hg6.mrsConnLib.sync;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.mrs.misc.Hg6MrsException;
 import cz.martlin.hg6.mrs.situation.Situation;
@@ -9,29 +12,32 @@ import cz.martlin.hg6.mrsConnLib.local.LocalSituationCreator;
 import cz.martlin.hg6.mrsConnLib.local.LocalSituationPerformer;
 
 public class SituationsMrsSyncer {
-	private final SituationsSyncerCore sincer;
+	private final Logger LOG = LoggerFactory.getLogger(getClass());
+
+	private final SituationsMerger merger;
 	private final Hg6MrsClient mrs;
 	private final LocalSituationCreator creator;
 	private final LocalSituationPerformer performer;
 
 	public SituationsMrsSyncer(Hg6Config config, AbstractHg6MrsConn mrs) throws Hg6MrsException {
-		this.sincer = new SituationsSyncerCore();
+		this.merger = new SituationsMerger();
 		this.mrs = new Hg6MrsClient(config.getConfig().getMrsBaseUrl());
 		this.creator = new LocalSituationCreator(config, mrs);
 		this.performer = new LocalSituationPerformer(config, mrs);
 	}
 
 	public void synchronize() throws Hg6MrsException {
+		LOG.info("Synchronizing");
+
 		Situation local = getCurrentLocal();
 		Situation remote = getCurrentRemote();
 
-		SyncResult sync = sincer.synchronize(local, remote);
+		Situation merged = merger.computeNewSituation(local, remote);
 
-		Situation newLocal = sync.getLocal();
-		Situation newRemote = sync.getRemote();
+		commitNewLocal(merged);
+		commitNewRemote(merged);
 
-		commitNewLocal(newLocal);
-		commitNewRemote(newRemote);
+		LOG.debug("Synchronized");
 	}
 
 	private Situation getCurrentLocal() throws Hg6MrsException {

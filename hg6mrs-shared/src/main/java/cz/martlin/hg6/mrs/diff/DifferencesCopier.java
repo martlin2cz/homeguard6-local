@@ -53,11 +53,15 @@ public class DifferencesCopier {
 				to.getReport().setItemsTo(from.getReport());
 			}
 			break;
-		case CHANGED_REPORT_METADATA:
+		case CHANGED_REPORT_STOPPED:
 			if (from.getReport() != null) {
-				to.getReport().setMetadataTo(from.getReport());
+				to.getReport().setStoppedAt(from.getReport().getStoppedAt());
 			}
 			break;
+		case CHANGED_REPORT_DESC:
+			if (from.getReport() != null) {
+				to.getReport().setDescription(from.getReport().getDescription());
+			}
 		default:
 			throw new IllegalArgumentException("Unsupported difference: " + difference);
 		}

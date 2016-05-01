@@ -1,8 +1,8 @@
 package cz.martlin.hg6.core;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.guard.GuardingPerformer;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.db.Hg6Database;
 
 public class Hg6Core {

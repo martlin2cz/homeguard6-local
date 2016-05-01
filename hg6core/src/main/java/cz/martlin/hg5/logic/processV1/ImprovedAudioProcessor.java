@@ -6,10 +6,10 @@ import java.util.Calendar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg5.logic.process.AbstractAudioProcessor;
+import cz.martlin.hg6.config.Configuration;
 
 /**
  * Implements Audio processor by counting "warning" an "error" samples.

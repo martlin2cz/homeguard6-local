@@ -3,11 +3,11 @@ package cz.martlin.hg6.db;
 import java.util.Calendar;
 import java.util.TreeSet;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager;
+import cz.martlin.hg6.config.Configuration;
 
 public class Hg6Database {
 

@@ -25,7 +25,7 @@ public class LocSitCreatorAndPerformerTestApp {
 		LOG.info("Current situation is: {}", situation);
 
 		situation.getStatus().setCoreRunning(true);
-		situation.getConfig().setInterval(20);
+		situation.getConfig().setInterval(1991);
 		situation.getReport().setDescription("The testing one at " + System.currentTimeMillis());
 
 		LOG.info("Updating to ... {}", situation);

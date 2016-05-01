@@ -16,6 +16,18 @@
         <dependent-module archiveName="hg6core-jrest-0.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hg6core-jrest/hg6core-jrest">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="hg6mrs-conn-jrest-0.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hg6mrs-conn-jrest/hg6mrs-conn-jrest">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hg6mrs-conn-lib-0.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hg6mrs-conn-lib/hg6mrs-conn-lib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hg6mrs-cli-0.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hg6mrs-cli/hg6mrs-cli">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hg6mrs-shared-0.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hg6mrs-shared/hg6mrs-shared">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="hg6web"/>
         <property name="java-output-path" value="/hg6web/target/classes"/>
     </wb-module>

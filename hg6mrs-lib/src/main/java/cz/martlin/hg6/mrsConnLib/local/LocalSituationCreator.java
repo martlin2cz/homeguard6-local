@@ -3,8 +3,8 @@ package cz.martlin.hg6.mrsConnLib.local;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.hg6.coreJRest.Hg6CoreClient;
@@ -61,7 +61,7 @@ public class LocalSituationCreator {
 		try {
 			mrsRunning = mrs.isLoopRunning();
 		} catch (Hg6MrsException e) {
-			LOG.error("Cannot inver whether is mrs conn loop running", e);
+			LOG.error("Cannot infer whether is mrs conn loop running", e);
 			mrsRunning = null;
 		}
 		status.setMrsConnRunning(mrsRunning);

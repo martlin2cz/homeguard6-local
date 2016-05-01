@@ -59,7 +59,7 @@ public class SituationDiffer {
 		if (from != null && to != null) {
 			changedReportStart = !Objects.equals(from.getStartedAt(), to.getStartedAt());
 			changedReportStop = !Objects.equals(from.getStartedAt(), to.getStartedAt());
-			changedReportDesc = !Objects.equals(from.getStartedAt(), to.getStartedAt());
+			changedReportDesc = !Objects.equals(from.getDescription(), to.getDescription());
 			changedReportItems = !Objects.equals(from.getItemsCount(), to.getItemsCount())
 					|| !Objects.equals(from.getWarningsCount(), to.getWarningsCount())
 					|| !Objects.equals(from.getCriticalCount(), to.getCriticalCount());
@@ -68,8 +68,11 @@ public class SituationDiffer {
 		if (changedReportStart) {
 			diffs.add(SituationDifference.CHANGED_REPORT);
 		}
-		if (changedReportStop || changedReportDesc) {
-			diffs.add(SituationDifference.CHANGED_REPORT_METADATA);
+		if (changedReportStop) {
+			diffs.add(SituationDifference.CHANGED_REPORT_STOPPED);
+		}
+		if (changedReportDesc) {
+			diffs.add(SituationDifference.CHANGED_REPORT_DESC);
 		}
 		if (changedReportItems) {
 			diffs.add(SituationDifference.CHANGED_REPORT_ITEMS);
@@ -93,7 +96,7 @@ public class SituationDiffer {
 		if (changedCoreStatus) {
 			diffs.add(SituationDifference.CHANGED_CORE_STATUS);
 		}
-		
+
 		if (changedMrsConnStatus) {
 			diffs.add(SituationDifference.CHANGED_MRS_STATUS);
 		}

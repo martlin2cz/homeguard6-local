@@ -7,10 +7,10 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.process.AbstractReporter;
 import cz.martlin.hg5.logic.process.Interruptable;
 import cz.martlin.hg5.logic.processV1.FileSystemReporter;
+import cz.martlin.hg6.config.Configuration;
 
 /**
  * Represents class which is starting point of running particular guarding

@@ -6,31 +6,41 @@
 	xmlns:composite="http://java.sun.com/jsf/composite"
 	xmlns:p="http://primefaces.org/ui">
 
-<composite:interface>
+<composite:interface name="settingsPopup">
 
 </composite:interface>
 
 <composite:implementation>
 	<p:dialog id="configFormDial" widgetVar="configFormDial"
-		resizable="false" closable="true" closeOnEscape="true"
-		onShow="updateContent();" header="Nastavení">
+		resizable="false" closable="true" closeOnEscape="true" dynamic="true"
+		onShow="updateSettingsFormContent();" header="Nastavení">
+
 
 		<h:form id="configFormForm">
-			<p:remoteCommand name="updateContent" update="@form" />
+			<p:remoteCommand name="updateSettingsFormContent" update="@form" />
 
 			<p:outputPanel autoUpdate="true">
 				<p:messages autoUpdate="true" closable="true" showDetail="true" />
 
-				<h:panelGrid columns="2">
+				<h:panelGrid columns="4">
 					<h:outputLabel value="Interval mezi záznamy (sec)" for="interval" />
 					<p:spinner id="interval"
 						value="#{configSettingsForm.config.samplesInterval}" min="10"
 						stepFactor="10" required="true" />
 
+					<h:outputLabel value="Domovský adresář:" for="rootDir" />
+					<h:outputText id="rootDir" value="#{configSettingsForm.rootDir}" />
+
+
 					<h:outputLabel value="Délka testovacího záznamu (sec)" for="lenght" />
 					<p:spinner id="lenght"
 						value="#{configSettingsForm.config.sampleLenght}" min="10"
 						stepFactor="5" required="true" />
+
+					<h:outputLabel value="Adresář se záznamy:" for="logsDir" />
+					<h:outputText id="logsDir"
+						value="#{configSettingsForm.config.logsRootDir.path}" />
+
 
 					<h:outputLabel value="Práh varovného vzorku"
 						for="warningNoiseThreshold" />
@@ -38,11 +48,22 @@
 						value="#{configSettingsForm.config.warningNoiseThreshold}"
 						min="0.0" max="1.0" stepFactor="0.05" required="true" />
 
+					<h:outputLabel value="Port pro core:" for="coreJRestPort" />
+					<h:outputText id="coreJRestPort"
+						value="#{configSettingsForm.config.coreJRestPort}" />
+
+
 					<h:outputLabel value="Práh kritického vzorku"
 						for="criticalNoiseThreshold" />
 					<p:spinner id="criticalNoiseThreshold"
 						value="#{configSettingsForm.config.criticalNoiseThreshold}"
 						min="0.0" max="1.0" stepFactor="0.05" required="true" />
+
+					<h:outputLabel value="Port pro MRS:" for="mrsJRestPort" />
+					<h:outputText id="mrsJRestPort"
+						value="#{configSettingsForm.config.mrsJRestPort}" />
+
+
 
 					<h:outputLabel value="Max. množství varovných vzorků"
 						for="warningNoiseAmount" />
@@ -50,20 +71,38 @@
 						value="#{configSettingsForm.config.warningNoiseAmount}" min="0.0"
 						max="1.0" stepFactor="0.05" required="true" />
 
+					<h:outputLabel value="Adresa webové služby MRS:" for="mrsBaseUrl" />
+					<h:outputText id="mrsBaseUrl"
+						value="#{configSettingsForm.config.mrsBaseUrl}" />
+
+
 					<h:outputLabel value="Max. množství kritických vzorků"
 						for="criticalNoiseAmount" />
 					<p:spinner id="criticalNoiseAmount"
 						value="#{configSettingsForm.config.criticalNoiseAmount}" min="0.0"
 						max="1.0" stepFactor="0.05" required="true" />
 
+					<p:spacer />
+					<p:spacer />
+
+
 					<h:outputLabel value="Výchozí popis nepřítomnosti"
 						for="defaultDesc" />
 					<p:inputText id="defaultDesc"
 						value="#{configSettingsForm.config.defaultDescription}" />
 
-					<h:outputLabel value="Adresář se záznamy" for="logsDir" />
-					<h:outputText id="logsDir"
-						value="#{configSettingsForm.config.logsRootDir.path}" />
+					<p:spacer />
+					<p:spacer />
+
+					<h:outputLabel value="Interval synchronizace MRS (min)"
+						for="mrsInterval" />
+					<p:spinner id="mrsInterval"
+						value="#{configSettingsForm.config.mrsInterval}" min="1"
+						stepFactor="10" required="true" />
+
+					<p:spacer />
+					<p:spacer />
+
 				</h:panelGrid>
 
 				<div class="centered big-top-margin">

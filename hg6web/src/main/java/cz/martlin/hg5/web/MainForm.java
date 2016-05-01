@@ -6,8 +6,8 @@ import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
 import cz.martlin.hg5.HomeGuardApp;
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.coreJRest.Hg6CoreConnException;
 import cz.martlin.hg6.db.Hg6DbException;
 

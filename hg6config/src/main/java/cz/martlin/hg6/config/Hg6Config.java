@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.martlin.hg5.logic.config.ConfigLoader;
-import cz.martlin.hg5.logic.config.Configuration;
 
 public class Hg6Config {
 	private static final Logger LOG = LoggerFactory.getLogger(Hg6Config.class);

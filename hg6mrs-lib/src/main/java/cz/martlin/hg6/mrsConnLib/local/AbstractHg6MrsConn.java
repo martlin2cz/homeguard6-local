@@ -10,4 +10,5 @@ public interface AbstractHg6MrsConn {
 
 	void stopLoop() throws Hg6MrsException;
 
+
 }

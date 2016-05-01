@@ -84,8 +84,6 @@ public class Situation implements Serializable, JaxonSerializable, Cloneable {
 			return false;
 		return true;
 	}
-	
-	
 
 	@Override
 	public String toString() {

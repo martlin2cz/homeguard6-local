@@ -14,11 +14,11 @@ import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg5.logic.processV1.fsman.FileSystemManTools;
 import cz.martlin.hg5.web.charts.RIsimpleChartRenderer;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.core.Hg6Core;
 import cz.martlin.hg6.db.Hg6DbException;

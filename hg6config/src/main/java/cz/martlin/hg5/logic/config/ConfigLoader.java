@@ -6,6 +6,7 @@ import java.io.Serializable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.jaxon.config.Config;
 import cz.martlin.jaxon.jaxon.JaxonConverter;

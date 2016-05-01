@@ -18,6 +18,4 @@ public interface Hg6CoreCmdsProcessor extends JarmilTarget {
 
 	public void configChanged() throws Exception;
 
-	// TODO
-
 }

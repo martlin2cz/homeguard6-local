@@ -8,7 +8,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
@@ -20,6 +19,7 @@ import cz.martlin.hg5.logic.process.TrackToSamplesConverter;
 import cz.martlin.hg5.logic.processV1.ImprovedTrackToSamplesConv;
 import cz.martlin.hg5.logic.processV1.ImprovedAudioProcessor;
 import cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager;
+import cz.martlin.hg6.config.Configuration;
 
 /**
  * Represents one instance of guarding process. When is runned (method

@@ -3,7 +3,7 @@ package cz.martlin.hg6.mrsConnLib.run;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.mrs.misc.Hg6MrsException;
 import cz.martlin.hg6.mrsConnLib.local.AbstractHg6MrsConn;

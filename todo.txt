@@ -1,0 +1,7 @@
+- [~~] solve all the TODOs, FIXMEs and XXXs in the sources
+- [OK] propagate config change
+- set up loggings
+- [??] FsMan fails, take a look at it?
+- [OK] MRS settings form ... really shows the slider/spinner, what it should (and not the default value?)
+- [OK] in MRS, in: "Dle aktuální konfigurace by se měl ozvat za X minut" should display local's value instead of the remote one.
+- [OK] add loading icon in MRS

@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.org/ui">
+
+<composite:interface name="mrsDial">
+
+</composite:interface>
+
+<composite:implementation>
+	<p:dialog id="mrsDial" widgetVar="mrsDial" resizable="false"
+		closable="true" closeOnEscape="true" dynamic="true"
+		onShow="updateMrsFormContent();" header="Nastavení MRS">
+
+		<h:form id="mrsForm">
+			<p:remoteCommand name="updateMrsFormContent" update="@form" />
+
+			<p:outputPanel autoUpdate="true">
+				<p:messages autoUpdate="true" closable="true" showDetail="true" />
+
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Stav MRS" for="runningButt" />
+					<p:inputSwitch id="runningButt" value="#{mrsForm.mrsConnRunning}"
+						onLabel="Spuštěn" offLabel="Vypnut">
+						<p:ajax listener="#{mrsForm.toggleRunning}" />
+					</p:inputSwitch>
+
+					<h:outputLabel value="Synchronizovat teď" for="syncButt" />
+					<p:commandButton value="Synchronizovat" id="syncButt"
+						action="#{mrsForm.synchronize}" icon="ui-icon-shuffle"
+						process="@this" />
+				</h:panelGrid>
+
+			</p:outputPanel>
+		</h:form>
+	</p:dialog>
+</composite:implementation>
+</html>

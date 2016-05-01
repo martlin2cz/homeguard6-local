@@ -3,12 +3,12 @@ package cz.martlin.hg5.logic.processV1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
 import cz.martlin.hg5.logic.data.ReportItem;
 import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg5.logic.process.AbstractReporter;
 import cz.martlin.hg5.logic.processV1.fsman.FileSystemReportsManager;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.db.Hg6Database;
 import cz.martlin.hg6.db.Hg6DbException;
 

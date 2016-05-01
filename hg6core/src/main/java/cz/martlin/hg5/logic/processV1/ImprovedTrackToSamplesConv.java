@@ -10,9 +10,9 @@ import javax.sound.sampled.AudioFormat.Encoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.SoundTrack;
 import cz.martlin.hg5.logic.process.TrackToSamplesConverter;
+import cz.martlin.hg6.config.Configuration;
 
 public class ImprovedTrackToSamplesConv implements TrackToSamplesConverter {
 	private final Logger LOG = LoggerFactory.getLogger(getClass());

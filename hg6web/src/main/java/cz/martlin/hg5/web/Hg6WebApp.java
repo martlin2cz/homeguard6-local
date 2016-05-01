@@ -6,14 +6,16 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 
-import cz.martlin.hg5.logic.config.Configuration;
 import cz.martlin.hg5.logic.data.GuardingReport;
+import cz.martlin.hg6.config.Configuration;
 import cz.martlin.hg6.config.Hg6Config;
 import cz.martlin.hg6.config.Hg6ConfigException;
 import cz.martlin.hg6.coreJRest.Hg6CoreClient;
 import cz.martlin.hg6.coreJRest.Hg6CoreConnException;
 import cz.martlin.hg6.db.Hg6Database;
 import cz.martlin.hg6.db.Hg6DbException;
+import cz.martlin.hg6.mrsConnJRest.Hg6MrsConnClient;
+import cz.martlin.hg6.mrsConnJRest.Hg6MrsConnJRestException;
 
 public class Hg6WebApp implements Serializable {
 
@@ -21,6 +23,7 @@ public class Hg6WebApp implements Serializable {
 
 	private final Hg6CoreClient client;
 	private final Hg6Database db;
+	private final Hg6MrsConnClient mrs;
 	private final Hg6Config cfg;
 
 	public Hg6WebApp() {
@@ -31,6 +34,7 @@ public class Hg6WebApp implements Serializable {
 
 		this.client = new Hg6CoreClient(cfg);
 		this.db = new Hg6Database(cfg.getConfig());
+		this.mrs = new Hg6MrsConnClient(cfg);
 		this.cfg = cfg;
 	}
 
@@ -50,9 +54,11 @@ public class Hg6WebApp implements Serializable {
 		return cfg.getConfig();
 	}
 
-	public void setToAndSave(Configuration config) throws Hg6ConfigException, Hg6CoreConnException {
+	public void setToAndSave(Configuration config)
+			throws Hg6ConfigException, Hg6CoreConnException, Hg6MrsConnJRestException {
 		cfg.setToAndSave(config);
 		client.configChanged();
+		mrs.configChanged();
 	}
 
 	public void setConfigToDefault() {
